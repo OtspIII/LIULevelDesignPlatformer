@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
+    public static int DeathCount = 0;
     public float Speed = 10;
     public float JumpPower = 10;
     public float JumpTime = 0.5f;
     public float Gravity = 2;
+    public int MaxAirJumps = 0;
     public SpriteRenderer Body;
     public BoxCollider2D Foot;
     
@@ -20,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public List<GameObject> Floors = new List<GameObject>();
     private GenericPower Power;
     private bool InControl = true;
+    private int AirJumps;
+    public float FallPlatTime = 0;
     
     void Start()
     {
@@ -30,7 +35,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        FallPlatTime -= Time.deltaTime;
         if (!InControl) return;
+        
         
         Vector2 vel = RB.velocity;
         
@@ -47,12 +54,28 @@ public class PlayerController : MonoBehaviour
         {
             if (OnGround())
             {
-                vel.y = JumpPower;
-                JumpTimer = 0;
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    FallPlatTime = 0.5f;
+                    JumpTimer = 999;
+                    vel.y = -3f;
+                }
+                else
+                {
+                    vel.y = JumpPower;
+                    JumpTimer = 0;
+                    AirJumps = MaxAirJumps;
+                }
             }
             else if (JumpTimer < JumpTime)
             {
                 JumpTimer += Time.deltaTime;
+                vel.y = JumpPower;
+            }
+            else if (Input.GetKeyDown(KeyCode.Z) && AirJumps > 0)
+            {
+                AirJumps--;
+                JumpTimer = 0;
                 vel.y = JumpPower;
             }
         }
@@ -65,6 +88,18 @@ public class PlayerController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.X) && Power != null)
             Power.Activate();
+
+        if (vel.y > 0 || FallPlatTime > 0)
+        {
+            gameObject.layer = LayerMask.NameToLayer("RisingPlayer");
+            Foot.gameObject.layer = LayerMask.NameToLayer("RisingPlayerFoot");
+        }
+        else
+        {
+            gameObject.layer = LayerMask.NameToLayer("Player");
+            Foot.gameObject.layer = LayerMask.NameToLayer("Foot");
+        }
+            
     }
 
     public void SetFlip(bool faceLeft)
@@ -139,6 +174,8 @@ public class PlayerController : MonoBehaviour
 
     public void Die(GameObject source)
     {
+        DeathCount++;
+        Debug.Log("YOU DIED: " + DeathCount + " / " + SceneManager.GetActiveScene().name.ToUpper());
         StartCoroutine(DeathAnimation(source));
     }
 }
