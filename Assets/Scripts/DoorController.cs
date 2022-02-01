@@ -7,6 +7,16 @@ using UnityEngine.SceneManagement;
 public class DoorController : MonoBehaviour
 {
     public CameraController Camera;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            int sceneN = SceneManager.GetActiveScene().buildIndex;
+            StartCoroutine(LoadLevel(sceneN + 1));
+        }
+            
+    }
     
     private void OnCollisionEnter2D(Collision2D other)
     {
