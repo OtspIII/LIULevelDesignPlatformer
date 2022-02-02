@@ -21,7 +21,7 @@ public class MishaPower : GenericPower
             Player.Body.transform.rotation = Quaternion.Euler(0, 0, Timer * 360);
             if (Timer <= 0)
             {
-                Player.RB.gravityScale = Player.Gravity;
+                Player.RB.gravityScale = Player.Gravity; 
                 Player.Body.transform.rotation = Quaternion.Euler(0,0,0);
                 Player.SetInControl(true);
             }
