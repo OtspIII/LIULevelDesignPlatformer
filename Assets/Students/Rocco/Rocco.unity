@@ -3029,10 +3029,12 @@ MonoBehaviour:
   JumpPower: 12.5
   JumpTime: 0.35
   Gravity: 8.5
+  MaxAirJumps: 0
   Body: {fileID: 8010425645528200738}
   Foot: {fileID: 1172600660916548719}
   RB: {fileID: 0}
   Floors: []
+  FallPlatTime: 0
 --- !u!4 &8010425643650113121
 Transform:
   m_ObjectHideFlags: 0
@@ -3105,6 +3107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8010425643650113121}
+  - component: {fileID: 8010425643650113153}
   - component: {fileID: 8010425643650113151}
   - component: {fileID: 8010425643650113120}
   - component: {fileID: 8010425643650113123}
@@ -3256,6 +3259,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75441307, y: 0.7428799}
   m_EdgeRadius: 0
+--- !u!114 &8010425643650113153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010425643650113149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0067ae5c69589f4fba08aa48472449e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!61 &8010425643722043956
 BoxCollider2D:
   m_ObjectHideFlags: 0
