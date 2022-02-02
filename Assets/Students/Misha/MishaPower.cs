@@ -15,7 +15,7 @@ public class MishaPower : GenericPower
 
     void Update()
     {
-        if (Timer > 0)
+        if (Timer > 0)  
         {
             Timer -= Time.deltaTime / 0.5f;
             Player.Body.transform.rotation = Quaternion.Euler(0, 0, Timer * 360);
