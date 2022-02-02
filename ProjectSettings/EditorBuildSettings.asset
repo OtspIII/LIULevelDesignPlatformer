@@ -29,9 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Students/Jimmy/Jimmy.unity
     guid: 500848fccad400f4f98cac91dca6a9f1
-  - enabled: 1
-    path: Assets/Students/Mason/Mason.unity
-    guid: 3ddb13e9498dbc54db451dc07c908b3c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Students/Robert/Robert.unity
     guid: f72001fa5a276fd489c63009e5691514

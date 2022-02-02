@@ -656,6 +656,28 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7611508493323352271}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1176050301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176050300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b446eeb8a8289479fbccda5a992269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  sizeState: 0
+  smallSpeed: 0
+  smallJumpPower: 0
+  smallJumpTime: 0
+  smallGravity: 0
+  bigSpeed: 0
+  bigJumpPower: 0
+  bigJumpTime: 0
+  bigGravity: 0
 --- !u!4 &1176050304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471537704916083731, guid: 22598831b759c774998b1aead81bdd75,
