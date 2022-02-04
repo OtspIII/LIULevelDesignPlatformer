@@ -12,12 +12,15 @@ public class Sounds_Rocco : MonoBehaviour {
 	private void Update() {
 		if (Input.GetKeyDown(KeyCode.Z) == true && ded == false && pc.Floors.Count > 0) {
 			source.volume = 0.25f;
-			source.PlayOneShot(jump);
+
+			if (jump != null) {
+				source.PlayOneShot(jump);
+			}
 		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-		if (collision.GetComponent<DangerController>() == true) {
+		if (collision.GetComponent<DangerController>() == true && ded == false) {
 			source.volume = 1;
 			source.PlayOneShot(die);
 			ded = true;
