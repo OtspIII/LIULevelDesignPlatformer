@@ -13,6 +13,18 @@
       "dependencies": {}
     },
     "com.unity.collab-proxy": {
+<<<<<<< HEAD
+      "version": "1.11.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+=======
+<<<<<<< HEAD
+      "version": "1.9.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+=======
       "version": "1.15.1",
       "depth": 0,
       "source": "registry",
@@ -20,6 +32,8 @@
         "com.unity.nuget.newtonsoft-json": "2.0.0",
         "com.unity.services.core": "1.0.1"
       },
+>>>>>>> 01fd3f618c302ca55c978d570387d33206525a39
+>>>>>>> 9b9d859bae6d3d7d3d2b58ad4e184c1f91b51d2b
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
@@ -30,16 +44,32 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
+<<<<<<< HEAD
+      "version": "3.0.7",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ext.nunit": "1.0.6"
+=======
       "version": "2.0.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.1"
+>>>>>>> 9b9d859bae6d3d7d3d2b58ad4e184c1f91b51d2b
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
+<<<<<<< HEAD
       "version": "2.0.11",
+=======
+<<<<<<< HEAD
+      "version": "2.0.14",
+=======
+      "version": "2.0.11",
+>>>>>>> 01fd3f618c302ca55c978d570387d33206525a39
+>>>>>>> 9b9d859bae6d3d7d3d2b58ad4e184c1f91b51d2b
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -54,6 +84,10 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
     "com.unity.nuget.newtonsoft-json": {
       "version": "2.0.0",
       "depth": 1,
@@ -70,6 +104,8 @@
       },
       "url": "https://packages.unity.com"
     },
+>>>>>>> 01fd3f618c302ca55c978d570387d33206525a39
+>>>>>>> 9b9d859bae6d3d7d3d2b58ad4e184c1f91b51d2b
     "com.unity.test-framework": {
       "version": "1.1.29",
       "depth": 0,
@@ -91,7 +127,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
+<<<<<<< HEAD
+      "version": "1.5.6",
+=======
       "version": "1.4.8",
+>>>>>>> 9b9d859bae6d3d7d3d2b58ad4e184c1f91b51d2b
       "depth": 0,
       "source": "registry",
       "dependencies": {
