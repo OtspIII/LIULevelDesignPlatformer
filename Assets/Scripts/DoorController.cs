@@ -23,6 +23,8 @@ public class DoorController : MonoBehaviour
         PlayerController p = other.gameObject.GetComponent<PlayerController>();
         if (p != null)
         {
+            if (p.GetWinCondition() > p.GetBlocksCollected())
+                return;
             int sceneN = SceneManager.GetActiveScene().buildIndex;
             StartCoroutine(LoadLevel(sceneN + 1));
         }
