@@ -5,14 +5,27 @@ using UnityEngine;
 public class BuildAbility_Robert : GenericPower
 {
     public static int BrickAmount;
+    public static bool isActivated;
+    public static bool hasBeenActivated;
     Vector3 mousePos;
     Vector2 mousePosition;
     public GameObject brick;
 
+    private void Start()
+    {
+        hasBeenActivated = false;
+        BrickAmount = 0;
+        isActivated = false;
+    }
     public override void Activate()
     {
-        BrickAmount = 50;
-        Player.SetInControl(true);
+        if (!hasBeenActivated)
+        {
+            BrickAmount = 55;
+            isActivated = true;
+            Player.SetInControl(true);
+            hasBeenActivated = true;
+        }
     }
 
     // Update is called once per frame
@@ -20,7 +33,7 @@ public class BuildAbility_Robert : GenericPower
     {
         mousePos = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0) && BrickAmount > 0)
+        if (Input.GetMouseButtonDown(0) && BrickAmount > 0 && BuildCheck.canBuild)
         {
             var brickspawn = Instantiate(brick, mousePosition, Quaternion.identity);
             brickspawn.GetComponent<BrickScript>().isOriginal = false;
