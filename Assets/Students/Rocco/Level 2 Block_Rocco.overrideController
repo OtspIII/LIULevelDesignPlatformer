@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Level 2 Block_Rocco
+  m_Controller: {fileID: 9100000, guid: f13a5072a66172240a6faf6e829afd3e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 8002dfc9a7c17d64b9e77f51781c003b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 71e130585165aab469bad6d258d2aa9d, type: 2}
