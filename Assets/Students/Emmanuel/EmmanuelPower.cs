@@ -15,6 +15,7 @@ public class EmmanuelPower : GenericPower
     }
     public override void Activate()
     {
+        /*
         activated = true;
         AudioSource DZA = DangerZones.GetComponent<AudioSource>();
 
@@ -35,7 +36,7 @@ public class EmmanuelPower : GenericPower
         }
 
         Player.SetWinCondition(counter);
-        
+        */
     }
 
 
