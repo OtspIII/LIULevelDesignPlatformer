@@ -6,7 +6,7 @@ public class JimmyPower : GenericPower
 {
     public override void Activate()
     {
-        
+        Player.RB.gravityScale *= -1;
     }
 
     void Update()

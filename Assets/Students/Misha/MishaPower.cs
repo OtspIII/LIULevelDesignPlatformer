@@ -11,6 +11,8 @@ public class MishaPower : GenericPower
         Timer = 1;
         Player.SetInControl(false);
         Player.RB.gravityScale = 0;
+
+//        float dist = Vector2.Distance(transform.position, brick.transform.position);
     }
 
     void Update()
@@ -21,7 +23,7 @@ public class MishaPower : GenericPower
             Player.Body.transform.rotation = Quaternion.Euler(0, 0, Timer * 360);
             if (Timer <= 0)
             {
-                Player.RB.gravityScale = Player.Gravity;
+                Player.RB.gravityScale = Player.Gravity; 
                 Player.Body.transform.rotation = Quaternion.Euler(0,0,0);
                 Player.SetInControl(true);
             }

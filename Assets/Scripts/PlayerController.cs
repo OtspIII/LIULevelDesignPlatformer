@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController PC;
     public static int DeathCount = 0;
     public float Speed = 10;
     public float JumpPower = 10;
@@ -26,33 +27,16 @@ public class PlayerController : MonoBehaviour
     private int AirJumps;
     public float FallPlatTime = 0;
 
-    public GameObject Door;
-    public GameObject CollectibleDoor;
-    private int winCondition;
-    private int blocksCollected = 0;
+    private void Awake()
+    {
+        PlayerController.PC = this;
+    }
 
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
         RB.gravityScale = Gravity;
         Power = GetComponent<GenericPower>();
-    }
-
-    public void SetWinCondition(int value)
-    {
-        winCondition = value;
-    }
-    public int GetWinCondition()
-    {
-        return winCondition;
-    }
-    public void AddToBlocksCollected()
-    {
-        blocksCollected++;
-    }
-    public int GetBlocksCollected()
-    {
-        return blocksCollected;
     }
 
     void Update()
@@ -121,12 +105,7 @@ public class PlayerController : MonoBehaviour
             gameObject.layer = LayerMask.NameToLayer("Player");
             Foot.gameObject.layer = LayerMask.NameToLayer("Foot");
         }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Door.SetActive(false);
-            CollectibleDoor.SetActive(true);
-        }
-
+            
     }
 
     public void SetFlip(bool faceLeft)
