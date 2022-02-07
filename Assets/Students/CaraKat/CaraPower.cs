@@ -49,7 +49,8 @@ public class CaraPower : GenericPower
          {
              moveDirection = Vector3.zero;
          }
-         controller.Move(moveDirection * Time.deltaTime * dashSpeed);
+         //TEACHERS NOTE: controller doesn't exist, so I had to comment this line of code out so it wouldn't cause compile errors for everyone
+         //controller.Move(moveDirection * Time.deltaTime * dashSpeed);
 
     }
 }
