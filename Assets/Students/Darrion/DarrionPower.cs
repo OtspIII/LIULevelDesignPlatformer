@@ -5,9 +5,12 @@ using UnityEngine;
 public class DarrionPower : GenericPower
 {
     public int sizeState;
+
     float speed, jumpPower, jumpTime, gravity;
     public float smallSpeed, smallJumpPower, smallJumpTime, smallGravity;
     public float bigSpeed, bigJumpPower, bigJumpTime, bigGravity;
+
+    public float size, smallSize, bigSize;
 
     private void Start()
     {
@@ -26,7 +29,7 @@ public class DarrionPower : GenericPower
 
     void Update()
     {
-        if (sizeState > 3)
+        if (sizeState > 2)
         {
             sizeState = 1;
         }
@@ -37,6 +40,7 @@ public class DarrionPower : GenericPower
             GetComponent<PlayerController>().JumpPower = smallJumpPower;
             GetComponent<PlayerController>().JumpTime = smallJumpTime;
             GetComponent<PlayerController>().Gravity = smallGravity;
+            transform.localScale = new Vector3(smallSize, smallSize, smallSize);
         }       
         
         if (sizeState == 2)
@@ -45,6 +49,7 @@ public class DarrionPower : GenericPower
             GetComponent<PlayerController>().JumpPower = jumpPower;
             GetComponent<PlayerController>().JumpTime = jumpTime;
             GetComponent<PlayerController>().Gravity = gravity;
+            transform.localScale = new Vector3(size, size, size);
         }       
         
         if (sizeState == 3)
@@ -53,6 +58,7 @@ public class DarrionPower : GenericPower
             GetComponent<PlayerController>().JumpPower = bigJumpPower;
             GetComponent<PlayerController>().JumpTime = bigJumpTime;
             GetComponent<PlayerController>().Gravity = bigGravity;
+            transform.localScale = new Vector3(bigSize, bigSize, bigSize);
         }
 
         Debug.Log(sizeState);

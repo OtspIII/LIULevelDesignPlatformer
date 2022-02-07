@@ -21,6 +21,15 @@ EditorBuildSettings:
     path: Assets/Students/Dana/Dana.unity
     guid: 38ce7ebdeb6ad8143a108507d9a48b59
   - enabled: 1
+    path: Assets/Students/Darrion/Darrion 1.unity
+    guid: 9a80ccb7fda606343bfcac8c28c081a3
+  - enabled: 1
+    path: Assets/Students/Darrion/Darrion 2.unity
+    guid: 724c8f01c1346d049b9550e687886e31
+  - enabled: 1
+    path: Assets/Students/Darrion/Darrion 3.unity
+    guid: 9ca0aee0e8684e349b335aaf417ab595
+  - enabled: 1
     path: Assets/Students/Emmanuel/Emmanuel.unity
     guid: 7d5147fd4dacd62468b5acbdf2fc957e
   - enabled: 1
