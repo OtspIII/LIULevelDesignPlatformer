@@ -1,5 +1,6 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -30,6 +31,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> df62d6b72800c2eac23ddd5a482dd6beff335a04
     "com.unity.collab-proxy": {
       "version": "1.11.2",
       "depth": 0,
