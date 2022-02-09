@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale.y,1);
     }
 
-    bool OnGround()
+    public bool OnGround()
     {
         return Floors.Count > 0;
     }
