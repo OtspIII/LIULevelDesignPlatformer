@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorController : MonoBehaviour
+public class DoorControllerEmmanuel : MonoBehaviour
 {
     public CameraController Camera;
 
@@ -21,10 +21,11 @@ public class DoorController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         PlayerController p = other.gameObject.GetComponent<PlayerController>();
-        if (p != null)
+        EmmanuelPower ep = other.gameObject.GetComponent<EmmanuelPower>();
+        if (p != null && ep != null)
         {
-            //if (p.GetWinCondition() > p.GetBlocksCollected())
-            //    return;
+            if (ep.GetWinCondition() >ep.GetBlocksCollected())
+                return;
             int sceneN = SceneManager.GetActiveScene().buildIndex;
             StartCoroutine(LoadLevel(sceneN + 1));
         }

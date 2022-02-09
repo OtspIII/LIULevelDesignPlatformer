@@ -13,18 +13,23 @@ public class EmmanuelPower : GenericPower
             return activated;
         }
     }
+    public GameObject Door;
+    public GameObject CollectibleDoor;
+    private int WinCondition;
+    private int blocksCollected = 0;
+
     public override void Activate()
     {
         activated = true;
         AudioSource DZA = DangerZones.GetComponent<AudioSource>();
 
-        int counter = 0;   
+        WinCondition = 0;   
         foreach(Transform child in DangerZones.transform)
         {
-            DangerController DC = child.GetComponent<DangerController>();
+            DangerControllerEmmanuel DC = child.GetComponent<DangerControllerEmmanuel>();
             if(DC != null)
             {
-                counter++;
+                WinCondition++;
                 if (DZA != null)
                     DC.audioSource = DZA;
                 DC.dangerZoneEnabled = false;
@@ -33,11 +38,28 @@ public class EmmanuelPower : GenericPower
             if(SR != null)
                 SR.color = Color.yellow;
         }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Door.SetActive(false);
+            CollectibleDoor.SetActive(true);
+        }
 
-        Player.SetWinCondition(counter);
-        
+        Debug.Log(WinCondition);
     }
 
+    public void AddToBlocksCollected()
+    {
+        blocksCollected++;
+        Debug.Log(blocksCollected);
+    }
+
+    public int GetWinCondition() {
+        return WinCondition;
+    }
+    public int GetBlocksCollected()
+    {
+        return blocksCollected;
+    }
 
 
     void Update()
