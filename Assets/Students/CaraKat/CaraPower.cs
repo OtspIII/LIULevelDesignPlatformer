@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,17 +6,18 @@ public class CaraPower : GenericPower
 {
     public float Timer = 0;
     public Vector3 moveDirection;
-     public const float maxDashTime = 1.0f;
-     public float dashDistance = 10;
-     public float dashStoppingSpeed = 0.1f;
-     float currentDashTime = maxDashTime;
-     float dashSpeed = 6;
+    public float dashSpeed;
+    public float dashTime;
+    public bool grounded;
     
     public override void Activate()
     {
         Timer = 1;
+        //dashTime = 1;
         Player.SetInControl(false);
         Player.RB.gravityScale = 0;
+        Player.RB.velocity = new Vector2(0,0);
+        grounded = true;
 
     }
 
@@ -34,22 +35,24 @@ public class CaraPower : GenericPower
                 Player.SetInControl(true);
             }
         }
-        
-     //Goal: Make a short dash/teleport type power
-     if (Input.GetKey(KeyCode.X))
-         {
-             currentDashTime = 0;                
-         }
-         if(currentDashTime < maxDashTime)
-         {
-             moveDirection = transform.forward * dashDistance;
-             currentDashTime += dashStoppingSpeed;
-         }
-         else
-         {
-             moveDirection = Vector3.zero;
-         }
-         controller.Move(moveDirection * Time.deltaTime * dashSpeed);
 
+        if (Input.GetKey(KeyCode.X))
+        {
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            grounded = false;
+
+            transform.position = transform.position + new Vector3(horizontalInput * dashTime * dashSpeed * Time.deltaTime, verticalInput * dashTime * dashSpeed * Time.deltaTime, 0);
+            dashTime -= Time.deltaTime / 0.5f;
+            if(dashTime <= 0.5f)
+            {
+                dashTime = 1.2f;
+                grounded = true;
+            }
+
+        }
+        
+     //GOAL: Make a short dash/teleport type power (think Celeste but can go through danger wall)
+     //GOAL 2: match timer for dash to be the same with the spin movement
     }
 }

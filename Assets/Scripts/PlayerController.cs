@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController PC;
     public static int DeathCount = 0;
     public float Speed = 10;
     public float JumpPower = 10;
@@ -25,7 +26,12 @@ public class PlayerController : MonoBehaviour
     private bool InControl = true;
     private int AirJumps;
     public float FallPlatTime = 0;
-    
+
+    private void Awake()
+    {
+        PlayerController.PC = this;
+    }
+
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
@@ -110,7 +116,7 @@ public class PlayerController : MonoBehaviour
             transform.localScale.y,1);
     }
 
-    bool OnGround()
+    public bool OnGround()
     {
         return Floors.Count > 0;
     }

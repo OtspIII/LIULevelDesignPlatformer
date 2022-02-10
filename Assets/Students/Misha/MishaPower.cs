@@ -11,6 +11,8 @@ public class MishaPower : GenericPower
         Timer = 1;
         Player.SetInControl(false);
         Player.RB.gravityScale = 0;
+        Player.RB.velocity = new Vector2(30,0);
+//        float dist = Vector2.Distance(transform.position, brick.transform.position);
     }
 
     void Update()
