@@ -5,6 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platforms
+  - Projectile
+  - Hazard
+  - Safe
+  - Stunning
+  - Boon
+  - Red
+  - Yellow
+  - Green
+  - Blue
+  - Purple
+  - Orange
   layers:
   - Default
   - TransparentFX
@@ -20,10 +31,10 @@ TagManager:
   - OneWayPlat
   - RisingPlayer
   - RisingPlayerFoot
-  - 
-  - 
-  - 
-  - 
+  - Attack
+  - Hazard
+  - Friendly
+  - Shield
   - 
   - 
   - 
