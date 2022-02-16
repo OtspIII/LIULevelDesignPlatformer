@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class JimmyPower : GenericPower
 {
+
+    public float score;
+
+    public GameObject gate;
     public override void Activate()
     {
         Player.RB.gravityScale *= -1;
@@ -11,6 +15,31 @@ public class JimmyPower : GenericPower
 
     void Update()
     {
-        
+       
+    }
+
+    public void CheckStatus()
+    {
+
+        if(score >= 5)
+        {
+            Destroy(gate.gameObject);
+        }
+
+    }
+    
+  
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log(col.gameObject.name);
+
+        if (col.gameObject.tag == "coin")
+        {
+            CheckStatus();
+            Destroy(col.gameObject);
+            score++;
+           
+        }
+     
     }
 }

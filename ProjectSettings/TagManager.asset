@@ -16,6 +16,8 @@ TagManager:
   - Blue
   - Purple
   - Orange
+  - moneyDoor
+  - coin
   layers:
   - Default
   - TransparentFX
