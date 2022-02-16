@@ -35,10 +35,11 @@ public class JimmyPower : GenericPower
 
         if (col.gameObject.tag == "coin")
         {
-            CheckStatus();
+
             Destroy(col.gameObject);
             score++;
-           
+            CheckStatus();
+
         }
      
     }
