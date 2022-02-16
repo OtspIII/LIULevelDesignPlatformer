@@ -95,13 +95,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Complete.unity
     guid: 160652b8fd2ac3243b310d88da638531
-  - enabled: 1
+  - enabled: 0
     path: Assets/Students/Emmanuel/Emmanuel HW2 Level1.unity
     guid: 06c38a41d13420a4488313c41adedd5c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Students/Emmanuel/Emmanuel HW2 Level2.unity
     guid: 3f0eb237eac4626409a56eb34b079c47
-  - enabled: 1
+  - enabled: 0
     path: Assets/Students/Emmanuel/Emmanuel HW2 Level3.unity
     guid: 83ea43484f1508f40be7814fd6399b50
+  - enabled: 1
+    path: Assets/Students/Emmanuel/Emmanuel HW3 Level1.unity
+    guid: c51ef46b526e7794689154cb9fec6db6
+  - enabled: 1
+    path: Assets/Students/Emmanuel/Emmanuel HW3 Level2.unity
+    guid: 9cc85f8f7e290c44b9abc55d1366b636
+  - enabled: 1
+    path: Assets/Students/Emmanuel/Emmanuel HW3 Level3.unity
+    guid: 92ce078539913044b9eab76876c0d410
   m_configObjects: {}
