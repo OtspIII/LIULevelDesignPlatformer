@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.11.2",
       "depth": 0,
@@ -24,7 +30,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
+<<<<<<< HEAD
+      "version": "2.0.12",
+=======
       "version": "2.0.11",
+>>>>>>> 92b985900b77c1bc25f6e6224966e8270de91a1b
       "depth": 0,
       "source": "registry",
       "dependencies": {
