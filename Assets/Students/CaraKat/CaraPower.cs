@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,15 +7,17 @@ public class CaraPower : GenericPower
     public float Timer = 0;
     public Vector3 moveDirection;
     public float dashSpeed;
-    public float dashTime = 0;
-    
+    public float dashTime;
+    public bool grounded;
     
     public override void Activate()
     {
         Timer = 1;
-      //  dashTime = 1;
+        //dashTime = 1;
         Player.SetInControl(false);
         Player.RB.gravityScale = 0;
+        Player.RB.velocity = new Vector2(0,0);
+        grounded = true;
 
     }
 
@@ -38,12 +40,14 @@ public class CaraPower : GenericPower
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
+            grounded = false;
 
-            transform.position = transform.position + new Vector3(horizontalInput * dashSpeed * Time.deltaTime, verticalInput * dashSpeed * Time.deltaTime, 0);
+            transform.position = transform.position + new Vector3(horizontalInput * dashTime * dashSpeed * Time.deltaTime, verticalInput * dashTime * dashSpeed * Time.deltaTime, 0);
             dashTime -= Time.deltaTime / 0.5f;
-            if (dashTime <= 0)
+            if(dashTime <= 0.5f)
             {
-                dashTime = 0;
+                dashTime = 1.2f;
+                grounded = true;
             }
 
         }
