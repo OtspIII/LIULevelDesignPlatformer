@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BuildAbility_Robert : GenericPower
 {
@@ -21,7 +22,14 @@ public class BuildAbility_Robert : GenericPower
     {
         if (!hasBeenActivated)
         {
-            BrickAmount = 55;
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("HW3Level2_Robert"))
+            {
+                BrickAmount = 100;
+            }
+            if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("HW3Level2_Robert"))
+            {
+                BrickAmount = 55;
+            }
             isActivated = true;
             Player.SetInControl(true);
             hasBeenActivated = true;
