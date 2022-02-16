@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Students/Misha/Misha.unity
-    guid: 388ea9c6fdbf2414c9a3860fa0540757
-  - enabled: 1
     path: Assets/Students/Allison/Allison.unity
     guid: 8c71eb57124b49543aff58709c158c8b
   - enabled: 1
@@ -17,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Students/CaraKat/CaraKat.unity
     guid: 3f8f84dbe611dc547af97288c1a16097
+  - enabled: 1
+    path: Assets/Students/CaraKat/LVL2_CaraKat.unity
+    guid: b484f5e37bb49d64bb4923a7f58b2d9b
   - enabled: 1
     path: Assets/Students/Dana/Dana.unity
     guid: 38ce7ebdeb6ad8143a108507d9a48b59
@@ -30,45 +30,69 @@ EditorBuildSettings:
     path: Assets/Students/Darrion/Darrion 3.unity
     guid: 9ca0aee0e8684e349b335aaf417ab595
   - enabled: 1
-    path: Assets/Students/Emmanuel/Emmanuel.unity
-    guid: 7d5147fd4dacd62468b5acbdf2fc957e
+    path: Assets/Students/Emmanuel/Emmanuel HW2 Level1.unity
+    guid: 06c38a41d13420a4488313c41adedd5c
+  - enabled: 1
+    path: Assets/Students/Emmanuel/Emmanuel HW2 Level2.unity
+    guid: 3f0eb237eac4626409a56eb34b079c47
+  - enabled: 1
+    path: Assets/Students/Emmanuel/Emmanuel HW2 Level3.unity
+    guid: 83ea43484f1508f40be7814fd6399b50
   - enabled: 1
     path: Assets/Students/Jacob/Jacob.unity
     guid: 58d8a8c712d72fa42a1456a5baeb5dce
-  - enabled: 0
+  - enabled: 1
     path: Assets/Students/Jimmy/Jimmy.unity
     guid: 500848fccad400f4f98cac91dca6a9f1
   - enabled: 1
-    path: Assets/Students/Jimmy/JA_week3hw_level1.unity
-    guid: ecdd9074e5ed4ec479c2d40d14ce56f2
+    path: Assets/Students/Jimmy/jimmylevel2.unity
+    guid: 7a2a73ebc7782fc4686f4985610a7b82
   - enabled: 1
-    path: Assets/Students/Jimmy/JA_week3hw_level2.unity
-    guid: 7d8b57383f68eab4d9b1468910f1582f
+    path: Assets/Students/Jimmy/Jimmylevel3.unity
+    guid: 2639421af8fb18f4a9804517f8d1b4e2
   - enabled: 1
-    path: Assets/Students/Jimmy/JA_week3HW_level3.unity
-    guid: 0e5b308d0540c4e4cb1e8d8e7f33e2cd
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Students/Mason/Mason.unity
+    guid: 3ddb13e9498dbc54db451dc07c908b3c
   - enabled: 1
-    path: Assets/Students/Rocco/Rocco Assignment 1/Rocco 0.unity
-    guid: 5f9bf43f10ac7fe468b94abe09d2e95f
+    path: Assets/Students/Robert/HW2/Level1_Robert.unity
+    guid: dad12baa178845c43b780c44b5f1cbe3
   - enabled: 1
-    path: Assets/Students/Rocco/Rocco Assignment 1/Rocco 1.unity
-    guid: 1f184e1e9603f7243ab49547e1799f4c
+    path: Assets/Students/Robert/HW2/Level2_Robert.unity
+    guid: 2dc1c56b4f77cf945bcebf87f18f74a9
   - enabled: 1
-    path: Assets/Students/Rocco/Rocco Assignment 1/Rocco 2.unity
-    guid: 0afc5775cd9325c44bcd3dadcae8484c
+    path: Assets/Students/Robert/HW2/Level3_Robert.unity
+    guid: 85401411a31ba3743993146793ed60d4
+  - enabled: 1
+    path: Assets/Students/Rocco/Rocco Assignment 2/Rocco 1.unity
+    guid: da9eedfffec0aeb47a7164b6ea598754
+  - enabled: 1
+    path: Assets/Students/Rocco/Rocco Assignment 2/Rocco 2.unity
+    guid: 53a6692b772001c439badd2265d5842d
+  - enabled: 1
+    path: Assets/Students/Rocco/Rocco Assignment 2/Rocco 3.unity
+    guid: 5bfe352d899832d4e8e7f4a266f2ad73
   - enabled: 1
     path: Assets/Students/Tyler/Tyler.unity
     guid: 740acfe1d8f509b4facc84ab8a63dab3
+  - enabled: 1
+    path: Assets/Students/Tyler/Tyler 1.unity
+    guid: 2b5e4489b7c046a499afc0971330d2ef
+  - enabled: 1
+    path: Assets/Students/Tyler/Tyler 2.unity
+    guid: c926971464212eb438e7e330d55ab126
   - enabled: 1
     path: Assets/Students/Zach/Zach.unity
     guid: 1b1b71d7e2cbe314288b11b7b4268fb7
   - enabled: 1
     path: Assets/Scenes/Complete.unity
     guid: 160652b8fd2ac3243b310d88da638531
+  - enabled: 1
+    path: Assets/Students/Emmanuel/Emmanuel HW2 Level1.unity
+    guid: 06c38a41d13420a4488313c41adedd5c
+  - enabled: 1
+    path: Assets/Students/Emmanuel/Emmanuel HW2 Level2.unity
+    guid: 3f0eb237eac4626409a56eb34b079c47
+  - enabled: 1
+    path: Assets/Students/Emmanuel/Emmanuel HW2 Level3.unity
+    guid: 83ea43484f1508f40be7814fd6399b50
   m_configObjects: {}
