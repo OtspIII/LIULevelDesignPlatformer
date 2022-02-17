@@ -63,14 +63,8 @@ EditorBuildSettings:
     path: Assets/Students/Robert/HW2/Level3_Robert.unity
     guid: 85401411a31ba3743993146793ed60d4
   - enabled: 1
-    path: Assets/Students/Rocco/Rocco Assignment 2/Rocco 1.unity
-    guid: da9eedfffec0aeb47a7164b6ea598754
-  - enabled: 1
-    path: Assets/Students/Rocco/Rocco Assignment 2/Rocco 2.unity
-    guid: 53a6692b772001c439badd2265d5842d
-  - enabled: 1
-    path: Assets/Students/Rocco/Rocco Assignment 2/Rocco 3.unity
-    guid: 5bfe352d899832d4e8e7f4a266f2ad73
+    path: Assets/Students/Rocco/Rocco Assignment 3/Rocco 1.unity
+    guid: a6c6fcb758f40574dabaae85382af500
   - enabled: 1
     path: Assets/Students/Tyler/Tyler.unity
     guid: 740acfe1d8f509b4facc84ab8a63dab3
