@@ -33,7 +33,6 @@ public class BuildCheck : MonoBehaviour
         if (collision.gameObject.tag == "Platforms" && BuildAbility_Robert.BrickAmount > 0)
         {
             canBuild = true;
-            Debug.Log("canBuild");
         }
     }
 
@@ -42,7 +41,6 @@ public class BuildCheck : MonoBehaviour
         if (collision.gameObject.tag == "Platforms")
         {
             canBuild = false;
-            Debug.Log("cannotBuild");
         }
     }
 }
