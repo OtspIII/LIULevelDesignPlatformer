@@ -36,6 +36,14 @@ public class BuildAbility_Robert : GenericPower
             {
                 BrickAmount = 70;
             }
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel3_Rob"))
+            {
+                BrickAmount = 175;
+            }
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel4_Rob"))
+            {
+                BrickAmount = 100;
+            }
             else
             {
                 BrickAmount = 55;
