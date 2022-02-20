@@ -62,3 +62,4 @@ crashlytics-build.properties
 Packages/manifest.json
 ProjectSettings/ProjectVersion.txt
 Packages/
+ProjectSettings/EditorBuildSettings.asset
