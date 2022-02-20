@@ -13,6 +13,8 @@ public class RoccoPower : GenericPower {
 	private bool active;
 	private float timer;
 	private float oSpeed;
+	public SpriteRenderer playerEye;
+
 
 	private float cooldown;
 	private bool cooling;
@@ -31,15 +33,24 @@ public class RoccoPower : GenericPower {
 				Time.timeScale = newTimeScale;
 				Player.Speed = oSpeed * speedMult;
 				Player.Body.color = Color.yellow;
+				playerEye.color = Color.white;
 				active = true;
+				StopAllCoroutines();
 			} else {
 				if (sounds.source.isPlaying == false) {
 					sounds.source.volume = 1f;
 					sounds.source.clip = coolNoise;
 					sounds.source.Play();
+					StartCoroutine("DoCooldownReminderVisual");
 				}
 			}
 		}
+	}
+
+	private IEnumerator DoCooldownReminderVisual() {
+		Player.Body.color = Color.black;
+		yield return new WaitForSeconds(0.2f);
+		Player.Body.color = Color.white;
 	}
 
 	void Update() {
@@ -58,11 +69,13 @@ public class RoccoPower : GenericPower {
 
 		if (cooling == true) {
 			cooldown += Time.deltaTime;
+			playerEye.color = Color.yellow;
 		}
 
 		if (cooldown >= activeTime) {
 			cooling = false;
 			cooldown = 0f;
+			playerEye.color = Color.black;
 		}
 	}
 }

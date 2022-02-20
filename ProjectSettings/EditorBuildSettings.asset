@@ -66,6 +66,18 @@ EditorBuildSettings:
     path: Assets/Students/Rocco/Rocco Assignment 3/Rocco 1.unity
     guid: a6c6fcb758f40574dabaae85382af500
   - enabled: 1
+    path: Assets/Students/Rocco/Rocco Assignment 3/Rocco 2.unity
+    guid: a0a2e6412059d5947b97561e48afbccd
+  - enabled: 1
+    path: Assets/Students/Rocco/Rocco Assignment 3/Rocco 3.unity
+    guid: 4eb438252ab9b8b468907006c1231b45
+  - enabled: 1
+    path: Assets/Students/Rocco/Rocco Assignment 3/Rocco 4.unity
+    guid: 3ea6dc0b4bdcceb4e9909855556f267f
+  - enabled: 1
+    path: Assets/Students/Rocco/Rocco Assignment 3/Rocco 5.unity
+    guid: 70e436ad7176bf34db99d5f79b2319e8
+  - enabled: 1
     path: Assets/Students/Tyler/Tyler.unity
     guid: 740acfe1d8f509b4facc84ab8a63dab3
   - enabled: 1
