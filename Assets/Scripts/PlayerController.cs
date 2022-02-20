@@ -95,6 +95,8 @@ public class PlayerController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.X) && Power != null)
             Power.Activate();
+        if (Input.GetKeyDown(KeyCode.R))
+            Die(gameObject);
 
         if (vel.y > 0 || FallPlatTime > 0)
         {
