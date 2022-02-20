@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController PC;
+    public CheckpointController LastCheckpoint;
     public static int DeathCount = 0;
     public float Speed = 10;
     public float JumpPower = 10;
@@ -140,6 +141,16 @@ public class PlayerController : MonoBehaviour
             Floors.Remove(other.gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        CheckpointController cc = other.gameObject.GetComponent<CheckpointController>();
+        if (cc != null)
+        {
+            SetCheckpoint(cc);
+            cc.GetChecked();
+        }
+    }
+
     private IEnumerator DeathAnimation(GameObject source)
     {
         SetInControl(false);
@@ -182,6 +193,13 @@ public class PlayerController : MonoBehaviour
     {
         DeathCount++;
         Debug.Log("YOU DIED: " + DeathCount + " / " + SceneManager.GetActiveScene().name.ToUpper());
-        StartCoroutine(DeathAnimation(source));
+        if (LastCheckpoint == null)
+            StartCoroutine(DeathAnimation(source));
+        else
+            transform.position = LastCheckpoint.Spawn.position;
+    }
+    
+    public void SetCheckpoint(CheckpointController cc){
+        LastCheckpoint = cc;
     }
 }
