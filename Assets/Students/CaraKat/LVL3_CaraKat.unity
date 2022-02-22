@@ -217,7 +217,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &16385598
@@ -847,7 +847,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &377099156
@@ -1084,12 +1084,12 @@ PrefabInstance:
     - target: {fileID: 8010425645494148990, guid: 664a0bd71eec9a546a8a3afd3d5d70b4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.75
+      value: 9.3
       objectReference: {fileID: 0}
     - target: {fileID: 8010425645494148990, guid: 664a0bd71eec9a546a8a3afd3d5d70b4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.82
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 664a0bd71eec9a546a8a3afd3d5d70b4, type: 3}
@@ -1811,7 +1811,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &847356878
@@ -1881,8 +1881,8 @@ MonoBehaviour:
   Player: {fileID: 0}
   Timer: 0
   moveDirection: {x: 0, y: 0, z: 0}
-  dashSpeed: 8
-  dashTime: 1.2
+  dashSpeed: 0
+  dashTime: 0
   grounded: 0
 --- !u!1 &959878162
 GameObject:
@@ -2122,7 +2122,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1086389299
