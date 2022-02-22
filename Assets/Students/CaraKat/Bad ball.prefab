@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4560c6e841c88459944d551c8c6dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bspeed: 10
-  bkill: 12
+  bspeed: 8
+  bkill: 11
   killstart: 12
 --- !u!114 &3428281501769470903
 MonoBehaviour:
