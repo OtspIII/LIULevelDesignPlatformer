@@ -2851,11 +2851,6 @@ PrefabInstance:
       propertyPath: Target
       value: 
       objectReference: {fileID: 7611508493537252020}
-    - target: {fileID: 3474894308774359273, guid: 842d5b82df63f3a429bf4f3ad62cabed,
-        type: 3}
-      propertyPath: orthographic size
-      value: 15.619059
-      objectReference: {fileID: 0}
     - target: {fileID: 3474894308774359275, guid: 842d5b82df63f3a429bf4f3ad62cabed,
         type: 3}
       propertyPath: m_Name
@@ -2985,8 +2980,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  score: 0
-  gate: {fileID: 0}
 --- !u!1 &8010425644232625972
 GameObject:
   m_ObjectHideFlags: 0
