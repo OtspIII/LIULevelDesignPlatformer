@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class TylerPower2 : GenericPower
 {
     public float Timer = 0;
@@ -116,3 +116,4 @@ public class TylerPower2 : GenericPower
 
    
 }
+*/

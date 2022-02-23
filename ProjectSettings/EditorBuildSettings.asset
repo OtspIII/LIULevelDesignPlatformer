@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Students/Brian/Brian.unity
     guid: bfa1d82ae84f0ff49a392983899192f2
   - enabled: 1
-    path: Assets/Students/CaraKat/CaraKat.unity
+    path: Assets/Students/CaraKat/LVLs/CaraKat.unity
     guid: 3f8f84dbe611dc547af97288c1a16097
   - enabled: 1
-    path: Assets/Students/CaraKat/LVL2_CaraKat.unity
+    path: Assets/Students/CaraKat/LVLs/LVL2_CaraKat.unity
     guid: b484f5e37bb49d64bb4923a7f58b2d9b
   - enabled: 1
     path: Assets/Students/Dana/Dana.unity
