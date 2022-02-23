@@ -21,7 +21,7 @@ public class JimmyPower : GenericPower
     public void CheckStatus()
     {
 
-        if(score >= 5)
+        if(score >= 4)
         {
             Destroy(gate.gameObject);
         }
