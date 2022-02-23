@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BuildAbility_Robert : GenericPower
 {
@@ -9,6 +10,8 @@ public class BuildAbility_Robert : GenericPower
     public static bool hasBeenActivated;
     Vector3 mousePos;
     Vector2 mousePosition;
+    public GameObject vertBuild;
+    public GameObject player;
     public GameObject brick;
 
     private void Start()
@@ -21,7 +24,30 @@ public class BuildAbility_Robert : GenericPower
     {
         if (!hasBeenActivated)
         {
-            BrickAmount = 55;
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("HW3Level2_Robert"))
+            {
+                BrickAmount = 100;
+            }
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel1_Rob"))
+            {
+                BrickAmount = 155;
+            }
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel2_Rob"))
+            {
+                BrickAmount = 95;
+            }
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel3_Rob"))
+            {
+                BrickAmount = 235;
+            }
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel4_Rob"))
+            {
+                BrickAmount = 135;
+            }
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel5_Rob"))
+            {
+                BrickAmount = 135;
+            }
             isActivated = true;
             Player.SetInControl(true);
             hasBeenActivated = true;
@@ -37,6 +63,16 @@ public class BuildAbility_Robert : GenericPower
         {
             var brickspawn = Instantiate(brick, mousePosition, Quaternion.identity);
             brickspawn.GetComponent<BrickScript>().isOriginal = false;
+            vertBuild.transform.position = new Vector2(mousePosition.x, player.transform.position.y);
+            VerticalBuildCheck.collidedWithPlatform = false;
+            BrickAmount -= 1;
+        }
+        if (Input.GetKeyDown(KeyCode.A) && BrickAmount > 0 && VerticalBuildCheck.canBuild)
+        {
+            var brickspawn2 = Instantiate(brick, vertBuild.transform.position, Quaternion.identity);
+            brickspawn2.GetComponent<BrickScript>().isOriginal = false;
+            vertBuild.transform.position = new Vector2(transform.position.x, player.transform.position.y);
+            VerticalBuildCheck.collidedWithPlatform = false;
             BrickAmount -= 1;
         }
     }

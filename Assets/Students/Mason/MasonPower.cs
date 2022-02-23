@@ -8,8 +8,6 @@ public class MasonPower : GenericPower
     private float timeCounter;
     public float time;
     public bool canAtt;
-    private float cdownCounter;
-    public float cooldown;
     public override void Activate()
     {
         if (canAtt == true)
@@ -22,13 +20,11 @@ public class MasonPower : GenericPower
     public void Start()
     {
         timeCounter = time;
-        cdownCounter = cooldown;
         canAtt = true;
     }
 
     void Update()
     {
-        print(cdownCounter);
         if (canAtt == false)
         {
             timeCounter -= Time.deltaTime;
