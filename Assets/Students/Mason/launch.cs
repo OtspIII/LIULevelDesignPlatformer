@@ -6,16 +6,16 @@ public class launch : MonoBehaviour
 {
     private Rigidbody2D rb;
 
-    private void Start()
+    public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 14)
         {
-            rb.AddForce(new Vector2(5, 5), ForceMode2D.Force);
+            this.rb.velocity = new Vector2(10, 8);
         }
     }
 }

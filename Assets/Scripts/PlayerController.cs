@@ -42,8 +42,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         FallPlatTime -= Time.deltaTime;
-        if (!InControl) return;
-        
+        if (!InControl) return;      
         
         Vector2 vel = RB.velocity;
         
