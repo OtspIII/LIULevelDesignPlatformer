@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Keycard : MonoBehaviour
 {
-    public Gate gate;
+//    public Gate gate;
     public AudioSource audioSource; // optional to set, but don't
     public AudioClip audioClip; // do set
  
     void OnTriggerEnter2D(Collider2D other)
     {
-        gate.Open();
+//        gate.Open();
         audioSource.PlayOneShot(audioClip);
         Destroy(gameObject, .50f);
     }

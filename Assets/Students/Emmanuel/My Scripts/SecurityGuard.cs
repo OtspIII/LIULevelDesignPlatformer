@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class SecurityGuard : Gate
+public class SecurityGuard : MonoBehaviour //Gate
 {
     private SpriteRenderer sr;
     public Sprite sprite;
     public TextMeshProUGUI dialogueText;
 
-    public override void Open()
+    public /*override*/ void Open()
     {
         sr.sprite = sprite;
         dialogueText.text = "Thank you. Come again!";
