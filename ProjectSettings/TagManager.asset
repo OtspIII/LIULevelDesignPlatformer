@@ -16,6 +16,8 @@ TagManager:
   - Blue
   - Purple
   - Orange
+  - moneyDoor
+  - coin
   layers:
   - Default
   - TransparentFX
@@ -35,7 +37,7 @@ TagManager:
   - Hazard
   - Friendly
   - Shield
-  - 
+  - Checkpoint
   - 
   - 
   - 

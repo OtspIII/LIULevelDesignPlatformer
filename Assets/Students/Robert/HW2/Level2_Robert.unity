@@ -213,6 +213,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6586972281772300866, guid: 3cef9ad054edd3b4a93aaedfd90afc9d,
         type: 3}
+      propertyPath: Speed
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -6586972281772300866, guid: 3cef9ad054edd3b4a93aaedfd90afc9d,
+        type: 3}
       propertyPath: Destinations.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1284,6 +1289,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6586972281772300866, guid: 3cef9ad054edd3b4a93aaedfd90afc9d,
+        type: 3}
+      propertyPath: Speed
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: -6586972281772300866, guid: 3cef9ad054edd3b4a93aaedfd90afc9d,
         type: 3}
       propertyPath: Destinations.Array.size
@@ -2994,7 +3004,7 @@ MonoBehaviour:
   - {x: 23.39, y: -0.589, z: 0}
   - {x: 23.39, y: -2.4, z: 0}
   - {x: 20, y: -2.4, z: 0}
-  Speed: 0.1
+  Speed: 0.07
 --- !u!114 &8711950966027987356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3012,7 +3022,7 @@ MonoBehaviour:
   - {x: 27.36, y: -2.66, z: 0}
   - {x: 27.36, y: -0.87, z: 0}
   - {x: 31.07, y: -0.87, z: 0}
-  Speed: 0.1
+  Speed: 0.07
 --- !u!1 &9020657372184508962
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class BrickScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        duration = 5;
+        duration = 12;
     }
 
     // Update is called once per frame
