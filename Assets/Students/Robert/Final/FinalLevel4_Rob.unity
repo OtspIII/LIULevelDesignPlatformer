@@ -1392,6 +1392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e3408989fd34d4d81f9194865e07da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LastCheckpoint: {fileID: 0}
   Speed: 5
   JumpPower: 5
   JumpTime: 0.5
@@ -1669,7 +1670,7 @@ RectTransform:
   m_Children:
   - {fileID: 341687322}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3205,7 +3206,7 @@ PrefabInstance:
     - target: {fileID: -6586972281772300866, guid: 3cef9ad054edd3b4a93aaedfd90afc9d,
         type: 3}
       propertyPath: Destinations.Array.data[1].x
-      value: 35.94
+      value: 37.66
       objectReference: {fileID: 0}
     - target: {fileID: -6586972281772300866, guid: 3cef9ad054edd3b4a93aaedfd90afc9d,
         type: 3}
@@ -3215,7 +3216,7 @@ PrefabInstance:
     - target: {fileID: 325179771502669247, guid: 3cef9ad054edd3b4a93aaedfd90afc9d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 325179771502669247, guid: 3cef9ad054edd3b4a93aaedfd90afc9d,
         type: 3}
@@ -4000,7 +4001,7 @@ PrefabInstance:
     - target: {fileID: -6586972281772300866, guid: 3cef9ad054edd3b4a93aaedfd90afc9d,
         type: 3}
       propertyPath: Destinations.Array.data[1].x
-      value: 33.36493
+      value: 31.71
       objectReference: {fileID: 0}
     - target: {fileID: -6586972281772300866, guid: 3cef9ad054edd3b4a93aaedfd90afc9d,
         type: 3}
