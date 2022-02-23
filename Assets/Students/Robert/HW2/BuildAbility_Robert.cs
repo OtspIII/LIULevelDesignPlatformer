@@ -34,19 +34,19 @@ public class BuildAbility_Robert : GenericPower
             }
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel2_Rob"))
             {
-                BrickAmount = 70;
+                BrickAmount = 95;
             }
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel3_Rob"))
             {
-                BrickAmount = 175;
+                BrickAmount = 235;
             }
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel4_Rob"))
             {
-                BrickAmount = 100;
+                BrickAmount = 135;
             }
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("FinalLevel5_Rob"))
             {
-                BrickAmount = 100;
+                BrickAmount = 135;
             }
             isActivated = true;
             Player.SetInControl(true);
