@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
+
 public class FiveMeterCollisionScript : MonoBehaviour
 {
     bool touchy;
@@ -37,4 +37,3 @@ public class FiveMeterCollisionScript : MonoBehaviour
         return touchy;
     }
 }
-*/
