@@ -29,7 +29,7 @@ public class VerticalBuildCheck : MonoBehaviour
         }
         if (canBuild && BuildAbility_Robert.isActivated && BuildAbility_Robert.BrickAmount > 0)
         {
-            render.color = Color.green;
+            render.color = Color.cyan;
         }
         if (!canBuild || BuildAbility_Robert.BrickAmount <= 0)
         {
