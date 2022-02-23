@@ -21,5 +21,14 @@ public class BadBall : MonoBehaviour
         }
         
     }
+    //GOAL: if 2 ball hits object with Danger tag= it destorys itself
+    // void OnCollisionEnter2D()
+    // {
+    //     if (gameObject.CompareTag("Hazard"))
+    //     {
+    //         Destroy(gameObject,.5f);
+    //         Debug.Log("Danger hit Danger");
+    //     }
+    // }
     
 }
