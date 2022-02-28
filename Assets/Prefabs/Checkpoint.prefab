@@ -119,11 +119,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1898429652903592968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 775440656a99c3a4283fda928eb40cc9, type: 3}
+  m_Script: {fileID: 11500000, guid: f95cb0caa76522b49aa26bf433ed5f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Spawn: {fileID: 1898429653359776314}
-  SR: {fileID: 1898429652903592973}
+  SR: {fileID: 0}
   StartColor: {r: 0, g: 0, b: 0, a: 0}
   ActiveColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1898429653359776315
