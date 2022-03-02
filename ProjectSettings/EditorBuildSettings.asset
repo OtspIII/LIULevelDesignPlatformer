@@ -4,35 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Students/Robert/Final/FinalLevel1_Rob.unity
-    guid: 02a8b3baf53683e409b10fe1243b4427
-  - enabled: 1
-    path: Assets/Students/Robert/Final/FinalLevel2_Rob.unity
-    guid: 87363dce074a9c5409c8197c1d947579
-  - enabled: 1
-    path: Assets/Students/Robert/Final/FinalLevel3_Rob.unity
-    guid: 030ad35060348834b9bf095a6b1c6b97
-  - enabled: 1
-    path: Assets/Students/Robert/Final/FinalLevel4_Rob.unity
-    guid: f13722fbba62d6e4492d123ad14352dc
-  - enabled: 1
-    path: Assets/Students/Robert/Final/FinalLevel5_Rob.unity
-    guid: 013f46a3248c2ae4a8826b9d42b66dd2
-  - enabled: 1
-    path: Assets/Students/Mason/Mason 1.unity
-    guid: 3ddb13e9498dbc54db451dc07c908b3c
-  - enabled: 1
-    path: Assets/Students/Mason/Mason 2.unity
-    guid: 9529e48b46d65b946b505999be53937a
-  - enabled: 1
-    path: Assets/Students/Mason/Mason 3.unity
-    guid: 4a624ca634c4334418cf6a0d80ec6d3f
-  - enabled: 1
-    path: Assets/Students/Mason/Mason 4.unity
-    guid: 07e93355cf287a349a5f1c626e02beec
-  - enabled: 1
-    path: Assets/Students/Mason/Mason 5.unity
-    guid: 8399f4f1dd7decd418f35487a9944bd3
+  m_Scenes: []
   m_configObjects: {}
