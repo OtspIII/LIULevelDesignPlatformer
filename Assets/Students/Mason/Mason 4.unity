@@ -227,13 +227,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 227058753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e0222d5c02db4e4ebef6de7785de1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
+  Speed: 4.5
   MoveRight: 0
   Timer: 0
-  MaxTimer: 10
+  MaxTimer: 20
 --- !u!114 &227058755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 227058753}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5fd4e5fb5eb4e47a7298e772f26e0a, type: 3}
+  m_Script: {fileID: 11500000, guid: a1d1e77d29874044dae8ad3d2d111b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &227058756
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 268086582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5fd4e5fb5eb4e47a7298e772f26e0a, type: 3}
+  m_Script: {fileID: 11500000, guid: a1d1e77d29874044dae8ad3d2d111b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &268086584
@@ -543,13 +543,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 268086582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e0222d5c02db4e4ebef6de7785de1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
   MoveRight: 0
   Timer: 0
-  MaxTimer: 10
+  MaxTimer: 20
 --- !u!50 &268086585
 Rigidbody2D:
   serializedVersion: 4
@@ -690,10 +690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
-  MoveRight: 0
-  Timer: 0
-  MaxTimer: 1
 --- !u!50 &299942027
 Rigidbody2D:
   serializedVersion: 4
@@ -1230,13 +1226,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 707776891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e0222d5c02db4e4ebef6de7785de1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
   MoveRight: 0
   Timer: 0
-  MaxTimer: 10
+  MaxTimer: 20
 --- !u!114 &707776893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1246,7 +1242,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 707776891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5fd4e5fb5eb4e47a7298e772f26e0a, type: 3}
+  m_Script: {fileID: 11500000, guid: a1d1e77d29874044dae8ad3d2d111b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &707776894
@@ -1990,13 +1986,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 901493166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e0222d5c02db4e4ebef6de7785de1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
+  Speed: 5.75
   MoveRight: 0
   Timer: 0
-  MaxTimer: 10
+  MaxTimer: 20
 --- !u!50 &901493169
 Rigidbody2D:
   serializedVersion: 4
@@ -3430,10 +3426,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423103085}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e0222d5c02db4e4ebef6de7785de1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
+  Speed: 5
   MoveRight: 0
   Timer: 0
   MaxTimer: 20
@@ -4818,10 +4814,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1678489758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e0222d5c02db4e4ebef6de7785de1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
+  Speed: 5
   MoveRight: 0
   Timer: 0
   MaxTimer: 20
@@ -4841,7 +4837,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7b4e8ddaab921874c99b389ca011fb1a, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5035,10 +5031,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
-  MoveRight: 1
-  Timer: 0
-  MaxTimer: 1
 --- !u!114 &1903439471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5258,6 +5250,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4077488255412724570, guid: f2caaa0a3407f3442bf7a35ac3c7cb97,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077488255412724570, guid: f2caaa0a3407f3442bf7a35ac3c7cb97,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077488255412724570, guid: f2caaa0a3407f3442bf7a35ac3c7cb97,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.5632448
+      objectReference: {fileID: 0}
     - target: {fileID: 4077488255412724571, guid: f2caaa0a3407f3442bf7a35ac3c7cb97,
         type: 3}
       propertyPath: m_RootOrder

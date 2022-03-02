@@ -643,7 +643,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 107406039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5fd4e5fb5eb4e47a7298e772f26e0a, type: 3}
+  m_Script: {fileID: 11500000, guid: a1d1e77d29874044dae8ad3d2d111b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &107406045
@@ -655,10 +655,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 107406039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e0222d5c02db4e4ebef6de7785de1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
+  Speed: 3
   MoveRight: 0
   Timer: 0
   MaxTimer: 2
@@ -682,7 +682,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &176575299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5553383928135912074, guid: 0a5757991ed58fa49b8b8c3c7973067d,
@@ -1534,13 +1534,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 686664118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e0222d5c02db4e4ebef6de7785de1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
+  Speed: 3
   MoveRight: 0
   Timer: 0
-  MaxTimer: 1
+  MaxTimer: 1.75
 --- !u!114 &686664120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 686664118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5fd4e5fb5eb4e47a7298e772f26e0a, type: 3}
+  m_Script: {fileID: 11500000, guid: a1d1e77d29874044dae8ad3d2d111b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &686664121
@@ -1561,7 +1561,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686664118}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2655,7 +2655,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1175208946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5fd4e5fb5eb4e47a7298e772f26e0a, type: 3}
+  m_Script: {fileID: 11500000, guid: a1d1e77d29874044dae8ad3d2d111b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1175208948
@@ -2667,13 +2667,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1175208946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb43f930a05a044287b5da0000bdf71, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e0222d5c02db4e4ebef6de7785de1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6
+  Speed: 3
   MoveRight: 1
   Timer: 0
-  MaxTimer: 1
+  MaxTimer: 1.75
 --- !u!50 &1175208949
 Rigidbody2D:
   serializedVersion: 4
