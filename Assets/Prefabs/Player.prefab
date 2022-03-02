@@ -58,14 +58,19 @@ MonoBehaviour:
     AttackRate: 0
     AttackRange: 0
     AttackSpeed: 0
-  HP: 10
+    AttackSpread: 0
+    Cost: 0
+    MinLevel: 0
+  HP: 0
   Alive: 1
   RB: {fileID: 949174140055783122}
   SR: {fileID: 3541457657127262218}
   Coll: {fileID: 0}
   Player: 1
   BulletCooldown: 999
+  Shaking: 0
   Moved: 0
+  Invincible: 0
 --- !u!50 &949174140055783122
 Rigidbody2D:
   serializedVersion: 4
