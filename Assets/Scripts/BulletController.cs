@@ -22,7 +22,7 @@ public class BulletController : MonoBehaviour
     public void Setup(CharController shooter)
     {
         Shooter = shooter.Data;
-        Speed = 10;
+        Speed = Shooter.AttackSpeed;
         if (shooter.Player)
             gameObject.layer = 10;
         GetComponent<BoxCollider2D>().enabled = true;
