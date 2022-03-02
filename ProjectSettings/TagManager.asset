@@ -4,20 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Platforms
-  - Projectile
-  - Hazard
-  - Safe
-  - Stunning
-  - Boon
-  - Red
-  - Yellow
-  - Green
-  - Blue
-  - Purple
-  - Orange
-  - moneyDoor
-  - coin
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -27,17 +14,17 @@ TagManager:
   - UI
   - 
   - 
-  - Platform
   - Player
-  - Foot
-  - OneWayPlat
-  - RisingPlayer
-  - RisingPlayerFoot
-  - Attack
-  - Hazard
-  - Friendly
-  - Shield
-  - Checkpoint
+  - Monster
+  - PBullet
+  - MBullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
