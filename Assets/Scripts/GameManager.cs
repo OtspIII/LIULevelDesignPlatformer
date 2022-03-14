@@ -34,19 +34,15 @@ public class GameManager : MonoBehaviour
         GameManager.Me = this;
         if (!Setup)
         {
-            TextAsset monData = Resources.Load<TextAsset>("Game Data - Monsters");
-            string[] monStr = monData.text.Split('\n');
-
-            for (int i = 1; i < monStr.Length; i++)
-            {
-                string[] mon = monStr[i].Split(',');
-                MonsterData d = new MonsterData(mon);
-                AddMonster(d);
-            }
-            Creators.Sort();
+            LoadAssets();
             Setup = true;
         }
 
+        PickCreator();
+    }
+
+    public virtual void PickCreator()
+    {
         if (Creator == "")
         {
             CurrentCreator++;
@@ -56,9 +52,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    protected virtual void LoadAssets()
+    {
+        TextAsset monData = Resources.Load<TextAsset>("Game Data - Monsters");
+        string[] monStr = monData.text.Split('\n');
+
+        for (int i = 1; i < monStr.Length; i++)
+        {
+            string[] mon = monStr[i].Split(',');
+            MonsterData d = new MonsterData(mon);
+            AddMonster(d);
+        }
+        Creators.Sort();
+    }
+
     void Start()
     {
-        StartCoroutine(SpawnMonsters(Level));
+        SpawnLevel(Level);
     }
 
     void Update()
@@ -67,7 +77,7 @@ public class GameManager : MonoBehaviour
         {
             Paused = true;
             Level++;
-            StartCoroutine(SpawnMonsters(Level));
+            SpawnLevel(Level);
         }
     }
 
@@ -82,6 +92,11 @@ public class GameManager : MonoBehaviour
         MonDict[mon.Creator].Add(mon.Color,mon);
     }
 
+    public virtual void SpawnLevel(int level)
+    {
+        StartCoroutine(SpawnMonsters(level));
+    }
+    
     public IEnumerator SpawnMonsters(int level)
     {
         PC.Reset();

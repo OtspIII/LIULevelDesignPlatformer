@@ -1,0 +1,21 @@
+xxxxxxxxxx   xxxxxx
+x        x   x    x
+x P      xxxxx    x
+x                 x
+x        xxxx     x
+x        x  x  G  x
+x        x  x     x
+x        x  xxxxxxx
+x        x
+xxxxxxxxxx
+
+xxxxxxxxxx   xxxxxx
+x        x   x    x
+x Y      xxxxx    x
+x                 x
+x        xxxx     x
+x  Y     x  x  P  x
+x        x  x     x
+x   G    x  xxxxxxx
+x        x
+xxxxxxxxxx
