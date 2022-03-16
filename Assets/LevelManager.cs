@@ -10,6 +10,7 @@ public class LevelManager : GameManager
     public Dictionary<string,List<List<string>>> Levels = new Dictionary<string, List<List<string>>>();
     public GameObject WallPrefab;
     public GameObject FloorPrefab;
+    public GameObject LavaPrefab;
     public List<GameObject> Tiles = new List<GameObject>();
     
     protected override void LoadAssets()
@@ -82,7 +83,7 @@ public class LevelManager : GameManager
         {
             for (int x = 0; x < lvl[y].Length; x++)
             {
-                Vector3 pos = new Vector3(x,y,0);
+                Vector3 pos = new Vector3(x,-y,0);
                 char tile = lvl[y][x];
                 MColors mon = MColors.None;
                 switch (tile)
@@ -91,6 +92,12 @@ public class LevelManager : GameManager
                     {
                         pos.z = 10;
                         Tiles.Add(Instantiate(WallPrefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case 'l':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(LavaPrefab, pos, Quaternion.identity));
                         break;
                     }
 //                    case ' ':
