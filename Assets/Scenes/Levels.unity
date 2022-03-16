@@ -396,5 +396,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3262978929261566381, guid: 0a5757991ed58fa49b8b8c3c7973067d,
         type: 3}
+    - target: {fileID: 5414933748289262411, guid: d0facc5ccca58f742a8e3532c2d3ee42,
+        type: 3}
+      propertyPath: LavaPrefab
+      value: 
+      objectReference: {fileID: 3759950738151654078, guid: fc89dec90b4d6fb4b97d29ae3753de6f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0facc5ccca58f742a8e3532c2d3ee42, type: 3}
