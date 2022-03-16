@@ -141,7 +141,10 @@ public class EnemyController : CharController
         if (Data.Type == MTypes.Shooter) return;
         PlayerController pc = other.gameObject.GetComponent<PlayerController>();
         if (pc != null)
+        {
+            pc.Knockback(transform.position,Data.Knockback);
             pc.TakeDamage(Data.Damage);
+        }
     }
 
 }
