@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Me;
+    public static bool LevelMode = false;
     public string Creator;
     public bool Paused = true;
     public PlayerController PC;

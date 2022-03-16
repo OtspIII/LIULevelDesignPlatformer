@@ -15,6 +15,7 @@ public class LevelManager : GameManager
     
     protected override void LoadAssets()
     {
+        GameManager.LevelMode = true;
         base.LoadAssets();
         TextAsset[] levels = Resources.LoadAll<TextAsset>("Levels");
         Debug.Log("LVLS: " + levels.Length);
@@ -60,6 +61,11 @@ public class LevelManager : GameManager
 
     public IEnumerator LevelBuild(int level)
     {
+        foreach (GameObject tile in Tiles)
+        {
+            Destroy(tile);
+        }
+        Tiles.Clear();
         PC.Reset();
         foreach(EnemyController e in AllEnemies)
             e.Reset();
@@ -81,6 +87,7 @@ public class LevelManager : GameManager
 
         for (int y = 0; y < lvl.Count; y++)
         {
+            //Debug.Log("Y" +y+": " + lvl[y]);
             for (int x = 0; x < lvl[y].Length; x++)
             {
                 Vector3 pos = new Vector3(x,-y,0);

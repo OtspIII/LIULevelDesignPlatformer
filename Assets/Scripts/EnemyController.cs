@@ -31,7 +31,13 @@ public class EnemyController : CharController
 
     public override void OnUpdate()
     {
-        
+        if (!Active && GameManager.LevelMode)
+        {
+            PlayerController pc = GameManager.Me.PC;
+//            Debug.Log("DIST: " + Vector2.Distance(transform.position,pc.transform.position) + " / " + Data.VisionRange);
+            if(pc.Moved && Vector2.Distance(transform.position,pc.transform.position) < Data.VisionRange)
+                Activate();
+        }
         if (Active)
         {
             float speed = Data.Speed;
@@ -104,6 +110,7 @@ public class EnemyController : CharController
 
     public void Activate()
     {
+        Debug.Log("ACTIVATE");
         Target = GameManager.Me.PC;
         Active = true;
         Rotation = Mathf.Atan2(transform.position.y - Target.transform.position.y, transform.position.x - Target.transform.position.x) * Mathf.Rad2Deg;
@@ -120,6 +127,12 @@ public class EnemyController : CharController
     public override void Reset()
     {
         Destroy(gameObject);
+    }
+
+    public override void TakeDamage(int amt)
+    {
+        base.TakeDamage(amt);
+        if(!Active) Activate();
     }
 
     private void OnCollisionStay2D(Collision2D other)
