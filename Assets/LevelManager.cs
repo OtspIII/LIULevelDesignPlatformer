@@ -15,7 +15,12 @@ public class LevelManager : GameManager
     public GameObject DBeltPrefab;
     public GameObject LBeltPrefab;
     public GameObject RBeltPrefab;
-    public List<GameObject> Tiles = new List<GameObject>();
+    public GameObject Key1Prefab;
+    public GameObject Door1Prefab;
+    public GameObject Key2Prefab;
+    public GameObject Door2Prefab;
+    public GameObject Key3Prefab;
+    public GameObject Door3Prefab;
     
     protected override void LoadAssets()
     {
@@ -133,6 +138,42 @@ public class LevelManager : GameManager
                     {
                         pos.z = 10;
                         Tiles.Add(Instantiate(UBeltPrefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case '1':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(Key1Prefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case '!':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(Door1Prefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case '2':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(Key2Prefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case '@':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(Door2Prefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case '3':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(Key3Prefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case '#':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(Door3Prefab, pos, Quaternion.identity));
                         break;
                     }
 //                    case ' ':

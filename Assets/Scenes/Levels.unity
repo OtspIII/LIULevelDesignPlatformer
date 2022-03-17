@@ -386,26 +386,39 @@ PrefabInstance:
       objectReference: {fileID: 1347121283}
     - target: {fileID: 5414933748289262411, guid: d0facc5ccca58f742a8e3532c2d3ee42,
         type: 3}
-      propertyPath: WallPrefab
+      propertyPath: Key1Prefab
       value: 
-      objectReference: {fileID: 6057562273107371419, guid: e9db24cfad2eb1d4daa43532b1fa6c53,
+      objectReference: {fileID: 4841020673172801106, guid: 912078379db02534b9d1bb04d1281497,
         type: 3}
     - target: {fileID: 5414933748289262411, guid: d0facc5ccca58f742a8e3532c2d3ee42,
         type: 3}
-      propertyPath: FloorPrefab
+      propertyPath: Key2Prefab
       value: 
-      objectReference: {fileID: 3262978929261566381, guid: 0a5757991ed58fa49b8b8c3c7973067d,
+      objectReference: {fileID: 1466269823206011144, guid: 2a49d420345acf6409c0e795b81155d3,
         type: 3}
     - target: {fileID: 5414933748289262411, guid: d0facc5ccca58f742a8e3532c2d3ee42,
         type: 3}
-      propertyPath: LavaPrefab
+      propertyPath: Key3Prefab
       value: 
-      objectReference: {fileID: 3759950738151654078, guid: fc89dec90b4d6fb4b97d29ae3753de6f,
+      objectReference: {fileID: 1689234165110858899, guid: a436d53acd31b1d46bf65b19dfa24de6,
         type: 3}
     - target: {fileID: 5414933748289262411, guid: d0facc5ccca58f742a8e3532c2d3ee42,
         type: 3}
-      propertyPath: Creator
-      value: Misha
-      objectReference: {fileID: 0}
+      propertyPath: Door1Prefab
+      value: 
+      objectReference: {fileID: 5881277639658922175, guid: f89473823ce2d954bbcf414eb4cd6a71,
+        type: 3}
+    - target: {fileID: 5414933748289262411, guid: d0facc5ccca58f742a8e3532c2d3ee42,
+        type: 3}
+      propertyPath: Door2Prefab
+      value: 
+      objectReference: {fileID: 8675383056727188734, guid: 9c2595ac77cdaeb4081b70a96ae13c4b,
+        type: 3}
+    - target: {fileID: 5414933748289262411, guid: d0facc5ccca58f742a8e3532c2d3ee42,
+        type: 3}
+      propertyPath: Door3Prefab
+      value: 
+      objectReference: {fileID: 1635027708264291366, guid: c0a9d797ae1562a42bd030e23597589f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0facc5ccca58f742a8e3532c2d3ee42, type: 3}

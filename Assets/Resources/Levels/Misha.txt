@@ -1,18 +1,18 @@
 xxxxxxxxxx   xxxxxx
 x        x   x    x
 x P      xxxxx    x
-x        <<<<     x
+x       !<<<<     x
 x    v   xxxx     x
 x    v   x  x  G  x
 x    v   x  x     x
-x >>>l   x  xxxxxxx
+x >>>l 1 x  xxxxxxx
 x    ^   x
 xxxxxxxxxx
 
 xxxxxxxxxx   xxxxxx
-x        x   x    x
+x        x   x2  3x
 x Y      xxxxx    x
-x                 x
+x        @#       x
 x        xxxx     x
 x  Y     x  x  P  x
 x        x  x     x
