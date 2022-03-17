@@ -20,6 +20,8 @@ public struct MonsterData
     public float AttackSpread;
     public float Cost;
     public int MinLevel;
+    public float VisionRange;
+    public float Knockback;
 
     public MonsterData(string[] data)
     {
@@ -38,6 +40,8 @@ public struct MonsterData
         AttackSpread = float.Parse(data[n]);n++;
         Cost = float.Parse(data[n]);n++;
         MinLevel = int.Parse(data[n]);n++;
+        VisionRange = data.Length > n ? float.Parse(data[n]) : 9;n++;
+        Knockback = data.Length > n ? float.Parse(data[n]) : 0;n++;
     }
 
     public override string ToString()

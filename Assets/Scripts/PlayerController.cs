@@ -53,10 +53,11 @@ public class PlayerController : CharController
         if (!Moved && input)
         {
             Moved = true;
-            foreach(EnemyController e in GameManager.Me.Enemies)
-            {
-                e.Activate();
-            }
+            if (!GameManager.LevelMode)
+                foreach(EnemyController e in GameManager.Me.Enemies)
+                {
+                    e.Activate();
+                }
         }
 
         if (Invincible > 0)

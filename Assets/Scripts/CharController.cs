@@ -77,7 +77,7 @@ public class CharController : MonoBehaviour
         float skinny = data.Type == MTypes.Leaper ? 0.25f : 0.5f;
         transform.localScale = new Vector3(data.Size*0.5f,data.Size*skinny,1);
         if (HP == 0) HP = data.HP;
-        if (data.Color == MColors.Player) Debug.Log(data.Color);
+        //if (data.Color == MColors.Player) Debug.Log(data.Color);
     }
     
     public virtual void TakeDamage(int amt)
