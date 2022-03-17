@@ -41,7 +41,7 @@ public struct MonsterData
         Cost = float.Parse(data[n]);n++;
         MinLevel = int.Parse(data[n]);n++;
         VisionRange = data.Length > n ? float.Parse(data[n]) : 9;n++;
-        Knockback = data.Length > n ? float.Parse(data[n]) : 1;n++;
+        Knockback = data.Length > n ? float.Parse(data[n]) : 0;n++;
     }
 
     public override string ToString()
@@ -63,6 +63,11 @@ public enum MColors
     Blue=7,
     Purple=8,
     White=9,
+    Ebony=10,
+    Tan=11,
+    Algea=12,
+    Slate=13,
+    
 }
 
 public enum MTypes

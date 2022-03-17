@@ -196,6 +196,10 @@ public class LevelManager : GameManager
                     case 'B':mon = MColors.Blue;break;
                     case 'O':mon = MColors.Orange;break;
                     case 'W':mon = MColors.White;break;
+                    case 'E':mon = MColors.Ebony;break;
+                    case 'T':mon = MColors.Tan;break;
+                    case 'A':mon = MColors.Algea;break;
+                    case 'S':mon = MColors.Slate;break;
                 }
 
                 if (mon != MColors.None)

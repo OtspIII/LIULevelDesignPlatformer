@@ -89,6 +89,10 @@ public class CharController : MonoBehaviour
             case MColors.Blue: c = Color.blue; break;
             case MColors.Purple: c = new Color(0.5f,0,1); break;
             case MColors.White: c = new Color(0.8f,0.8f,0.8f); break;
+            case MColors.Ebony: c = new Color(0.1f,0.1f,0.1f); break;
+            case MColors.Tan: c = new Color(0.8f,0.7f,0.6f); break;
+            case MColors.Algea: c = new Color(0.1f,0.66f,0.56f); break;
+            case MColors.Slate: c = new Color(0.4f,0.4f,0.4f); break;
         }
         SR.color = c;
         float skinny = data.Type == MTypes.Leaper ? 0.25f : 0.5f;
