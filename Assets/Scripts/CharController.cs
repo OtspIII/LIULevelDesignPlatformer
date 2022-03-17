@@ -89,6 +89,12 @@ public class CharController : MonoBehaviour
             Shaking = 0.2f;
     }
 
+    public virtual void Knockback(Vector2 src, float amt)
+    {
+        Vector2 dir = (Vector2)transform.position - src;
+        RB.MovePosition((Vector2)transform.position + (dir.normalized * amt));
+    }
+
     public virtual void Die()
     {
         SR.color = Color.gray;
