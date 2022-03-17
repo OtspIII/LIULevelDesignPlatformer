@@ -34,6 +34,8 @@ public class PlayerController : CharController
             vel.y = -Data.Speed;
         else
             vel.y = 0;
+
+        vel += Knock;
         
         RB.velocity = vel;
 

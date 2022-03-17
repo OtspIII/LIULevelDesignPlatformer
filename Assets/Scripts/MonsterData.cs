@@ -41,7 +41,7 @@ public struct MonsterData
         Cost = float.Parse(data[n]);n++;
         MinLevel = int.Parse(data[n]);n++;
         VisionRange = data.Length > n ? float.Parse(data[n]) : 9;n++;
-        Knockback = data.Length > n ? float.Parse(data[n]) : 0;n++;
+        Knockback = data.Length > n ? float.Parse(data[n]) : 1;n++;
     }
 
     public override string ToString()

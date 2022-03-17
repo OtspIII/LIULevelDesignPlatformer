@@ -31,6 +31,7 @@ public class EnemyController : CharController
 
     public override void OnUpdate()
     {
+        Vector2 vel = Knock;
         if (!Active && GameManager.LevelMode)
         {
             PlayerController pc = GameManager.Me.PC;
@@ -58,7 +59,7 @@ public class EnemyController : CharController
             }
             if (Windup > 0)
             {
-                RB.velocity = Vector2.zero;
+//                RB.velocity = vel;
                 Windup -= Time.deltaTime;
                 if (Windup > 0)
                     Shaking = 1;
@@ -87,7 +88,7 @@ public class EnemyController : CharController
                         speed = 0;
                 }
                     
-                RB.velocity = transform.right * -speed;
+                vel += (Vector2)transform.right * -speed;
             }
         }
 
@@ -103,6 +104,8 @@ public class EnemyController : CharController
                     break;
             }
         }
+
+        RB.velocity = vel;
 
     }
 

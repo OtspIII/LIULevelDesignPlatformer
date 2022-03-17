@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4cf724370f81d499826870595507ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Creator: 
+  Creator: Misha
   Paused: 1
   PC: {fileID: 0}
   Enemies: []
@@ -57,6 +57,21 @@ MonoBehaviour:
   Prefab: {fileID: 3138656249811443674, guid: 33ff0255844d09144836d5dd62d80837, type: 3}
   BPrefab: {fileID: 2600217071185801952, guid: 2f20c1635c4118c4eafe885152482e07, type: 3}
   MonsterDatas: []
+  WallPrefab: {fileID: 6057562273107371419, guid: e9db24cfad2eb1d4daa43532b1fa6c53,
+    type: 3}
+  FloorPrefab: {fileID: 3262978929261566381, guid: 0a5757991ed58fa49b8b8c3c7973067d,
+    type: 3}
+  LavaPrefab: {fileID: 3759950738151654078, guid: fc89dec90b4d6fb4b97d29ae3753de6f,
+    type: 3}
+  UBeltPrefab: {fileID: 3270615844902367039, guid: 6af0749d40aada442989bfa2196bd47d,
+    type: 3}
+  DBeltPrefab: {fileID: 7957202729163195155, guid: 5570620bf8214c04881898f86a4a5752,
+    type: 3}
+  LBeltPrefab: {fileID: 7717559316476816518, guid: 4c41b46f7d0a13245a8f187ac94739be,
+    type: 3}
+  RBeltPrefab: {fileID: 5905277293841810984, guid: 1f262c63e58740f4a8d4fcb4a1ca6140,
+    type: 3}
+  Tiles: []
 --- !u!1 &2146081176856133021
 GameObject:
   m_ObjectHideFlags: 0

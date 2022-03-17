@@ -1,12 +1,12 @@
 xxxxxxxxxx   xxxxxx
 x        x   x    x
 x P      xxxxx    x
-x                 x
-x        xxxx     x
-x        x  x  G  x
-x        x  x     x
-x    l   x  xxxxxxx
-x        x
+x        <<<<     x
+x    v   xxxx     x
+x    v   x  x  G  x
+x    v   x  x     x
+x >>>l   x  xxxxxxx
+x    ^   x
 xxxxxxxxxx
 
 xxxxxxxxxx   xxxxxx

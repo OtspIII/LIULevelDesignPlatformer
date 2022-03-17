@@ -11,6 +11,10 @@ public class LevelManager : GameManager
     public GameObject WallPrefab;
     public GameObject FloorPrefab;
     public GameObject LavaPrefab;
+    public GameObject UBeltPrefab;
+    public GameObject DBeltPrefab;
+    public GameObject LBeltPrefab;
+    public GameObject RBeltPrefab;
     public List<GameObject> Tiles = new List<GameObject>();
     
     protected override void LoadAssets()
@@ -105,6 +109,30 @@ public class LevelManager : GameManager
                     {
                         pos.z = 10;
                         Tiles.Add(Instantiate(LavaPrefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case '<':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(LBeltPrefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case '>':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(RBeltPrefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case 'v':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(DBeltPrefab, pos, Quaternion.identity));
+                        break;
+                    }
+                    case '^':
+                    {
+                        pos.z = 10;
+                        Tiles.Add(Instantiate(UBeltPrefab, pos, Quaternion.identity));
                         break;
                     }
 //                    case ' ':

@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CharController : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class CharController : MonoBehaviour
     public bool Player;
     public float BulletCooldown = 999;
     public float Shaking = 0;
+    public Vector2 Knock;
+    public bool Belted = false;
 
     void Awake()
     {
@@ -26,6 +30,7 @@ public class CharController : MonoBehaviour
         
     }
 
+
     void Start()
     {
         OnStart();
@@ -38,6 +43,7 @@ public class CharController : MonoBehaviour
 
     void Update()
     {
+        Belted = false;
         BulletCooldown += Time.deltaTime;
         if (!Alive || GameManager.Me.Paused) return;
         if (Shaking > 0)
@@ -49,6 +55,12 @@ public class CharController : MonoBehaviour
                 SR.transform.localPosition = Vector3.zero;
         }
         OnUpdate();
+
+        if (Knock != Vector2.zero)
+        {
+            Knock = Vector2.Lerp(Knock,Vector2.zero,0.1f);
+            Knock = Vector2.MoveTowards(Knock,Vector2.zero,0.1f);
+        }
     }
     
     public virtual void OnUpdate()
@@ -63,7 +75,12 @@ public class CharController : MonoBehaviour
         Color c = Color.white;
         switch (data.Color)
         {
-            case MColors.Player: c = Color.cyan; break;
+            case MColors.Player:
+            {
+                GameSettings.CurrentPlayerSpeed = data.Speed;
+                c = Color.cyan; 
+                break;
+            }
             case MColors.Red: c = Color.red; break;
             case MColors.Green: c = Color.green; break;
             case MColors.Yellow: c = Color.yellow; break;
@@ -92,7 +109,7 @@ public class CharController : MonoBehaviour
     public virtual void Knockback(Vector2 src, float amt)
     {
         Vector2 dir = (Vector2)transform.position - src;
-        RB.MovePosition((Vector2)transform.position + (dir.normalized * amt));
+        Knock = dir * amt * GameSettings.Knockback;
     }
 
     public virtual void Die()
