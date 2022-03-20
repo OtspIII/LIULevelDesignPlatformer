@@ -63,6 +63,11 @@ public enum MColors
     Blue=7,
     Purple=8,
     White=9,
+    Ebony=10,
+    Tan=11,
+    Algea=12,
+    Slate=13,
+    
 }
 
 public enum MTypes

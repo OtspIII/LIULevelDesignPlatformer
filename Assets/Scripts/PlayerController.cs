@@ -9,6 +9,7 @@ public class PlayerController : CharController
 {
     public bool Moved = false;
     public float Invincible = 0;
+    public List<int> Keys;
 
     public override void OnAwake()
     {
@@ -34,6 +35,8 @@ public class PlayerController : CharController
             vel.y = -Data.Speed;
         else
             vel.y = 0;
+
+        vel += Knock;
         
         RB.velocity = vel;
 
@@ -78,6 +81,7 @@ public class PlayerController : CharController
         base.Reset();
         Moved = false;
         RB.velocity = Vector2.zero;
+        Keys.Clear();
     }
 
     public override void TakeDamage(int amt)
@@ -92,5 +96,10 @@ public class PlayerController : CharController
     {
         base.Die();
         GameManager.Me.GameOver();
+    }
+
+    public void GetKey(KeyController k)
+    {
+        Keys.Add(k.Number);
     }
 }
