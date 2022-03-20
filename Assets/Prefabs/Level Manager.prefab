@@ -1,5 +1,103 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &421487502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 421487505}
+  - component: {fileID: 421487504}
+  - component: {fileID: 421487503}
+  - component: {fileID: 421487506}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &421487505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421487502}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2251560239541586977}
+  m_Father: {fileID: 1719166612456067676}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &421487504
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421487502}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.29930577, g: 0.5377358, b: 0.5229081, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &421487503
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421487502}
+  m_Enabled: 1
+--- !u!114 &421487506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421487502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f7ccff3b3e0a9478833402dd28314e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 0}
 --- !u!1 &1719166612456067674
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,7 +126,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2251560239541586977}
+  - {fileID: 421487505}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -57,6 +155,8 @@ MonoBehaviour:
   Prefab: {fileID: 3138656249811443674, guid: 33ff0255844d09144836d5dd62d80837, type: 3}
   BPrefab: {fileID: 2600217071185801952, guid: 2f20c1635c4118c4eafe885152482e07, type: 3}
   MonsterDatas: []
+  Tiles: []
+  PrefabPairs: []
   WallPrefab: {fileID: 6057562273107371419, guid: e9db24cfad2eb1d4daa43532b1fa6c53,
     type: 3}
   FloorPrefab: {fileID: 3262978929261566381, guid: 0a5757991ed58fa49b8b8c3c7973067d,
@@ -71,7 +171,18 @@ MonoBehaviour:
     type: 3}
   RBeltPrefab: {fileID: 5905277293841810984, guid: 1f262c63e58740f4a8d4fcb4a1ca6140,
     type: 3}
-  Tiles: []
+  Key1Prefab: {fileID: 4841020673172801106, guid: 912078379db02534b9d1bb04d1281497,
+    type: 3}
+  Door1Prefab: {fileID: 5881277639658922175, guid: f89473823ce2d954bbcf414eb4cd6a71,
+    type: 3}
+  Key2Prefab: {fileID: 1466269823206011144, guid: 2a49d420345acf6409c0e795b81155d3,
+    type: 3}
+  Door2Prefab: {fileID: 8675383056727188734, guid: 9c2595ac77cdaeb4081b70a96ae13c4b,
+    type: 3}
+  Key3Prefab: {fileID: 1689234165110858899, guid: a436d53acd31b1d46bf65b19dfa24de6,
+    type: 3}
+  Door3Prefab: {fileID: 1635027708264291366, guid: c0a9d797ae1562a42bd030e23597589f,
+    type: 3}
 --- !u!1 &2146081176856133021
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,15 +206,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146081176856133021}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2948118822026102859}
   - {fileID: 5961900852447692851}
   - {fileID: 3348500705141269008}
   - {fileID: 2428215219992001200}
-  m_Father: {fileID: 1719166612456067676}
+  m_Father: {fileID: 421487505}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3697148878598546779
@@ -325,7 +436,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 16, y: 8}
+  m_SizeDelta: {x: 14, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &4957172380005690504
 MeshRenderer:
@@ -396,7 +507,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

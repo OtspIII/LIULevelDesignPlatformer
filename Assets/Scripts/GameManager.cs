@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
     public static List<string> Creators = new List<string>();
     public static int CurrentCreator = -1;
     public static bool Setup = false;
-    public List<GameObject> Tiles = new List<GameObject>();
+    public List<ThingController> Tiles = new List<ThingController>();
     
     void Awake()
     {

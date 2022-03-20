@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConveyorController : MonoBehaviour
+public class ConveyorController : ThingController
 {
     public List<CharController> Touching;
     public Vector3 Movement;
@@ -17,7 +17,7 @@ public class ConveyorController : MonoBehaviour
         {
             if (cc.Belted) continue;
             cc.Belted = true;
-            Debug.Log("MOVE: " + move + " / " + Speed + " / " + GameSettings.CurrentPlayerSpeed );
+            //Debug.Log("MOVE: " + move + " / " + Speed + " / " + GameSettings.CurrentPlayerSpeed );
 //            cc.RB.MovePosition(cc.transform.position + move);
             cc.RB.velocity += move;
         }
