@@ -1,7 +1,7 @@
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xP                          Bx
-x        x                   x
-x                            x
+xP          x               Bx
+x           x                x
+xxx                          x
 x        x                   x
 x                            x
 x                            x
@@ -15,9 +15,9 @@ xB                          Bx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x  P x                     B x
-x    x                       x
-x                            x
+x  P  x                    B x
+x     x                      x
+xxxx                         x
 x                            x
 x                            x
 x                            x
@@ -35,7 +35,58 @@ x                                  x  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  xxxxxxxx  
 x                                     x                            x                x
 x G                                   x                            x            W   x
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                            xxxxxxxxxxxxxxxxxx  
-                                   
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x  P x                                      x
+x    x               x                      x
+xxx  x               x                      x
+x               G    x                      x
+x                    x                      x
+xxxxx                x                      x
+x                    x                      x
+x                    x      R               x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                                                          
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x 1    W  x                   x          xW      x 
+x         x                   x R        xxxxxx!xx
+x   xxxx  x                    x                 x
+x   x     x                    x              R  x
+x   x     x                    x                 x
+x   x     x                    x                 x
+x   x     x                    xxxxxxxxxxxx      x
+x   x     x                              x       x
+x   x     x                              x       x
+x   x     x                              x       x
+x   x     x                              x       x
+x   x     x   xxx                        x       x
+x   x     xxxxxxxx                       x       x
+x   x B        x  x                      x       x
+x   x          x  x                      x       x
+x   xxxxxxxx   x  x                      x       x
+x          x   x  x                      x       x
+x          x   x  x                      x       x
+xxxxxxx    x   x  x                      x       x
+x      x   x   x  x                      x       x
+x      x   x   xx@xxxxxxxxxxxxxxxxxxxxxxxx       x
+x  x       x                                     x
+xP x       x G                                B  x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
