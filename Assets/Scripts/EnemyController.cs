@@ -31,7 +31,14 @@ public class EnemyController : CharController
 
     public override void OnUpdate()
     {
-        
+        Vector2 vel = Knock;
+        if (!Active && GameManager.LevelMode)
+        {
+            PlayerController pc = GameManager.Me.PC;
+//            Debug.Log("DIST: " + Vector2.Distance(transform.position,pc.transform.position) + " / " + Data.VisionRange);
+            if(pc.Moved && Vector2.Distance(transform.position,pc.transform.position) < Data.VisionRange)
+                Activate();
+        }
         if (Active)
         {
             float speed = Data.Speed;
@@ -52,7 +59,7 @@ public class EnemyController : CharController
             }
             if (Windup > 0)
             {
-                RB.velocity = Vector2.zero;
+//                RB.velocity = vel;
                 Windup -= Time.deltaTime;
                 if (Windup > 0)
                     Shaking = 1;
@@ -81,7 +88,7 @@ public class EnemyController : CharController
                         speed = 0;
                 }
                     
-                RB.velocity = transform.right * -speed;
+                vel += (Vector2)transform.right * -speed;
             }
         }
 
@@ -97,6 +104,8 @@ public class EnemyController : CharController
                     break;
             }
         }
+
+        RB.velocity = vel;
 
     }
 
@@ -122,13 +131,22 @@ public class EnemyController : CharController
         Destroy(gameObject);
     }
 
+    public override void TakeDamage(int amt)
+    {
+        base.TakeDamage(amt);
+        if(!Active) Activate();
+    }
+
     private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Wall")) Leaping = 0;
         if (Data.Type == MTypes.Shooter) return;
         PlayerController pc = other.gameObject.GetComponent<PlayerController>();
         if (pc != null)
+        {
+            pc.Knockback(transform.position,Data.Knockback);
             pc.TakeDamage(Data.Damage);
+        }
     }
 
 }

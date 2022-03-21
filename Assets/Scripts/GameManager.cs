@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -9,6 +10,7 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Me;
+    public static bool LevelMode = false;
     public string Creator;
     public bool Paused = true;
     public PlayerController PC;
@@ -20,6 +22,7 @@ public class GameManager : MonoBehaviour
     public TextMeshPro CreditsText;
     public TextMeshPro LevelText;
     public TextMeshPro AnnounceText;
+    public TextMeshPro NarrateText;
 
     public EnemyController Prefab;
     public BulletController BPrefab;
@@ -28,6 +31,9 @@ public class GameManager : MonoBehaviour
     public static List<string> Creators = new List<string>();
     public static int CurrentCreator = -1;
     public static bool Setup = false;
+    public List<ThingController> Tiles = new List<ThingController>();
+    public static Dictionary<string,Dictionary<string,Sprite>> ResourceSprites = new Dictionary<string, Dictionary<string, Sprite>>();
+    public static Dictionary<string,Dictionary<string,AudioClip>> ResourceSounds = new Dictionary<string, Dictionary<string, AudioClip>>();
     
     void Awake()
     {
@@ -165,6 +171,20 @@ public class GameManager : MonoBehaviour
         while(!Input.GetKeyDown(KeyCode.X))
             yield return null;
         SceneManager.LoadScene("Gameplay");
+    }
+
+    public static Sprite GetResourceSprite(string label, string author)
+    {
+        if(!ResourceSprites.ContainsKey(author)) ResourceSprites.Add(author,new Dictionary<string, Sprite>());
+        if (!ResourceSprites[author].ContainsKey(label)) ResourceSprites[author].Add(label,Resources.Load<Sprite>("Assets/"+author+"/"+label));
+        return ResourceSprites[author][label];
+    }
+    
+    public static AudioClip GetResourceSound(string label, string author)
+    {
+        if(!ResourceSounds.ContainsKey(author)) ResourceSounds.Add(author,new Dictionary<string, AudioClip>());
+        if (!ResourceSounds[author].ContainsKey(label)) ResourceSounds[author].Add(label,Resources.Load<AudioClip>("Assets/"+author+"/"+label));
+        return ResourceSounds[author][label];
     }
 
 }

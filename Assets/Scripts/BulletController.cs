@@ -31,7 +31,11 @@ public class BulletController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         CharController c = other.gameObject.GetComponent<CharController>();
-        if (c) c.TakeDamage(Shooter.Damage);
+        if (c)
+        {
+            c.Knockback(transform.position,Shooter.Knockback);
+            c.TakeDamage(Shooter.Damage);
+        }
         Destroy(gameObject);
     }
 }

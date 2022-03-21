@@ -357,7 +357,7 @@ PrefabInstance:
     - target: {fileID: 1288036201253720395, guid: a0ef24ae16209dd4383d356445531c8b,
         type: 3}
       propertyPath: Creator
-      value: Emmanuel
+      value: Kat
       objectReference: {fileID: 0}
     - target: {fileID: 1288036201253720396, guid: a0ef24ae16209dd4383d356445531c8b,
         type: 3}

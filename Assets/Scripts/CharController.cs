@@ -1,30 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class CharController : MonoBehaviour
+public class CharController : ThingController
 {
     public MonsterData Data;
     public int HP;
     public bool Alive = true;
     public Rigidbody2D RB;
-    public SpriteRenderer SR;
     public Collider2D Coll;
     public bool Player;
     public float BulletCooldown = 999;
     public float Shaking = 0;
+    public Vector2 Knock;
+    public bool Belted = false;
 
-    void Awake()
+    public override void OnAwake()
     {
+        base.OnAwake();
         RB = GetComponent<Rigidbody2D>();
         Coll = GetComponent<Collider2D>();
-        OnAwake();
     }
-    
-    public virtual void OnAwake()
-    {
-        
-    }
+
 
     void Start()
     {
@@ -38,6 +37,7 @@ public class CharController : MonoBehaviour
 
     void Update()
     {
+        Belted = false;
         BulletCooldown += Time.deltaTime;
         if (!Alive || GameManager.Me.Paused) return;
         if (Shaking > 0)
@@ -49,6 +49,12 @@ public class CharController : MonoBehaviour
                 SR.transform.localPosition = Vector3.zero;
         }
         OnUpdate();
+
+        if (Knock != Vector2.zero)
+        {
+            Knock = Vector2.Lerp(Knock,Vector2.zero,0.1f);
+            Knock = Vector2.MoveTowards(Knock,Vector2.zero,0.1f);
+        }
     }
     
     public virtual void OnUpdate()
@@ -60,24 +66,12 @@ public class CharController : MonoBehaviour
     {
         Data = data;
         gameObject.name = data.Color + "(" + data.Creator + ")";
-        Color c = Color.white;
-        switch (data.Color)
-        {
-            case MColors.Player: c = Color.cyan; break;
-            case MColors.Red: c = Color.red; break;
-            case MColors.Green: c = Color.green; break;
-            case MColors.Yellow: c = Color.yellow; break;
-            case MColors.Pink: c = Color.magenta; break;
-            case MColors.Orange: c = new Color(1,0.5f,0); break;
-            case MColors.Blue: c = Color.blue; break;
-            case MColors.Purple: c = new Color(0.5f,0,1); break;
-            case MColors.White: c = new Color(0.8f,0.8f,0.8f); break;
-        }
-        SR.color = c;
+        SetColor(data.Color);
+        if(data.Color == MColors.Player)GameSettings.CurrentPlayerSpeed = data.Speed;
         float skinny = data.Type == MTypes.Leaper ? 0.25f : 0.5f;
         transform.localScale = new Vector3(data.Size*0.5f,data.Size*skinny,1);
         if (HP == 0) HP = data.HP;
-        if (data.Color == MColors.Player) Debug.Log(data.Color);
+        //if (data.Color == MColors.Player) Debug.Log(data.Color);
     }
     
     public virtual void TakeDamage(int amt)
@@ -89,11 +83,17 @@ public class CharController : MonoBehaviour
             Shaking = 0.2f;
     }
 
+    public virtual void Knockback(Vector2 src, float amt)
+    {
+        Vector2 dir = (Vector2)transform.position - src;
+        Knock = dir * amt * GameSettings.Knockback;
+    }
+
     public virtual void Die()
     {
         SR.color = Color.gray;
         Alive = false;
-        RB.velocity = Vector2.zero;
+        if(RB != null) RB.velocity = Vector2.zero;
         Coll.enabled = false;
     }
     
