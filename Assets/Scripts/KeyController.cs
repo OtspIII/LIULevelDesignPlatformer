@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyController : MonoBehaviour
+public class KeyController : ThingController
 {
     public int Number;
     
@@ -12,7 +12,6 @@ public class KeyController : MonoBehaviour
         if (pc != null)
         {
             pc.GetKey(this);
-            GameManager.Me.Tiles.Remove(gameObject);
             Destroy(gameObject);
         }
     }

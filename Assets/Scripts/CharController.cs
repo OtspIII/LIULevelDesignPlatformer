@@ -4,13 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class CharController : MonoBehaviour
+public class CharController : ThingController
 {
     public MonsterData Data;
     public int HP;
     public bool Alive = true;
     public Rigidbody2D RB;
-    public SpriteRenderer SR;
     public Collider2D Coll;
     public bool Player;
     public float BulletCooldown = 999;
@@ -18,16 +17,11 @@ public class CharController : MonoBehaviour
     public Vector2 Knock;
     public bool Belted = false;
 
-    void Awake()
+    public override void OnAwake()
     {
+        base.OnAwake();
         RB = GetComponent<Rigidbody2D>();
         Coll = GetComponent<Collider2D>();
-        OnAwake();
-    }
-    
-    public virtual void OnAwake()
-    {
-        
     }
 
 
@@ -72,29 +66,8 @@ public class CharController : MonoBehaviour
     {
         Data = data;
         gameObject.name = data.Color + "(" + data.Creator + ")";
-        Color c = Color.white;
-        switch (data.Color)
-        {
-            case MColors.Player:
-            {
-                GameSettings.CurrentPlayerSpeed = data.Speed;
-                c = Color.cyan; 
-                break;
-            }
-            case MColors.Red: c = Color.red; break;
-            case MColors.Green: c = Color.green; break;
-            case MColors.Yellow: c = Color.yellow; break;
-            case MColors.Pink: c = Color.magenta; break;
-            case MColors.Orange: c = new Color(1,0.5f,0); break;
-            case MColors.Blue: c = Color.blue; break;
-            case MColors.Purple: c = new Color(0.5f,0,1); break;
-            case MColors.White: c = new Color(0.8f,0.8f,0.8f); break;
-            case MColors.Ebony: c = new Color(0.1f,0.1f,0.1f); break;
-            case MColors.Tan: c = new Color(0.8f,0.7f,0.6f); break;
-            case MColors.Algea: c = new Color(0.1f,0.66f,0.56f); break;
-            case MColors.Slate: c = new Color(0.4f,0.4f,0.4f); break;
-        }
-        SR.color = c;
+        SetColor(data.Color);
+        if(data.Color == MColors.Player)GameSettings.CurrentPlayerSpeed = data.Speed;
         float skinny = data.Type == MTypes.Leaper ? 0.25f : 0.5f;
         transform.localScale = new Vector3(data.Size*0.5f,data.Size*skinny,1);
         if (HP == 0) HP = data.HP;
@@ -120,7 +93,7 @@ public class CharController : MonoBehaviour
     {
         SR.color = Color.gray;
         Alive = false;
-        RB.velocity = Vector2.zero;
+        if(RB != null) RB.velocity = Vector2.zero;
         Coll.enabled = false;
     }
     

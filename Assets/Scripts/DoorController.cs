@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Diagnostics;
 
-public class DoorController : MonoBehaviour
+public class DoorController : ThingController
 {
     public int Number;
     
@@ -14,7 +14,6 @@ public class DoorController : MonoBehaviour
         if (pc != null && pc.Keys.Contains(Number))
         {
             pc.Keys.Remove(Number);
-            GameManager.Me.Tiles.Remove(gameObject);
             Destroy(gameObject);
         }
     }
