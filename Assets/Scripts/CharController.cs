@@ -76,6 +76,7 @@ public class CharController : ThingController
     
     public virtual void TakeDamage(int amt)
     {
+        Debug.Log("TAKE DAM: " + HP + " / " + amt);
         HP -= amt;
         if (HP <= 0)
             Die();
@@ -91,9 +92,10 @@ public class CharController : ThingController
 
     public virtual void Die()
     {
+        Debug.Log("DIE");
         SR.color = Color.gray;
         Alive = false;
-        RB.velocity = Vector2.zero;
+        if(RB != null) RB.velocity = Vector2.zero;
         Coll.enabled = false;
     }
     

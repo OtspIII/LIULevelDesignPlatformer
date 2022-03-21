@@ -37,6 +37,7 @@ public class ThingController : MonoBehaviour
 
     private void OnDestroy()
     {
+        Debug.Log("ON DESTROY");
         GameManager.Me.Tiles.Remove(this);
     }
 
@@ -64,6 +65,7 @@ public class ThingController : MonoBehaviour
             case MColors.Tan: c = new Color(0.8f,0.7f,0.6f); break;
             case MColors.Algea: c = new Color(0.1f,0.66f,0.56f); break;
             case MColors.Slate: c = new Color(0.4f,0.4f,0.4f); break;
+            case MColors.WallWhite: c = Color.white; break;
         }
         SR.color = c;
     }
@@ -89,4 +91,6 @@ public enum SpawnThings
     Wall=14,
     Floor=15,
     Event=16,
+    Destructable=17,
+    Bomb=18,
 }
