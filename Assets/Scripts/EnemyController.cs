@@ -31,6 +31,7 @@ public class EnemyController : CharController
 
     public override void OnUpdate()
     {
+        Vector2 vel = Knock;
         if (!Active && GameManager.LevelMode)
         {
             PlayerController pc = GameManager.Me.PC;
@@ -58,7 +59,7 @@ public class EnemyController : CharController
             }
             if (Windup > 0)
             {
-                RB.velocity = Vector2.zero;
+//                RB.velocity = vel;
                 Windup -= Time.deltaTime;
                 if (Windup > 0)
                     Shaking = 1;
@@ -87,7 +88,7 @@ public class EnemyController : CharController
                         speed = 0;
                 }
                     
-                RB.velocity = transform.right * -speed;
+                vel += (Vector2)transform.right * -speed;
             }
         }
 
@@ -104,13 +105,14 @@ public class EnemyController : CharController
             }
         }
 
+        RB.velocity = vel;
+
     }
 
     
 
     public void Activate()
     {
-        Debug.Log("ACTIVATE");
         Target = GameManager.Me.PC;
         Active = true;
         Rotation = Mathf.Atan2(transform.position.y - Target.transform.position.y, transform.position.x - Target.transform.position.x) * Mathf.Rad2Deg;
@@ -141,7 +143,10 @@ public class EnemyController : CharController
         if (Data.Type == MTypes.Shooter) return;
         PlayerController pc = other.gameObject.GetComponent<PlayerController>();
         if (pc != null)
+        {
+            pc.Knockback(transform.position,Data.Knockback);
             pc.TakeDamage(Data.Damage);
+        }
     }
 
 }
