@@ -7,10 +7,32 @@ public class ThingController : MonoBehaviour
 {
     public SpriteRenderer SR;
     public JSONData JSON;
+
+    void Awake()
+    {
+        if (SR == null) SR = GetComponent<SpriteRenderer>();
+        OnAwake();
+    }
+    
+    public virtual void OnAwake()
+    {
+        
+    }
     
     public virtual void ApplyJSON(JSONData data)
     {
         JSON = data;
+        if (data.Sprite != null)
+        {
+            if (SR == null) SR = gameObject.AddComponent<SpriteRenderer>();
+            SR.sprite = data.Sprite;
+        }
+
+        if (data.Color != MColors.None)
+        {
+            if (SR == null) SR = gameObject.AddComponent<SpriteRenderer>();
+            SetColor(data.Color);
+        }
     }
 
     private void OnDestroy()
@@ -20,6 +42,7 @@ public class ThingController : MonoBehaviour
 
     public void SetColor(MColors color)
     {
+        if (SR == null) return;
         Color c = Color.white;
         switch (color)
         {
@@ -65,4 +88,5 @@ public enum SpawnThings
     Door3=13,
     Wall=14,
     Floor=15,
+    Event=16,
 }

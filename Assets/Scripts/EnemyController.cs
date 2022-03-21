@@ -113,7 +113,6 @@ public class EnemyController : CharController
 
     public void Activate()
     {
-        Debug.Log("ACTIVATE");
         Target = GameManager.Me.PC;
         Active = true;
         Rotation = Mathf.Atan2(transform.position.y - Target.transform.position.y, transform.position.x - Target.transform.position.x) * Mathf.Rad2Deg;

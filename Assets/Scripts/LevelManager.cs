@@ -126,18 +126,22 @@ public class LevelManager : GameManager
                     {
                         PC.transform.position = pos;
                         PC.Setup(MonDict[chosen][MColors.Player]);
+                        PC.ApplyJSON(data);
                         break;
                     }
                     case SpawnThings.Enemy:
                     {
                         EnemyController enemy = (EnemyController)Instantiate(Prefabs[SpawnThings.Enemy], pos, Quaternion.identity);
                         enemy.Setup(MonDict[chosen][data.Color]);
+                        enemy.ApplyJSON(data);
                         break;
                     }
                     default:
                     {
                         pos.z = data.Type== SpawnThings.Floor ? 20 : 10;
-                        Tiles.Add(Instantiate(Prefabs[data.Type], pos, Quaternion.identity));
+                        ThingController thing = Instantiate(Prefabs[data.Type], pos, Quaternion.identity);
+                        thing.ApplyJSON(data);
+                        Tiles.Add(thing);
                         break;
                     }
                 }

@@ -17,16 +17,11 @@ public class CharController : ThingController
     public Vector2 Knock;
     public bool Belted = false;
 
-    void Awake()
+    public override void OnAwake()
     {
+        base.OnAwake();
         RB = GetComponent<Rigidbody2D>();
         Coll = GetComponent<Collider2D>();
-        OnAwake();
-    }
-    
-    public virtual void OnAwake()
-    {
-        
     }
 
 
