@@ -14,7 +14,7 @@
 {"Type":"Enemy", "Symbol":"S", "Color":"Slate"},
 {"Type":"Wall", "Symbol":"x"},
 {"Type":"Floor", "Symbol":" "},
-{"Type":"Lava", "Symbol":"l", "Color":"Blue"},
+{"Type":"Lava", "Symbol":"l"},
 {"Type":"ConveyorL", "Symbol":"<"},
 {"Type":"ConveyorR", "Symbol":">"},
 {"Type":"ConveyorU", "Symbol":"^"},
