@@ -33,11 +33,15 @@ public class ThingController : MonoBehaviour
             if (SR == null) SR = gameObject.AddComponent<SpriteRenderer>();
             SetColor(data.Color);
         }
+
+        if (data.Size > 0)
+        {
+            transform.localScale = new Vector3(data.Size,data.Size,1);
+        }
     }
 
     private void OnDestroy()
     {
-        Debug.Log("ON DESTROY");
         GameManager.Me.Tiles.Remove(this);
     }
 

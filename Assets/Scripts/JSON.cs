@@ -14,6 +14,8 @@ public class JSONData
     public AudioClip Audio;
     public string Text = "";
     public float Amount;
+    public float Size;
+    public float Size2;
 
     public JSONData(JSONTemp source,string author)
     {
@@ -24,6 +26,8 @@ public class JSONData
         if (source.Audio != null) Audio = Resources.Load<AudioClip>("Assets/"+author+"/"+source.Audio);
         if (source.Text != null) Text = source.Text;
         Amount = source.Amount;
+        Size = source.Size;
+        Size2 = source.Size2;
     }
 }
 
@@ -37,6 +41,8 @@ public class JSONTemp
     public string Audio;
     public string Text;
     public float Amount;
+    public float Size;
+    public float Size2;
 }
 
 [System.Serializable]
