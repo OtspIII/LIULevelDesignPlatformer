@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LavaController : MonoBehaviour
+public class LavaController : ThingController
 {
     public List<CharController> Touching;
 
