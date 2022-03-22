@@ -99,4 +99,5 @@ public enum SpawnThings
     Bomb=18,
     Music=19,
     Bullet=20,
+    Explosion=21,
 }

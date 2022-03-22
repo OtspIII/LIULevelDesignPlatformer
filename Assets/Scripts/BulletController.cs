@@ -36,6 +36,10 @@ public class BulletController : ThingController
             c.Knockback(transform.position,Shooter.Knockback);
             c.TakeDamage(Shooter.Damage);
         }
+        if (JSON.Drop != ' ')
+        {
+            GameManager.Me.SpawnThing(JSON.Drop,GameManager.Me.Creator,transform.position);
+        }
         Destroy(gameObject);
     }
 }
