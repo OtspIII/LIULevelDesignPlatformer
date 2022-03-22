@@ -16,6 +16,8 @@ public class JSONData
     public float Amount;
     public float Size;
     public float Size2;
+    public char Bullet = '.';
+    public char Drop = ' ';
 
     public JSONData(JSONTemp source,string author)
     {
@@ -28,6 +30,10 @@ public class JSONData
         Amount = source.Amount;
         Size = source.Size;
         Size2 = source.Size2;
+        if (source.Bullet != null)
+            Bullet = source.Bullet.Length > 0 ? source.Bullet[0] : '.';
+        if (source.Drop != null)
+            Drop = source.Drop.Length > 0 ? source.Drop[0] : ' ';
     }
 }
 
@@ -43,6 +49,8 @@ public class JSONTemp
     public float Amount;
     public float Size;
     public float Size2;
+    public string Bullet;
+    public string Drop;
 }
 
 [System.Serializable]

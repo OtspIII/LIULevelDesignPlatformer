@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<SpawnThings,ThingController> Prefabs = new Dictionary<SpawnThings, ThingController>();
 
     public Dictionary<string,Dictionary<char,JSONData>> Datas = new Dictionary<string, Dictionary<char, JSONData>>();
-    public Dictionary<string,JSONData> Bullets = new Dictionary<string, JSONData>();
+    public Dictionary<string,Dictionary<char,JSONData>> Bullets = new Dictionary<string, Dictionary<char, JSONData>>();
     
     void Awake()
     {
@@ -205,10 +205,44 @@ public class GameManager : MonoBehaviour
         return Datas[author][symbol];
     }
 
-    public JSONData GetBullet()
+    public JSONData GetBullet(char symbol='.')
     {
-        if (!Bullets.ContainsKey(Creator)) return null;
-        return Bullets[Creator];
+        if (!Bullets.ContainsKey(Creator) || !Bullets[Creator].ContainsKey(symbol)) return null;
+        return Bullets[Creator][symbol];
+    }
+
+    public ThingController SpawnThing(char symbol, string creator, Vector3 pos)
+    {
+        JSONData data = GetData(symbol, Creator);
+        if (data?.Type == null)
+        {
+            return null;
+        }
+        switch (data.Type)
+        {
+            case SpawnThings.Player:
+            {
+                PC.transform.position = pos;
+                PC.Setup(MonDict[creator][MColors.Player]);
+                PC.ApplyJSON(data);
+                return PC;
+            }
+            case SpawnThings.Enemy:
+            {
+                EnemyController enemy = (EnemyController)Instantiate(Prefabs[SpawnThings.Enemy], pos, Quaternion.identity);
+                enemy.Setup(MonDict[creator][data.Color]);
+                enemy.ApplyJSON(data);
+                return enemy;
+            }
+            default:
+            {
+                pos.z = data.Type== SpawnThings.Floor ? 20 : 10;
+                ThingController thing = Instantiate(Prefabs[data.Type], pos, Quaternion.identity);
+                thing.ApplyJSON(data);
+                Tiles.Add(thing);
+                return thing;
+            }
+        }
     }
 
 }

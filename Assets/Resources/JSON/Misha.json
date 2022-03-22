@@ -1,6 +1,6 @@
 {"Items":[
 {"Type":"Player", "Symbol":"P"},
-{"Type":"Enemy", "Symbol":"G", "Color":"Green","Sprite":"Hi"},
+{"Type":"Enemy", "Symbol":"G", "Color":"Green"},
 {"Type":"Enemy", "Symbol":"R", "Color":"Red"},
 {"Type":"Enemy", "Symbol":"Y", "Color":"Yellow"},
 {"Type":"Enemy", "Symbol":"I", "Color":"Pink"},
@@ -8,7 +8,7 @@
 {"Type":"Enemy", "Symbol":"B", "Color":"Blue"},
 {"Type":"Enemy", "Symbol":"U", "Color":"Purple"},
 {"Type":"Enemy", "Symbol":"W", "Color":"White"},
-{"Type":"Enemy", "Symbol":"E", "Color":"Ebony"},
+{"Type":"Enemy", "Symbol":"E", "Color":"Ebony","Drop":"1"},
 {"Type":"Enemy", "Symbol":"T", "Color":"Tan"},
 {"Type":"Enemy", "Symbol":"A", "Color":"Algea"},
 {"Type":"Enemy", "Symbol":"S", "Color":"Slate"},

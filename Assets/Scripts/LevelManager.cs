@@ -59,7 +59,11 @@ public class LevelManager : GameManager
             foreach (JSONTemp t in j)
             {
                 JSONData data = new JSONData(t,json.name);
-                if(data.Type == SpawnThings.Bullet) Bullets.Add(json.name,data);
+                if (data.Type == SpawnThings.Bullet)
+                {
+                    if(!Bullets.ContainsKey(json.name)) Bullets.Add(json.name,new Dictionary<char, JSONData>());
+                    Bullets[json.name].Add(data.Symbol,data);
+                }
                 Datas[json.name].Add(data.Symbol,data);
             }
         }
@@ -113,36 +117,8 @@ public class LevelManager : GameManager
             {
                 Vector3 pos = new Vector3(x,-y,0);
                 char tile = lvl[y][x];
-                JSONData data = GetData(tile, Creator);
-                if (data?.Type == null)
-                {
-                    continue;
-                }
-                switch (data.Type)
-                {
-                    case SpawnThings.Player:
-                    {
-                        PC.transform.position = pos;
-                        PC.Setup(MonDict[chosen][MColors.Player]);
-                        PC.ApplyJSON(data);
-                        break;
-                    }
-                    case SpawnThings.Enemy:
-                    {
-                        EnemyController enemy = (EnemyController)Instantiate(Prefabs[SpawnThings.Enemy], pos, Quaternion.identity);
-                        enemy.Setup(MonDict[chosen][data.Color]);
-                        enemy.ApplyJSON(data);
-                        break;
-                    }
-                    default:
-                    {
-                        pos.z = data.Type== SpawnThings.Floor ? 20 : 10;
-                        ThingController thing = Instantiate(Prefabs[data.Type], pos, Quaternion.identity);
-                        thing.ApplyJSON(data);
-                        Tiles.Add(thing);
-                        break;
-                    }
-                }
+                SpawnThing(tile,chosen,pos);
+                
             }
         }
         yield return new WaitForSeconds(0.5f);
