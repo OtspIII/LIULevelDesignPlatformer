@@ -28,7 +28,7 @@ public class ThingController : MonoBehaviour
             SR.sprite = data.Sprite;
         }
 
-        if (data.Color != MColors.None)
+        if (data.Color != MColors.None && (data.Sprite == null || (data.Type != SpawnThings.Enemy && data.Type != SpawnThings.Player)) )
         {
             if (SR == null) SR = gameObject.AddComponent<SpriteRenderer>();
             SetColor(data.Color);
@@ -97,4 +97,6 @@ public enum SpawnThings
     Event=16,
     Destructable=17,
     Bomb=18,
+    Music=19,
+    Bullet=20,
 }

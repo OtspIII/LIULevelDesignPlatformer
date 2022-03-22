@@ -9,9 +9,6 @@ public class LevelManager : GameManager
 {
     public Dictionary<string,List<List<string>>> Levels = new Dictionary<string, List<List<string>>>();
     public List<SpawnPair> PrefabPairs;
-    public Dictionary<SpawnThings,ThingController> Prefabs = new Dictionary<SpawnThings, ThingController>();
-
-    public Dictionary<string,Dictionary<char,JSONData>> Datas = new Dictionary<string, Dictionary<char, JSONData>>();
 //    public GameObject WallPrefab;
 //    public GameObject FloorPrefab;
 //    public GameObject LavaPrefab;
@@ -62,6 +59,7 @@ public class LevelManager : GameManager
             foreach (JSONTemp t in j)
             {
                 JSONData data = new JSONData(t,json.name);
+                if(data.Type == SpawnThings.Bullet) Bullets.Add(json.name,data);
                 Datas[json.name].Add(data.Symbol,data);
             }
         }
@@ -153,17 +151,7 @@ public class LevelManager : GameManager
         Paused = false;
     }
     
-    public JSONData GetData(char symbol, string author="Misha")
-    {
-        if (!Datas.ContainsKey(author)) author = "Misha";
-        if (!Datas[author].ContainsKey(symbol))
-        {
-            if(Datas["Misha"].ContainsKey(symbol))
-                return Datas["Misha"][symbol];
-            return null;
-        }
-        return Datas[author][symbol];
-    }
+    
 }
 
 

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class BulletController : ThingController
 {
     public MonsterData Shooter;
     public Rigidbody2D RB;

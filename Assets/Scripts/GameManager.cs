@@ -35,6 +35,12 @@ public class GameManager : MonoBehaviour
     public static Dictionary<string,Dictionary<string,Sprite>> ResourceSprites = new Dictionary<string, Dictionary<string, Sprite>>();
     public static Dictionary<string,Dictionary<string,AudioClip>> ResourceSounds = new Dictionary<string, Dictionary<string, AudioClip>>();
     
+    
+    public Dictionary<SpawnThings,ThingController> Prefabs = new Dictionary<SpawnThings, ThingController>();
+
+    public Dictionary<string,Dictionary<char,JSONData>> Datas = new Dictionary<string, Dictionary<char, JSONData>>();
+    public Dictionary<string,JSONData> Bullets = new Dictionary<string, JSONData>();
+    
     void Awake()
     {
         GameManager.Me = this;
@@ -185,6 +191,24 @@ public class GameManager : MonoBehaviour
         if(!ResourceSounds.ContainsKey(author)) ResourceSounds.Add(author,new Dictionary<string, AudioClip>());
         if (!ResourceSounds[author].ContainsKey(label)) ResourceSounds[author].Add(label,Resources.Load<AudioClip>("Assets/"+author+"/"+label));
         return ResourceSounds[author][label];
+    }
+    
+    public JSONData GetData(char symbol, string author="Misha")
+    {
+        if (!Datas.ContainsKey(author)) author = "Misha";
+        if (!Datas[author].ContainsKey(symbol))
+        {
+            if(Datas["Misha"].ContainsKey(symbol))
+                return Datas["Misha"][symbol];
+            return null;
+        }
+        return Datas[author][symbol];
+    }
+
+    public JSONData GetBullet()
+    {
+        if (!Bullets.ContainsKey(Creator)) return null;
+        return Bullets[Creator];
     }
 
 }
