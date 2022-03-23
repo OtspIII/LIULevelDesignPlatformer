@@ -8,6 +8,13 @@ public class ConveyorController : ThingController
     public Vector3 Movement;
     public float Speed = 0.5f;
 
+    public override void ApplyJSON(JSONData data)
+    {
+        base.ApplyJSON(data);
+        if (data.Amount > 0)
+            Speed = data.Amount;
+    }
+
     void LateUpdate()
     {
         Vector2 move = (Touching.Count > 0

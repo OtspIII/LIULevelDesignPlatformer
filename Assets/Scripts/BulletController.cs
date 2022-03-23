@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class BulletController : ThingController
 {
     public MonsterData Shooter;
     public Rigidbody2D RB;
@@ -35,6 +35,10 @@ public class BulletController : MonoBehaviour
         {
             c.Knockback(transform.position,Shooter.Knockback);
             c.TakeDamage(Shooter.Damage);
+        }
+        if (JSON.Drop != ' ')
+        {
+            GameManager.Me.SpawnThing(JSON.Drop,GameManager.Me.Creator,transform.position);
         }
         Destroy(gameObject);
     }

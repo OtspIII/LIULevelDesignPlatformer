@@ -67,6 +67,7 @@ public enum MColors
     Tan=11,
     Algea=12,
     Slate=13,
+    WallWhite=14,
     
 }
 

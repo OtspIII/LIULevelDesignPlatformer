@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -17,16 +18,11 @@ public class CharController : ThingController
     public Vector2 Knock;
     public bool Belted = false;
 
-    void Awake()
+    public override void OnAwake()
     {
+        base.OnAwake();
         RB = GetComponent<Rigidbody2D>();
         Coll = GetComponent<Collider2D>();
-        OnAwake();
-    }
-    
-    public virtual void OnAwake()
-    {
-        
     }
 
 
@@ -71,7 +67,7 @@ public class CharController : ThingController
     {
         Data = data;
         gameObject.name = data.Color + "(" + data.Creator + ")";
-        SetColor(data.Color);
+        //SetColor(data.Color);
         if(data.Color == MColors.Player)GameSettings.CurrentPlayerSpeed = data.Speed;
         float skinny = data.Type == MTypes.Leaper ? 0.25f : 0.5f;
         transform.localScale = new Vector3(data.Size*0.5f,data.Size*skinny,1);
@@ -98,8 +94,18 @@ public class CharController : ThingController
     {
         SR.color = Color.gray;
         Alive = false;
-        RB.velocity = Vector2.zero;
+        if(RB != null) RB.velocity = Vector2.zero;
         Coll.enabled = false;
+        if (JSON.Drop != ' ')
+        {
+            ThingController thing = GameManager.Me.SpawnThing(JSON.Drop,GameManager.Me.Creator,transform.position);
+            if (thing != null)
+                thing.transform.position += new Vector3(0,0,-0.1f);
+        }
+
+        Vector3 pos = transform.position;
+        pos.z = 10;
+        transform.position = pos;
     }
     
     public virtual void Reset()
@@ -115,6 +121,9 @@ public class CharController : ThingController
         if (Data.AttackSpread > 0) rot.z += Random.Range(0, Data.AttackSpread) - (Data.AttackSpread / 2);
         BulletController b = Instantiate(GameManager.Me.BPrefab, pos, Quaternion.Euler(rot));
         b.Setup(this);
+        JSONData js = GameManager.Me.GetBullet(JSON.Bullet);
+        if(js != null)
+            b.ApplyJSON(js);
         BulletCooldown = 0;
     }
 }

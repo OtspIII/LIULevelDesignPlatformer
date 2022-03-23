@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public TextMeshPro CreditsText;
     public TextMeshPro LevelText;
     public TextMeshPro AnnounceText;
+    public TextMeshPro NarrateText;
 
     public EnemyController Prefab;
     public BulletController BPrefab;
@@ -31,6 +32,14 @@ public class GameManager : MonoBehaviour
     public static int CurrentCreator = -1;
     public static bool Setup = false;
     public List<ThingController> Tiles = new List<ThingController>();
+    public static Dictionary<string,Dictionary<string,Sprite>> ResourceSprites = new Dictionary<string, Dictionary<string, Sprite>>();
+    public static Dictionary<string,Dictionary<string,AudioClip>> ResourceSounds = new Dictionary<string, Dictionary<string, AudioClip>>();
+    
+    
+    public Dictionary<SpawnThings,ThingController> Prefabs = new Dictionary<SpawnThings, ThingController>();
+
+    public Dictionary<string,Dictionary<char,JSONData>> Datas = new Dictionary<string, Dictionary<char, JSONData>>();
+    public Dictionary<string,Dictionary<char,JSONData>> Bullets = new Dictionary<string, Dictionary<char, JSONData>>();
     
     void Awake()
     {
@@ -168,6 +177,72 @@ public class GameManager : MonoBehaviour
         while(!Input.GetKeyDown(KeyCode.X))
             yield return null;
         SceneManager.LoadScene("Gameplay");
+    }
+
+    public static Sprite GetResourceSprite(string label, string author)
+    {
+        if(!ResourceSprites.ContainsKey(author)) ResourceSprites.Add(author,new Dictionary<string, Sprite>());
+        if (!ResourceSprites[author].ContainsKey(label)) ResourceSprites[author].Add(label,Resources.Load<Sprite>("Assets/"+author+"/"+label));
+        return ResourceSprites[author][label];
+    }
+    
+    public static AudioClip GetResourceSound(string label, string author)
+    {
+        if(!ResourceSounds.ContainsKey(author)) ResourceSounds.Add(author,new Dictionary<string, AudioClip>());
+        if (!ResourceSounds[author].ContainsKey(label)) ResourceSounds[author].Add(label,Resources.Load<AudioClip>("Assets/"+author+"/"+label));
+        return ResourceSounds[author][label];
+    }
+    
+    public JSONData GetData(char symbol, string author="Misha")
+    {
+        if (!Datas.ContainsKey(author)) author = "Misha";
+        if (!Datas[author].ContainsKey(symbol))
+        {
+            if(Datas["Misha"].ContainsKey(symbol))
+                return Datas["Misha"][symbol];
+            return null;
+        }
+        return Datas[author][symbol];
+    }
+
+    public JSONData GetBullet(char symbol='.')
+    {
+        if (!Bullets.ContainsKey(Creator) || !Bullets[Creator].ContainsKey(symbol)) return null;
+        return Bullets[Creator][symbol];
+    }
+
+    public ThingController SpawnThing(char symbol, string creator, Vector3 pos)
+    {
+        JSONData data = GetData(symbol, Creator);
+        if (data?.Type == null)
+        {
+            return null;
+        }
+        switch (data.Type)
+        {
+            case SpawnThings.Player:
+            {
+                PC.transform.position = pos;
+                PC.Setup(MonDict[creator][MColors.Player]);
+                PC.ApplyJSON(data);
+                return PC;
+            }
+            case SpawnThings.Enemy:
+            {
+                EnemyController enemy = (EnemyController)Instantiate(Prefabs[SpawnThings.Enemy], pos, Quaternion.identity);
+                enemy.Setup(MonDict[creator][data.Color]);
+                enemy.ApplyJSON(data);
+                return enemy;
+            }
+            default:
+            {
+                pos.z = data.Type== SpawnThings.Floor ? 20 : 10;
+                ThingController thing = Instantiate(Prefabs[data.Type], pos, Quaternion.identity);
+                thing.ApplyJSON(data);
+                Tiles.Add(thing);
+                return thing;
+            }
+        }
     }
 
 }

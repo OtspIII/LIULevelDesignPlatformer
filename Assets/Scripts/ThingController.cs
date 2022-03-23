@@ -7,10 +7,37 @@ public class ThingController : MonoBehaviour
 {
     public SpriteRenderer SR;
     public JSONData JSON;
+
+    void Awake()
+    {
+        if (SR == null) SR = GetComponent<SpriteRenderer>();
+        OnAwake();
+    }
+    
+    public virtual void OnAwake()
+    {
+        
+    }
     
     public virtual void ApplyJSON(JSONData data)
     {
         JSON = data;
+        if (data.Sprite != null)
+        {
+            if (SR == null) SR = gameObject.AddComponent<SpriteRenderer>();
+            SR.sprite = data.Sprite;
+        }
+
+        if (data.Color != MColors.None && (data.Sprite == null || (data.Type != SpawnThings.Enemy && data.Type != SpawnThings.Player)) )
+        {
+            if (SR == null) SR = gameObject.AddComponent<SpriteRenderer>();
+            SetColor(data.Color);
+        }
+
+        if (data.Size > 0)
+        {
+            transform.localScale = new Vector3(data.Size,data.Size,1);
+        }
     }
 
     private void OnDestroy()
@@ -20,6 +47,7 @@ public class ThingController : MonoBehaviour
 
     public void SetColor(MColors color)
     {
+        if (SR == null) return;
         Color c = Color.white;
         switch (color)
         {
@@ -41,6 +69,7 @@ public class ThingController : MonoBehaviour
             case MColors.Tan: c = new Color(0.8f,0.7f,0.6f); break;
             case MColors.Algea: c = new Color(0.1f,0.66f,0.56f); break;
             case MColors.Slate: c = new Color(0.4f,0.4f,0.4f); break;
+            case MColors.WallWhite: c = Color.white; break;
         }
         SR.color = c;
     }
@@ -65,4 +94,10 @@ public enum SpawnThings
     Door3=13,
     Wall=14,
     Floor=15,
+    Event=16,
+    Destructable=17,
+    Bomb=18,
+    Music=19,
+    Bullet=20,
+    Explosion=21,
 }
