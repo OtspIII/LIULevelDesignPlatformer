@@ -1,37 +1,45 @@
 xxxxxxxxxxxxxxxxxxx
 x      x  W   x   x
 x  P   x        W x
-x            x    x
+x            x R  x
 xxxxxxx   xxxx   xx
 x  W       x      x
-x     W        W  x
+x     W R      W  x
 x   W      x      x
+x      xxxxx      x
+x        x        x
+x    R   x        x
+x        x   R    x
+xxxx              x
+x   B    B        x
+x             B   x
 xxxxxxxxxxxxxxxxxxx
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x               WWWWx   Y     Y   x
-x  P           xxxxxx             x
-x                   x    xx       x
-xxxxxxxxxxxxx       x          B  x
-x                   xxxxxxxxxx    x
-x  WWWWWWWW     Y                 x
-x                                 x
-xxx      xxxxxxxxxxxxxxxx  B   xxxx
-x    B     x                   xWWx
-x          x        x          xWWx
-x    x     x   WWW  x             x
-x          x   WWW  x     B       x
-x    B              x             x
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x               WWWW     x            Y         Y          x
+x                        x                                 x
+x  P           xxxxxxxxxxx                                 x
+x                   x R   xx           xxxxxxxxxx          x
+xxxxxxxxxxxxx       x          B                           x
+x                   xxxxxxxxxx                             x
+x  WWWWWWWW     Y      I                                   x
+x     R                        R                           x
+xxxxxxxx         xxxxxxxxxxxxxxxxxxxxxx     B      xxxxxxxxx
+x    B           x                                 x   BWWWx
+x       R        x                    x  U  R      x B  WWWx
+x    x               WWW              x                    x
+x                    WWW              xB R                 x
+x    B  R                                                  x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x          WWW     x       W   x                  x     B                x           x
-x  P               x           x   BY             x              R       x      I    x
+x          WWW     x       W   x                  x     B   U            x           x
+x  P               x        U  x   BY       G     x              R       x      I    x
 xxxxxxxxxxxxxxx    x     x     x                  x     xxxxxxxxxxxxx    x           x
-x           W      x  R  x   B x         xxxxx    x     x                            x
-x               W  x     x                        x     x                            x
-x R        W       x     x                        x  B  x  B  xxxxxxxxxxxxxxxxxxxxxxxx
+x           W      x  R  x   B x         xxxxx    x     x                    G    U  x
+x     U         W  x     x                        x     x           U                x
+x R        W       x  U  x      U                 x  B  x  B  xxxxxxxxxxxxxxxxxxxxxxxx
 x    xxxxxxxxxxxxxxx     xxxxxxxxxxx     xxxxxxxxxx     x     x         I          I x
 x            Y YY        x                              x         B            O     x
-x      B            B    x   I                B         x               I           Ix
+x      B   U        B    x   I        U       B         x               I           Ix
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
