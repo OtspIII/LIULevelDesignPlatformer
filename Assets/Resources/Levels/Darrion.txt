@@ -1,0 +1,48 @@
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X        B                          x
+X           Y                       x
+X              XXXXX        I       x
+X     x        XXXXX                x
+X         x    XXXXX     x          x
+X P       x B  XXXXX     x    R     x
+X     x        XXXXX                x
+X              XXXXX                x
+X           Y  XXXXX     I          x
+X                                   x
+X            G                      x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+
+xxxxxxxxxxx
+x         x   xxxxxxxxxxxx
+x   x     xxxxx          x
+x P x  G       Y     G   x
+x   x     xxxxx          x   xxxxxxxxxxxxx
+x         x   x  I     B x   x     R     x
+xxxxxxxxxxx   x     G    xxxxx  x        x
+              x                 xx xxx   x
+              xxxxxxxxxxxxxxxx  x        x
+                             x     x   R x
+                             x     x     x
+                             x   xxx     x
+                             x  R        x
+                             xxxxxxxxxxxxx
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x                x               x
+x       G               G        x
+x  I          x     Y            x
+x           xxxxxxxxxx           x
+x           x        xxx         x
+x    xxx    x        x           x
+x           x        x    xx     x
+x     P     x        x           x
+xxxxxxxxxxxxx        x  Y     Y  x
+                     xxx       xxx
+                     x           x
+                     x     I     x
+xxxxxxxxxxxxxxxxxxxxxx    xx     x
+x     R                   xx     x
+x         R      B               x
+x     R                   G      x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
