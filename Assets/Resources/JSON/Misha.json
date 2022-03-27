@@ -30,5 +30,7 @@
 {"Type":"Bomb", "Symbol":"b","Color":"Pink","Size":0.5,"Drop":"~"},
 {"Type":"Music", "Symbol":"m","Audio":"Yell"},
 {"Type":"Bullet", "Symbol":".","Size":0.2},
-{"Type":"Explosion", "Symbol":"~","Amount":4}
+{"Type":"Explosion", "Symbol":"~","Amount":4},
+{"Type":"Zoom", "Symbol":"(","Amount":2},
+{"Type":"Zoom", "Symbol":")","Amount":1}
 ]}

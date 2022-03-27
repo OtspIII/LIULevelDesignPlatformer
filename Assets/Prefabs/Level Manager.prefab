@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
+  Cam: {fileID: 421487504}
+  UI: {fileID: 2146081176856133021}
 --- !u!1 &518408261752061413
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +384,10 @@ MonoBehaviour:
     B: {fileID: 4431340337168765105, guid: 741c3306d4e636541b725b0188b9a617, type: 3}
   - A: 20
     B: {fileID: 2600217071185801952, guid: 2f20c1635c4118c4eafe885152482e07, type: 3}
+  - A: 21
+    B: {fileID: 4904756945701139136, guid: 779a8655ce3788c4b98ff6aea43ae148, type: 3}
+  - A: 22
+    B: {fileID: 8097127877965397723, guid: 27a7849d66cf2e14e9af2330950265c0, type: 3}
 --- !u!1 &2146081176856133021
 GameObject:
   m_ObjectHideFlags: 0
