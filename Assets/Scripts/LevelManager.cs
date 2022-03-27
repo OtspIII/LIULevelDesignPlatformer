@@ -96,6 +96,7 @@ public class LevelManager : GameManager
         foreach(EnemyController e in AllEnemies)
             e.Reset();
         CameraController.Me.SetZoom(1);
+        Tags.Clear();
         
         if (level > 1)
             yield return new WaitForSeconds(0.5f);

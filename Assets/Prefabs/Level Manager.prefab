@@ -334,6 +334,8 @@ MonoBehaviour:
   Enemies: []
   AllEnemies: []
   Level: 1
+  Victory: 0
+  GoalExists: 0
   HPText: {fileID: 3828367574098141688}
   CreditsText: {fileID: 6979882516066568915}
   LevelText: {fileID: 8566999724631334067}
@@ -388,6 +390,10 @@ MonoBehaviour:
     B: {fileID: 4904756945701139136, guid: 779a8655ce3788c4b98ff6aea43ae148, type: 3}
   - A: 22
     B: {fileID: 8097127877965397723, guid: 27a7849d66cf2e14e9af2330950265c0, type: 3}
+  - A: 23
+    B: {fileID: 9035623215647395447, guid: 1dcb1894249c966448e3471110c03e77, type: 3}
+  - A: 24
+    B: {fileID: 5821786985482388991, guid: d208ef98ac602aa45a53ef35b7bf4da1, type: 3}
 --- !u!1 &2146081176856133021
 GameObject:
   m_ObjectHideFlags: 0
