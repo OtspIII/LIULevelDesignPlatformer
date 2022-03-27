@@ -6,7 +6,6 @@ using UnityEngine;
 public class BulletController : ThingController
 {
     public MonsterData Shooter;
-    public Rigidbody2D RB;
     public float Speed = 10;
     
     void Start()

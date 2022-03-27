@@ -19,6 +19,7 @@ public class PlayerController : CharController
 
     public override void OnUpdate()
     {
+        base.OnUpdate();
         GameManager.Me.HPText.text = "HP: " + HP;
         bool input = false;
         Vector2 vel = RB.velocity;

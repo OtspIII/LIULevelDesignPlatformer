@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MusicController : ThingController
 {
-    public AudioSource AS;
 
     public override void ApplyJSON(JSONData data)
     {
