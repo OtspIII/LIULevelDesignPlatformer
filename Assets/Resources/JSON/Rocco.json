@@ -1,17 +1,20 @@
 {"Items":[
-{"Type":"Player", "Symbol":"P", "Color":"Green"},
-{"Type":"Bullet", "Symbol":".","Size":0.1, "Sprite":"Bullet", "Color":"Green"},
+{"Type":"Player", "Symbol":"☺", "Color":"Green"},
+{"Type":"Bullet", "Symbol":".","Size":0.15, "Sprite":"Bullet", "Color":"Green"},
 
-{"Type":"Enemy", "Symbol":"R", "Color":"Red"},
-{"Type":"Enemy", "Symbol":"Y", "Color":"Yellow"},
-{"Type":"Enemy", "Symbol":"I", "Color":"Pink"},
-{"Type":"Enemy", "Symbol":"O", "Color":"Orange"},
+{"Type":"Enemy", "Symbol":"S", "Color":"Yellow"},
+{"Type":"Enemy", "Symbol":"C", "Color":"Purple"},
 {"Type":"Enemy", "Symbol":"B", "Color":"Blue"},
-{"Type":"Enemy", "Symbol":"U", "Color":"Purple"},
+{"Type":"Enemy", "Symbol":"I", "Color":"Pink"},
+{"Type":"Enemy", "Symbol":"~", "Color":"Tan", "Drop":"1"},
+{"Type":"Enemy", "Symbol":"`", "Color":"Red", "Drop":"2"},
+
+{"Type":"Enemy", "Symbol":"O", "Color":"Orange", "Drop":"e"},
+{"Type":"Enemy", "Symbol":"R", "Color":"Red"},
 {"Type":"Enemy", "Symbol":"W", "Color":"White"},
 
 {"Type":"Wall", "Symbol":"x", "Color":"Green"},
-{"Type":"Floor", "Symbol":" ", "Color":"Ebony", "Sprite":"SquareStolenFromMishaLmao", "Size":5},
+{"Type":"Floor", "Symbol":" ", "Color":"Ebony", "Sprite":"SquareStolenFromMishaLmao", "Size":4},
 {"Type":"ConveyorL", "Symbol":"<"},
 {"Type":"ConveyorR", "Symbol":">"},
 {"Type":"ConveyorU", "Symbol":"^"},
@@ -23,16 +26,17 @@
 {"Type":"Door2", "Symbol":"@"},
 {"Type":"Key3", "Symbol":"3"},
 {"Type":"Door3", "Symbol":"#"},
-{"Type":"Health", "Symbol":"+","Amount":100},
+{"Type":"Health", "Symbol":"♥","Amount":5, "Color":"Green"},
 
-{"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3},
-{"Type":"Bomb", "Symbol":"b","Color":"Pink","Size":0.5,"Drop":"~"},
+{"Type":"Destructable", "Symbol":"d","Color":"White","Amount":2},
+{"Type":"Bomb", "Symbol":"b","Color":"Red","Size":0.5,"Drop":"e"},
 {"Type":"Lava", "Symbol":"l"},
-{"Type":"Explosion", "Symbol":"~","Amount":4},
+{"Type":"Explosion", "Symbol":"e","Amount":2, "Size":"5"},
 
-{"Type":"Music", "Symbol":"m","Audio":"Yell"},
-{"Type":"Event", "Symbol":"h","Sprite":"Hi","Color":"Purple","Text":"And that's how it all\nhappened! ;)","Audio":"Yell"},
-{"Type":"Goal", "Symbol":"="},
-{"Type":"Zoom", "Symbol":"(","Amount":2},
-{"Type":"Zoom", "Symbol":")","Amount":1}
+{"Type":"Music", "Symbol":"♪","Audio":"Yell"},
+{"Type":"Event", "Symbol":"E","Sprite":"Hi","Color":"Purple","Text":"And that's how it all\nhappened! ;)","Audio":"Yell"},
+{"Type":"Goal", "Symbol":"G", "Color":"Ebony"},
+{"Type":"Zoom", "Symbol":"z","Amount":1.75},
+{"Type":"Zoom", "Symbol":"Z","Amount":1},
+{"Type":"Zoom", "Symbol":"►","Amount":1.15}
 ]}
