@@ -1,0 +1,21 @@
+{"Items":[
+{"Type": "Player", "Symbol": "P", "Sprite": "Mewhen", "Size": 1},
+{"Type":"Enemy", "Symbol": "G",  "Color":"Green", "Sprite": "Rat", "Size": 1},
+{"Type":"Enemy", "Symbol":"R", "Color":"Red"},
+{"Type":"Enemy", "Symbol":"Y", "Color":"Yellow"},
+{"Type":"Enemy", "Symbol":"I", "Color":"Pink"},
+{"Type":"Enemy", "Symbol":"O", "Color":"Orange"},
+{"Type":"Enemy", "Symbol":"B", "Color":"Blue"},
+{"Type":"Enemy", "Symbol":"U", "Color":"Purple"},
+{"Type":"Enemy", "Symbol":"W", "Color":"White"},
+{"Type":"Wall", "Symbol":"X", "Sprite":"Mywall"},
+{"Type":"Lava", "Symbol":"l", "Color":"Red"},
+{"Type":"ConveyorL", "Symbol":"<"},
+{"Type":"ConveyorR", "Symbol":">"},
+{"Type":"ConveyorU", "Symbol":"^"},
+{"Type":"ConveyorD", "Symbol":"v"},
+{"Type":"Event", "Symbol":"h","Sprite":"Cheese","Text":"um cheesed to meet you"},
+{"Type":"Event", "Symbol":"e","Sprite":"Cheese","Text":"cheese wisely"},
+{"Type":"Music", "Symbol":"m","Audio":"drawadogclip"},
+{"Type": "Bullet","Symbol": ".", "Size": 0.5,"Sprite": "Tom"}
+]}

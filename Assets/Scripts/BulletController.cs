@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class BulletController : ThingController
 {
     public MonsterData Shooter;
-    public Rigidbody2D RB;
     public float Speed = 10;
     
     void Start()
@@ -22,6 +21,7 @@ public class BulletController : MonoBehaviour
     public void Setup(CharController shooter)
     {
         Shooter = shooter.Data;
+        Source = shooter;
         Speed = Shooter.AttackSpeed;
         if (shooter.Player)
             gameObject.layer = 10;
@@ -33,8 +33,16 @@ public class BulletController : MonoBehaviour
         CharController c = other.gameObject.GetComponent<CharController>();
         if (c)
         {
-            c.Knockback(transform.position,Shooter.Knockback);
-            c.TakeDamage(Shooter.Damage);
+            if (!c.Tile || Shooter.Color == MColors.Player)
+            {
+                c.Knockback(transform.position, Shooter.Knockback);
+                c.TakeDamage(Shooter.Damage);
+            }
+        }
+        if (JSON.Drop != ' ')
+        {
+            ThingController drop = GameManager.Me.SpawnThing(JSON.Drop,GameManager.Me.Creator,transform.position);
+            if (drop != null) drop.Source = Source;
         }
         Destroy(gameObject);
     }

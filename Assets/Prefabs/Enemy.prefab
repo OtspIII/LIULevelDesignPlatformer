@@ -127,6 +127,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee46c6dac1dd4b4b82d1b7cb7b416cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SR: {fileID: 6985235591352163773}
+  JSON:
+    Symbol: 0
+    Type: 0
+    Color: 0
+    Sprite: {fileID: 0}
+    Audio: {fileID: 0}
+    Text: 
+    Amount: 0
+    Size: 0
+    Size2: 0
+    Bullet: 0
+    Drop: 0
+    Tag: 
+    Toggle: 
+  AS: {fileID: 0}
+  RB: {fileID: 2013191342}
+  Coll: {fileID: 2013191341}
+  Shaking: 0
+  Knock: {x: 0, y: 0}
+  Belted: 0
+  Alive: 1
+  Mobile: 0
   Data:
     Creator: 
     Color: 0
@@ -139,14 +162,16 @@ MonoBehaviour:
     AttackRate: 0
     AttackRange: 0
     AttackSpeed: 0
+    AttackSpread: 0
+    Cost: 0
+    MinLevel: 0
+    VisionRange: 0
+    Knockback: 0
   HP: 0
-  Alive: 1
-  RB: {fileID: 2013191342}
-  SR: {fileID: 6985235591352163773}
-  Coll: {fileID: 2013191341}
+  MaxHP: 0
   Player: 0
   BulletCooldown: 999
-  Shaking: 0
+  Tile: 0
   Target: {fileID: 0}
   Rotation: 0
   Active: 0

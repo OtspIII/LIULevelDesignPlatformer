@@ -8,7 +8,7 @@
 {"Type":"Enemy", "Symbol":"B", "Color":"Blue"},
 {"Type":"Enemy", "Symbol":"U", "Color":"Purple"},
 {"Type":"Enemy", "Symbol":"W", "Color":"White"},
-{"Type":"Enemy", "Symbol":"E", "Color":"Ebony"},
+{"Type":"Enemy", "Symbol":"E", "Color":"Ebony","Drop":"1"},
 {"Type":"Enemy", "Symbol":"T", "Color":"Tan"},
 {"Type":"Enemy", "Symbol":"A", "Color":"Algea"},
 {"Type":"Enemy", "Symbol":"S", "Color":"Slate"},
@@ -27,5 +27,12 @@
 {"Type":"Door3", "Symbol":"#"},
 {"Type":"Event", "Symbol":"h","Sprite":"Hi","Color":"Purple","Text":"And that's how it all\nhappened! ;)","Audio":"Yell"},
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3},
-{"Type":"Bomb", "Symbol":"b","Color":"Pink","Amount":3,"Size":0.5,"Size2":5}
+{"Type":"Bomb", "Symbol":"b","Color":"Pink","Size":0.5,"Drop":"~"},
+{"Type":"Music", "Symbol":"m","Audio":"Yell"},
+{"Type":"Bullet", "Symbol":".","Size":0.2},
+{"Type":"Explosion", "Symbol":"~","Amount":4},
+{"Type":"Zoom", "Symbol":"(","Amount":2},
+{"Type":"Zoom", "Symbol":")","Amount":1},
+{"Type":"Health", "Symbol":"+","Amount":100},
+{"Type":"Goal", "Symbol":"="}
 ]}

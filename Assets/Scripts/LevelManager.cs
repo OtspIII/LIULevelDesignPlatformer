@@ -9,9 +9,6 @@ public class LevelManager : GameManager
 {
     public Dictionary<string,List<List<string>>> Levels = new Dictionary<string, List<List<string>>>();
     public List<SpawnPair> PrefabPairs;
-    public Dictionary<SpawnThings,ThingController> Prefabs = new Dictionary<SpawnThings, ThingController>();
-
-    public Dictionary<string,Dictionary<char,JSONData>> Datas = new Dictionary<string, Dictionary<char, JSONData>>();
 //    public GameObject WallPrefab;
 //    public GameObject FloorPrefab;
 //    public GameObject LavaPrefab;
@@ -61,7 +58,13 @@ public class LevelManager : GameManager
             JSONTemp[] j = JsonHelper.FromJson<JSONTemp>(json.text);
             foreach (JSONTemp t in j)
             {
-                JSONData data = new JSONData(t,json.name);
+                //Debug.Log("X: " + json.name + " / " + t.Symbol);
+                JSONData data = new JSONData(t,json.name,json);
+                if (data.Type == SpawnThings.Bullet)
+                {
+                    if(!Bullets.ContainsKey(json.name)) Bullets.Add(json.name,new Dictionary<char, JSONData>());
+                    Bullets[json.name].Add(data.Symbol,data);
+                }
                 Datas[json.name].Add(data.Symbol,data);
             }
         }
@@ -93,6 +96,8 @@ public class LevelManager : GameManager
         PC.Reset();
         foreach(EnemyController e in AllEnemies)
             e.Reset();
+        CameraController.Me.SetZoom(1);
+        Tags.Clear();
         
         if (level > 1)
             yield return new WaitForSeconds(0.5f);
@@ -115,36 +120,8 @@ public class LevelManager : GameManager
             {
                 Vector3 pos = new Vector3(x,-y,0);
                 char tile = lvl[y][x];
-                JSONData data = GetData(tile, Creator);
-                if (data?.Type == null)
-                {
-                    continue;
-                }
-                switch (data.Type)
-                {
-                    case SpawnThings.Player:
-                    {
-                        PC.transform.position = pos;
-                        PC.Setup(MonDict[chosen][MColors.Player]);
-                        PC.ApplyJSON(data);
-                        break;
-                    }
-                    case SpawnThings.Enemy:
-                    {
-                        EnemyController enemy = (EnemyController)Instantiate(Prefabs[SpawnThings.Enemy], pos, Quaternion.identity);
-                        enemy.Setup(MonDict[chosen][data.Color]);
-                        enemy.ApplyJSON(data);
-                        break;
-                    }
-                    default:
-                    {
-                        pos.z = data.Type== SpawnThings.Floor ? 20 : 10;
-                        ThingController thing = Instantiate(Prefabs[data.Type], pos, Quaternion.identity);
-                        thing.ApplyJSON(data);
-                        Tiles.Add(thing);
-                        break;
-                    }
-                }
+                SpawnThing(tile,chosen,pos);
+                
             }
         }
         yield return new WaitForSeconds(0.5f);
@@ -153,17 +130,7 @@ public class LevelManager : GameManager
         Paused = false;
     }
     
-    public JSONData GetData(char symbol, string author="Misha")
-    {
-        if (!Datas.ContainsKey(author)) author = "Misha";
-        if (!Datas[author].ContainsKey(symbol))
-        {
-            if(Datas["Misha"].ContainsKey(symbol))
-                return Datas["Misha"][symbol];
-            return null;
-        }
-        return Datas[author][symbol];
-    }
+    
 }
 
 

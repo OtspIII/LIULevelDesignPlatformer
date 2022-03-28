@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public List<EnemyController> Enemies;
     public List<EnemyController> AllEnemies;
     public int Level = 1;
+    public bool Victory = false;
+    public bool GoalExists = false;
 
     public TextMeshPro HPText;
     public TextMeshPro CreditsText;
@@ -34,6 +36,14 @@ public class GameManager : MonoBehaviour
     public List<ThingController> Tiles = new List<ThingController>();
     public static Dictionary<string,Dictionary<string,Sprite>> ResourceSprites = new Dictionary<string, Dictionary<string, Sprite>>();
     public static Dictionary<string,Dictionary<string,AudioClip>> ResourceSounds = new Dictionary<string, Dictionary<string, AudioClip>>();
+    
+    
+    public Dictionary<SpawnThings,ThingController> Prefabs = new Dictionary<SpawnThings, ThingController>();
+
+    public Dictionary<string,Dictionary<char,JSONData>> Datas = new Dictionary<string, Dictionary<char, JSONData>>();
+    public Dictionary<string,Dictionary<char,JSONData>> Bullets = new Dictionary<string, Dictionary<char, JSONData>>();
+    
+    public Dictionary<string,List<ThingController>> Tags = new Dictionary<string, List<ThingController>>();
     
     void Awake()
     {
@@ -79,12 +89,20 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Enemies.Count <= 0 && !Paused)
+        if (CheckWin() && !Paused)
         {
             Paused = true;
             Level++;
+            Victory = false;
+            GoalExists = false;
             SpawnLevel(Level);
         }
+    }
+
+    public bool CheckWin()
+    {
+        if (GoalExists) return Victory;
+        return Enemies.Count <= 0;
     }
 
     void AddMonster(MonsterData mon)
@@ -108,6 +126,7 @@ public class GameManager : MonoBehaviour
         PC.Reset();
         foreach(EnemyController e in AllEnemies)
             e.Reset();
+        Tags.Clear();
         
         if (level > 1)
             yield return new WaitForSeconds(0.5f);
@@ -185,6 +204,71 @@ public class GameManager : MonoBehaviour
         if(!ResourceSounds.ContainsKey(author)) ResourceSounds.Add(author,new Dictionary<string, AudioClip>());
         if (!ResourceSounds[author].ContainsKey(label)) ResourceSounds[author].Add(label,Resources.Load<AudioClip>("Assets/"+author+"/"+label));
         return ResourceSounds[author][label];
+    }
+    
+    public JSONData GetData(char symbol, string author="Misha")
+    {
+        if (!Datas.ContainsKey(author)) author = "Misha";
+        if (!Datas[author].ContainsKey(symbol))
+        {
+            if(Datas["Misha"].ContainsKey(symbol))
+                return Datas["Misha"][symbol];
+            return null;
+        }
+        return Datas[author][symbol];
+    }
+
+    public JSONData GetBullet(char symbol='.')
+    {
+        if (!Bullets.ContainsKey(Creator) || !Bullets[Creator].ContainsKey(symbol)) return null;
+        return Bullets[Creator][symbol];
+    }
+
+    public ThingController SpawnThing(char symbol, string creator, Vector3 pos)
+    {
+        JSONData data = GetData(symbol, Creator);
+        if (data?.Type == null)
+        {
+            return null;
+        }
+        switch (data.Type)
+        {
+            case SpawnThings.Player:
+            {
+                PC.transform.position = pos;
+                PC.Setup(MonDict[creator][MColors.Player]);
+                PC.ApplyJSON(data);
+                return PC;
+            }
+            case SpawnThings.Enemy:
+            {
+                EnemyController enemy = (EnemyController)Instantiate(Prefabs[SpawnThings.Enemy], pos, Quaternion.identity);
+                enemy.Setup(MonDict[creator][data.Color]);
+                enemy.ApplyJSON(data);
+                return enemy;
+            }
+            default:
+            {
+                pos.z = data.Type== SpawnThings.Floor ? 20 : 10;
+                ThingController thing = Instantiate(Prefabs[data.Type], pos, Quaternion.identity);
+                thing.ApplyJSON(data);
+                Tiles.Add(thing);
+                return thing;
+            }
+        }
+    }
+
+    public void AddTag(string tag, ThingController who)
+    {
+        if(!Tags.ContainsKey(tag)) Tags.Add(tag,new List<ThingController>());
+        Tags[tag].Add(who);
+    }
+
+    public void Toggle(string tag)
+    {
+        if(Tags.ContainsKey(tag))
+            foreach(ThingController t in Tags[tag])
+                t.gameObject.SetActive(!t.gameObject.activeSelf);
     }
 
 }

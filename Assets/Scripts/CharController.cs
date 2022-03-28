@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,20 +9,17 @@ public class CharController : ThingController
 {
     public MonsterData Data;
     public int HP;
-    public bool Alive = true;
-    public Rigidbody2D RB;
-    public Collider2D Coll;
+    public int MaxHP;
     public bool Player;
     public float BulletCooldown = 999;
-    public float Shaking = 0;
-    public Vector2 Knock;
-    public bool Belted = false;
+    public bool Tile = true;
 
     public override void OnAwake()
     {
         base.OnAwake();
         RB = GetComponent<Rigidbody2D>();
         Coll = GetComponent<Collider2D>();
+        Mobile = true;
     }
 
 
@@ -35,42 +33,26 @@ public class CharController : ThingController
         
     }
 
-    void Update()
+    public override void OnUpdate()
     {
-        Belted = false;
+        base.OnUpdate();
         BulletCooldown += Time.deltaTime;
-        if (!Alive || GameManager.Me.Paused) return;
-        if (Shaking > 0)
-        {
-            Shaking -= Time.deltaTime;
-            if (Shaking > 0)
-                SR.transform.localPosition = new Vector3(Random.Range(-0.1f,0.1f),Random.Range(-0.1f,0.1f),0);
-            else
-                SR.transform.localPosition = Vector3.zero;
-        }
-        OnUpdate();
+    }
 
-        if (Knock != Vector2.zero)
-        {
-            Knock = Vector2.Lerp(Knock,Vector2.zero,0.1f);
-            Knock = Vector2.MoveTowards(Knock,Vector2.zero,0.1f);
-        }
-    }
-    
-    public virtual void OnUpdate()
-    {
-        
-    }
-    
+
     public void Setup(MonsterData data)
     {
         Data = data;
         gameObject.name = data.Color + "(" + data.Creator + ")";
-        SetColor(data.Color);
+        //SetColor(data.Color);
         if(data.Color == MColors.Player)GameSettings.CurrentPlayerSpeed = data.Speed;
         float skinny = data.Type == MTypes.Leaper ? 0.25f : 0.5f;
         transform.localScale = new Vector3(data.Size*0.5f,data.Size*skinny,1);
-        if (HP == 0) HP = data.HP;
+        if (HP == 0)
+        {
+            HP = data.HP;
+            MaxHP = HP;
+        }
         //if (data.Color == MColors.Player) Debug.Log(data.Color);
     }
     
@@ -95,6 +77,22 @@ public class CharController : ThingController
         Alive = false;
         if(RB != null) RB.velocity = Vector2.zero;
         Coll.enabled = false;
+        if (JSON.Drop != ' ')
+        {
+            ThingController thing = GameManager.Me.SpawnThing(JSON.Drop,GameManager.Me.Creator,transform.position);
+            if (thing != null)
+            {
+                thing.transform.position += new Vector3(0, 0, -0.1f);
+                thing.Source = this;
+            }
+        }
+        
+        if(JSON.Toggle != "")
+            GameManager.Me.Toggle(JSON.Toggle);
+
+        Vector3 pos = transform.position;
+        pos.z = 10;
+        transform.position = pos;
     }
     
     public virtual void Reset()
@@ -110,6 +108,9 @@ public class CharController : ThingController
         if (Data.AttackSpread > 0) rot.z += Random.Range(0, Data.AttackSpread) - (Data.AttackSpread / 2);
         BulletController b = Instantiate(GameManager.Me.BPrefab, pos, Quaternion.Euler(rot));
         b.Setup(this);
+        JSONData js = GameManager.Me.GetBullet(JSON.Bullet);
+        if(js != null)
+            b.ApplyJSON(js);
         BulletCooldown = 0;
     }
 }

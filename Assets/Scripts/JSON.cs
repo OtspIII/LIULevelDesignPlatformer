@@ -16,18 +16,32 @@ public class JSONData
     public float Amount;
     public float Size;
     public float Size2;
+    public char Bullet = '.';
+    public char Drop = ' ';
+    public string Tag = "";
+    public string Toggle = "";
 
-    public JSONData(JSONTemp source,string author)
+    public JSONData(JSONTemp source,string author,TextAsset ta)
     {
+        if (source.Symbol == null)
+        {
+            Debug.Log("JSON CRASH: " + author + " / " + source + " / " + ta.text);
+        }
         Symbol = source.Symbol.Length > 0 ? source.Symbol[0] : ' ';
         Type = source.Type != null ? (SpawnThings)Enum.Parse(typeof(SpawnThings), source.Type) : SpawnThings.None;
         Color = source.Color != null ? (MColors)Enum.Parse(typeof(MColors), source.Color) : MColors.None;
         if (source.Sprite != null) Sprite = GameManager.GetResourceSprite(source.Sprite, author);
         if (source.Audio != null) Audio = Resources.Load<AudioClip>("Assets/"+author+"/"+source.Audio);
         if (source.Text != null) Text = source.Text;
+        if (source.Tag != null) Tag = source.Tag;
+        if (source.Toggle != null) Toggle = source.Toggle;
         Amount = source.Amount;
         Size = source.Size;
         Size2 = source.Size2;
+        if (source.Bullet != null)
+            Bullet = source.Bullet.Length > 0 ? source.Bullet[0] : '.';
+        if (source.Drop != null)
+            Drop = source.Drop.Length > 0 ? source.Drop[0] : ' ';
     }
 }
 
@@ -43,6 +57,10 @@ public class JSONTemp
     public float Amount;
     public float Size;
     public float Size2;
+    public string Bullet;
+    public string Drop;
+    public string Tag;
+    public string Toggle;
 }
 
 [System.Serializable]
