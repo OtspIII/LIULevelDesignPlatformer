@@ -19,7 +19,7 @@
 {"Type":"ConveyorR", "Symbol":">"},
 {"Type":"ConveyorU", "Symbol":"^"},
 {"Type":"ConveyorD", "Symbol":"v"},
-{"Type":"Goal","symbol": "q", "Sprite":"Ship"},
+{"Type":"Goal","Symbol": "q", "Sprite":"Ship"},
 {"Type":"Key1", "Symbol":"1"},
 {"Type":"Door1", "Symbol":"!"},
 {"Type":"Key2", "Symbol":"2"},

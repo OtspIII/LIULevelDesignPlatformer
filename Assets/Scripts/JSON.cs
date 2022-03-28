@@ -21,8 +21,12 @@ public class JSONData
     public string Tag = "";
     public string Toggle = "";
 
-    public JSONData(JSONTemp source,string author)
+    public JSONData(JSONTemp source,string author,TextAsset ta)
     {
+        if (source.Symbol == null)
+        {
+            Debug.Log("JSON CRASH: " + author + " / " + source + " / " + ta.text);
+        }
         Symbol = source.Symbol.Length > 0 ? source.Symbol[0] : ' ';
         Type = source.Type != null ? (SpawnThings)Enum.Parse(typeof(SpawnThings), source.Type) : SpawnThings.None;
         Color = source.Color != null ? (MColors)Enum.Parse(typeof(MColors), source.Color) : MColors.None;

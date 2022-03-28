@@ -58,7 +58,8 @@ public class LevelManager : GameManager
             JSONTemp[] j = JsonHelper.FromJson<JSONTemp>(json.text);
             foreach (JSONTemp t in j)
             {
-                JSONData data = new JSONData(t,json.name);
+                //Debug.Log("X: " + json.name + " / " + t.Symbol);
+                JSONData data = new JSONData(t,json.name,json);
                 if (data.Type == SpawnThings.Bullet)
                 {
                     if(!Bullets.ContainsKey(json.name)) Bullets.Add(json.name,new Dictionary<char, JSONData>());
