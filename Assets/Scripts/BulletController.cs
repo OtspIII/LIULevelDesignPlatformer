@@ -21,6 +21,7 @@ public class BulletController : ThingController
     public void Setup(CharController shooter)
     {
         Shooter = shooter.Data;
+        Source = shooter;
         Speed = Shooter.AttackSpeed;
         if (shooter.Player)
             gameObject.layer = 10;
@@ -40,7 +41,8 @@ public class BulletController : ThingController
         }
         if (JSON.Drop != ' ')
         {
-            GameManager.Me.SpawnThing(JSON.Drop,GameManager.Me.Creator,transform.position);
+            ThingController drop = GameManager.Me.SpawnThing(JSON.Drop,GameManager.Me.Creator,transform.position);
+            if (drop != null) drop.Source = Source;
         }
         Destroy(gameObject);
     }

@@ -81,7 +81,10 @@ public class CharController : ThingController
         {
             ThingController thing = GameManager.Me.SpawnThing(JSON.Drop,GameManager.Me.Creator,transform.position);
             if (thing != null)
-                thing.transform.position += new Vector3(0,0,-0.1f);
+            {
+                thing.transform.position += new Vector3(0, 0, -0.1f);
+                thing.Source = this;
+            }
         }
         
         if(JSON.Toggle != "")

@@ -28,7 +28,7 @@ public class ExplosionController : ThingController
     private void OnTriggerEnter2D(Collider2D other)
     {
         CharController cc = other.GetComponent<CharController>();
-        if (cc != null && !Immune.Contains(cc))
+        if (cc != null && !Immune.Contains(cc) && (cc != Source || cc.Player))
         {
             cc.TakeDamage(Damage);
             Immune.Add(cc);

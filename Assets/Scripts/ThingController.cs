@@ -16,6 +16,7 @@ public class ThingController : MonoBehaviour
     public bool Belted = false;
     public bool Alive = true;
     public bool Mobile = false;
+    public ThingController Source;
 
     void Awake()
     {
