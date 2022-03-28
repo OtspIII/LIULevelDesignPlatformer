@@ -12,6 +12,7 @@ public class CharController : ThingController
     public int MaxHP;
     public bool Player;
     public float BulletCooldown = 999;
+    public bool Tile = true;
 
     public override void OnAwake()
     {

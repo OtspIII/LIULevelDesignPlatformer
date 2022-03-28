@@ -32,8 +32,11 @@ public class BulletController : ThingController
         CharController c = other.gameObject.GetComponent<CharController>();
         if (c)
         {
-            c.Knockback(transform.position,Shooter.Knockback);
-            c.TakeDamage(Shooter.Damage);
+            if (!c.Tile || Shooter.Color == MColors.Player)
+            {
+                c.Knockback(transform.position, Shooter.Knockback);
+                c.TakeDamage(Shooter.Damage);
+            }
         }
         if (JSON.Drop != ' ')
         {
