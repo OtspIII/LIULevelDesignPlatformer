@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class EventController : ThingController
 {
-    public AudioSource AS;
+    
     public TextMeshPro Text;
     
     public override void ApplyJSON(JSONData data)
@@ -19,6 +19,7 @@ public class EventController : ThingController
         if (!other.gameObject.GetComponent<PlayerController>()) return;
         if(JSON.Audio != null) AS.PlayOneShot(JSON.Audio);
         if (JSON.Text != "") GameManager.Me.NarrateText.text = JSON.Text;
+        if (JSON.Toggle != "") GameManager.Me.Toggle(JSON.Toggle);
     }
 
     private void OnTriggerExit2D(Collider2D other)

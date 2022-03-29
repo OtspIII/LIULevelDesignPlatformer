@@ -46,6 +46,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49dbb30e26539644fbce0df17e124591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SR: {fileID: 3541457657127262218}
+  JSON:
+    Symbol: 0
+    Type: 0
+    Color: 0
+    Sprite: {fileID: 0}
+    Audio: {fileID: 0}
+    Text: 
+    Amount: 0
+    Size: 0
+    Size2: 0
+    Bullet: 0
+    Drop: 0
+    Tag: 
+    Toggle: 
+  AS: {fileID: 0}
+  RB: {fileID: 949174140055783122}
+  Coll: {fileID: 0}
+  Shaking: 0
+  Knock: {x: 0, y: 0}
+  Belted: 0
+  Alive: 1
+  Mobile: 0
   Data:
     Creator: 
     Color: 0
@@ -61,16 +84,16 @@ MonoBehaviour:
     AttackSpread: 0
     Cost: 0
     MinLevel: 0
+    VisionRange: 0
+    Knockback: 0
   HP: 0
-  Alive: 1
-  RB: {fileID: 949174140055783122}
-  SR: {fileID: 3541457657127262218}
-  Coll: {fileID: 0}
+  MaxHP: 0
   Player: 1
   BulletCooldown: 999
-  Shaking: 0
+  Tile: 0
   Moved: 0
   Invincible: 0
+  Keys: 
 --- !u!50 &949174140055783122
 Rigidbody2D:
   serializedVersion: 4

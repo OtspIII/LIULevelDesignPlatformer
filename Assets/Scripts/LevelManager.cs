@@ -58,7 +58,8 @@ public class LevelManager : GameManager
             JSONTemp[] j = JsonHelper.FromJson<JSONTemp>(json.text);
             foreach (JSONTemp t in j)
             {
-                JSONData data = new JSONData(t,json.name);
+                //Debug.Log("X: " + json.name + " / " + t.Symbol);
+                JSONData data = new JSONData(t,json.name,json);
                 if (data.Type == SpawnThings.Bullet)
                 {
                     if(!Bullets.ContainsKey(json.name)) Bullets.Add(json.name,new Dictionary<char, JSONData>());
@@ -95,6 +96,8 @@ public class LevelManager : GameManager
         PC.Reset();
         foreach(EnemyController e in AllEnemies)
             e.Reset();
+        CameraController.Me.SetZoom(1);
+        Tags.Clear();
         
         if (level > 1)
             yield return new WaitForSeconds(0.5f);

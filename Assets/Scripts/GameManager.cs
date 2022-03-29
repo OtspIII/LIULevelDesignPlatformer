@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public List<EnemyController> Enemies;
     public List<EnemyController> AllEnemies;
     public int Level = 1;
+    public bool Victory = false;
+    public bool GoalExists = false;
 
     public TextMeshPro HPText;
     public TextMeshPro CreditsText;
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour
 
     public Dictionary<string,Dictionary<char,JSONData>> Datas = new Dictionary<string, Dictionary<char, JSONData>>();
     public Dictionary<string,Dictionary<char,JSONData>> Bullets = new Dictionary<string, Dictionary<char, JSONData>>();
+    
+    public Dictionary<string,List<ThingController>> Tags = new Dictionary<string, List<ThingController>>();
     
     void Awake()
     {
@@ -85,12 +89,20 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Enemies.Count <= 0 && !Paused)
+        if (CheckWin() && !Paused)
         {
             Paused = true;
             Level++;
+            Victory = false;
+            GoalExists = false;
             SpawnLevel(Level);
         }
+    }
+
+    public bool CheckWin()
+    {
+        if (GoalExists) return Victory;
+        return Enemies.Count <= 0;
     }
 
     void AddMonster(MonsterData mon)
@@ -114,6 +126,7 @@ public class GameManager : MonoBehaviour
         PC.Reset();
         foreach(EnemyController e in AllEnemies)
             e.Reset();
+        Tags.Clear();
         
         if (level > 1)
             yield return new WaitForSeconds(0.5f);
@@ -243,6 +256,19 @@ public class GameManager : MonoBehaviour
                 return thing;
             }
         }
+    }
+
+    public void AddTag(string tag, ThingController who)
+    {
+        if(!Tags.ContainsKey(tag)) Tags.Add(tag,new List<ThingController>());
+        Tags[tag].Add(who);
+    }
+
+    public void Toggle(string tag)
+    {
+        if(Tags.ContainsKey(tag))
+            foreach(ThingController t in Tags[tag])
+                t.gameObject.SetActive(!t.gameObject.activeSelf);
     }
 
 }

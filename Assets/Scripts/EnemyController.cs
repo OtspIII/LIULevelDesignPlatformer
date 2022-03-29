@@ -31,6 +31,7 @@ public class EnemyController : CharController
 
     public override void OnUpdate()
     {
+        base.OnUpdate();
         Vector2 vel = Knock;
         if (!Active && GameManager.LevelMode)
         {
