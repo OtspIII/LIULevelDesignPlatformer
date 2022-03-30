@@ -14,6 +14,7 @@ public class ExplosionController : ThingController
         base.ApplyJSON(data);
         if (data.Amount > 0) Damage = Mathf.CeilToInt(data.Amount);
         gameObject.SetActive(true);
+        if (data.Audio)GameManager.Me.PlaySound(data.Audio);
         Invoke("End",0.2f);
     }
 

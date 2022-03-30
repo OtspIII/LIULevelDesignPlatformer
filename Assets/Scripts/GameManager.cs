@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<string,Dictionary<char,JSONData>> Bullets = new Dictionary<string, Dictionary<char, JSONData>>();
     
     public Dictionary<string,List<ThingController>> Tags = new Dictionary<string, List<ThingController>>();
+    public AudioSource AS;
     
     void Awake()
     {
@@ -127,6 +128,8 @@ public class GameManager : MonoBehaviour
         foreach(EnemyController e in AllEnemies)
             e.Reset();
         Tags.Clear();
+        foreach(BulletController bc in GameObject.FindObjectsOfType<BulletController>())
+            Destroy(bc.gameObject);
         
         if (level > 1)
             yield return new WaitForSeconds(0.5f);
@@ -270,5 +273,11 @@ public class GameManager : MonoBehaviour
             foreach(ThingController t in Tags[tag])
                 t.gameObject.SetActive(!t.gameObject.activeSelf);
     }
+
+    public void PlaySound(AudioClip ac)
+    {
+        AS.PlayOneShot(ac);
+    }
+    
 
 }

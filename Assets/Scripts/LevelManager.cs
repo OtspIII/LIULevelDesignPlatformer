@@ -9,6 +9,7 @@ public class LevelManager : GameManager
 {
     public Dictionary<string,List<List<string>>> Levels = new Dictionary<string, List<List<string>>>();
     public List<SpawnPair> PrefabPairs;
+
 //    public GameObject WallPrefab;
 //    public GameObject FloorPrefab;
 //    public GameObject LavaPrefab;
@@ -42,7 +43,7 @@ public class LevelManager : GameManager
                     Levels[ta.name].Add(current);
                     current = new List<string>();
                 }
-                else
+                else if (str.Length > 2)
                     current.Add(str);
             }
             if (current.Count > 0)
@@ -98,6 +99,8 @@ public class LevelManager : GameManager
             e.Reset();
         CameraController.Me.SetZoom(1);
         Tags.Clear();
+        foreach(BulletController bc in GameObject.FindObjectsOfType<BulletController>())
+            Destroy(bc.gameObject);
         
         if (level > 1)
             yield return new WaitForSeconds(0.5f);
