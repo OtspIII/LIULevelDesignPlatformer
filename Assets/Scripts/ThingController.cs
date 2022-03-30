@@ -65,6 +65,7 @@ public class ThingController : MonoBehaviour
         {
             if (SR == null) SR = gameObject.AddComponent<SpriteRenderer>();
             SR.sprite = data.Sprite;
+            SR.color = Color.white;
         }
 
         if (data.Color != MColors.None && (data.Sprite == null || (data.Type != SpawnThings.Enemy && data.Type != SpawnThings.Player)) )
