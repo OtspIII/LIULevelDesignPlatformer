@@ -130,4 +130,5 @@ public enum SpawnThings
     Zoom=22,
     Health=23,
     Goal=24,
+    Destructible=25,
 }

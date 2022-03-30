@@ -19,11 +19,11 @@ TagManager:
   - Monster
   - PBullet
   - MBullet
-  - 
-  - 
-  - 
-  - 
-  - 
+  - IgnorePlayer
+  - IgnoreEnemy
+  - IgnoreBullet
+  - IgnoreWalls
+  - Walls
   - 
   - 
   - 

@@ -396,6 +396,8 @@ MonoBehaviour:
     B: {fileID: 9035623215647395447, guid: 1dcb1894249c966448e3471110c03e77, type: 3}
   - A: 24
     B: {fileID: 5821786985482388991, guid: d208ef98ac602aa45a53ef35b7bf4da1, type: 3}
+  - A: 25
+    B: {fileID: 8173232369486601060, guid: 98526d0ae70e081429a4007db3793ad2, type: 3}
 --- !u!82 &1444854468155545558
 AudioSource:
   m_ObjectHideFlags: 0
