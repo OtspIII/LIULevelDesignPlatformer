@@ -7,6 +7,7 @@ public class BulletController : ThingController
 {
     public MonsterData Shooter;
     public float Speed = 10;
+    public float Lifetime = 0;
     
     void Start()
     {
@@ -17,11 +18,20 @@ public class BulletController : ThingController
     {
         base.ApplyJSON(data);
         if (data.Audio)GameManager.Me.PlaySound(data.Audio);
+        if (data.Amount > 0) Lifetime = data.Amount;
     }
 
     void Update()
     {
         RB.velocity = transform.right * -Speed;
+        if (Lifetime > 0)
+        {
+            Lifetime -= Time.deltaTime;
+            if (Lifetime <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public void Setup(CharController shooter)

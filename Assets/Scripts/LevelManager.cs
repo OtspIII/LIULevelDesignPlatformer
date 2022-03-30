@@ -9,6 +9,7 @@ public class LevelManager : GameManager
 {
     public Dictionary<string,List<List<string>>> Levels = new Dictionary<string, List<List<string>>>();
     public List<SpawnPair> PrefabPairs;
+
 //    public GameObject WallPrefab;
 //    public GameObject FloorPrefab;
 //    public GameObject LavaPrefab;
