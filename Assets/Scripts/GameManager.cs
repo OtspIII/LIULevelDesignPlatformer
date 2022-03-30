@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<string,Dictionary<char,JSONData>> Bullets = new Dictionary<string, Dictionary<char, JSONData>>();
     
     public Dictionary<string,List<ThingController>> Tags = new Dictionary<string, List<ThingController>>();
+    public AudioSource AS;
     
     void Awake()
     {
@@ -270,5 +271,11 @@ public class GameManager : MonoBehaviour
             foreach(ThingController t in Tags[tag])
                 t.gameObject.SetActive(!t.gameObject.activeSelf);
     }
+
+    public void PlaySound(AudioClip ac)
+    {
+        AS.PlayOneShot(ac);
+    }
+    
 
 }

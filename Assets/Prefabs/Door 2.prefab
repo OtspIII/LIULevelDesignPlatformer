@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5090071785696554349}
   - component: {fileID: 6325917799026014527}
   - component: {fileID: 3203728557790117210}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Door 2
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -121,4 +121,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b02284e5b21a34896c73e77d2fd2a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SR: {fileID: 0}
+  JSON:
+    Symbol: 0
+    Type: 0
+    Color: 0
+    Sprite: {fileID: 0}
+    Audio: {fileID: 0}
+    Text: 
+    Amount: 0
+    Size: 0
+    Size2: 0
+    Bullet: 0
+    Drop: 0
+    Tag: 
+    Toggle: 
+    Target: 0
+    Layer: 0
+  AS: {fileID: 0}
+  RB: {fileID: 0}
+  Coll: {fileID: 0}
+  Shaking: 0
+  Knock: {x: 0, y: 0}
+  Belted: 0
+  Alive: 1
+  Mobile: 0
+  Source: {fileID: 0}
   Number: 2

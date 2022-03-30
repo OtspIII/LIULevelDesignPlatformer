@@ -9,6 +9,7 @@ public class LevelManager : GameManager
 {
     public Dictionary<string,List<List<string>>> Levels = new Dictionary<string, List<List<string>>>();
     public List<SpawnPair> PrefabPairs;
+
 //    public GameObject WallPrefab;
 //    public GameObject FloorPrefab;
 //    public GameObject LavaPrefab;
@@ -42,7 +43,7 @@ public class LevelManager : GameManager
                     Levels[ta.name].Add(current);
                     current = new List<string>();
                 }
-                else
+                else if (str.Length > 2)
                     current.Add(str);
             }
             if (current.Count > 0)

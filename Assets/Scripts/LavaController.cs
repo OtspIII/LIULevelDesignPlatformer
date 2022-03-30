@@ -21,6 +21,7 @@ public class LavaController : ThingController
         if (cc != null && !Touching.Contains(cc))
         {
             Touching.Add(cc);
+            if (JSON.Audio)GameManager.Me.PlaySound(JSON.Audio);
         }
     }
 

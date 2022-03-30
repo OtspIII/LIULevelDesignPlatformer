@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
         Me = this;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 pos = Vector3.Lerp(transform.position, Target.transform.position,0.2f);
         pos.z = transform.position.z;
@@ -27,5 +27,10 @@ public class CameraController : MonoBehaviour
         float size = amt * 5;
         Cam.orthographicSize = size;
         UI.transform.localScale = new Vector3(amt,amt,1);
+    }
+
+    public void SetBG(MColors color)
+    {
+        Cam.backgroundColor = God.GetColor(color);
     }
 }

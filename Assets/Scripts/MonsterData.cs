@@ -51,25 +51,7 @@ public struct MonsterData
     }
 }
 
-public enum MColors
-{
-    None=0,
-    Player=1,
-    Red=2,
-    Green=3,
-    Yellow=4,
-    Pink=5,
-    Orange=6,
-    Blue=7,
-    Purple=8,
-    White=9,
-    Ebony=10,
-    Tan=11,
-    Algea=12,
-    Slate=13,
-    WallWhite=14,
-    
-}
+
 
 public enum MTypes
 {

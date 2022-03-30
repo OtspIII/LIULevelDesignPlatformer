@@ -93,6 +93,7 @@ public class CharController : ThingController
         Vector3 pos = transform.position;
         pos.z = 10;
         transform.position = pos;
+        if (JSON.Audio)GameManager.Me.PlaySound(JSON.Audio);
     }
     
     public virtual void Reset()
