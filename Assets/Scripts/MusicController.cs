@@ -13,5 +13,7 @@ public class MusicController : ThingController
             AS.clip = data.Audio;
             AS.Play();
         }
+        if(JSON.Color != MColors.None)
+            CameraController.Me.SetBG(JSON.Color);
     }
 }
