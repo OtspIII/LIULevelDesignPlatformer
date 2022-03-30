@@ -99,6 +99,8 @@ public class LevelManager : GameManager
             e.Reset();
         CameraController.Me.SetZoom(1);
         Tags.Clear();
+        foreach(BulletController bc in GameObject.FindObjectsOfType<BulletController>())
+            Destroy(bc.gameObject);
         
         if (level > 1)
             yield return new WaitForSeconds(0.5f);

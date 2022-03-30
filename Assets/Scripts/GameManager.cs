@@ -128,6 +128,8 @@ public class GameManager : MonoBehaviour
         foreach(EnemyController e in AllEnemies)
             e.Reset();
         Tags.Clear();
+        foreach(BulletController bc in GameObject.FindObjectsOfType<BulletController>())
+            Destroy(bc.gameObject);
         
         if (level > 1)
             yield return new WaitForSeconds(0.5f);
