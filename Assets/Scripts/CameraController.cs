@@ -28,4 +28,9 @@ public class CameraController : MonoBehaviour
         Cam.orthographicSize = size;
         UI.transform.localScale = new Vector3(amt,amt,1);
     }
+
+    public void SetBG(MColors color)
+    {
+        Cam.backgroundColor = God.GetColor(color);
+    }
 }

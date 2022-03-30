@@ -12,6 +12,7 @@ public class HealthController : ThingController
             pc.HP = Mathf.Min(pc.MaxHP,pc.HP + Mathf.RoundToInt(JSON.Amount)) ;
         else
             pc.HP = pc.MaxHP;
+        if (JSON.Audio)GameManager.Me.PlaySound(JSON.Audio);
         Destroy(gameObject);
     }
 }

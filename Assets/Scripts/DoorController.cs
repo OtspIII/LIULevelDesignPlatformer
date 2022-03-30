@@ -14,6 +14,7 @@ public class DoorController : ThingController
         if (pc != null && pc.Keys.Contains(Number))
         {
             pc.Keys.Remove(Number);
+            if (JSON.Audio)GameManager.Me.PlaySound(JSON.Audio);
             Destroy(gameObject);
         }
     }

@@ -31,7 +31,7 @@
 {"Type":"Music", "Symbol":"m","Audio":"Yell"},
 {"Type":"Bullet", "Symbol":".","Size":0.2},
 {"Type":"Explosion", "Symbol":"~","Amount":4},
-{"Type":"Zoom", "Symbol":"(","Amount":2},
+{"Type":"Zoom", "Symbol":"(","Amount":2,"Color": "Red"},
 {"Type":"Zoom", "Symbol":")","Amount":1},
 {"Type":"Health", "Symbol":"+","Amount":100},
 {"Type":"Goal", "Symbol":"="}

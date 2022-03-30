@@ -12,6 +12,7 @@ public class KeyController : ThingController
         if (pc != null)
         {
             pc.GetKey(this);
+            if (JSON.Audio)GameManager.Me.PlaySound(JSON.Audio);
             Destroy(gameObject);
         }
     }

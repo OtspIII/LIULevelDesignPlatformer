@@ -12,4 +12,9 @@ public class BombController : CharController
         HP = data.Amount > 0 ? Mathf.CeilToInt(data.Amount) : 1;
     }
 
+    public override void Die()
+    {
+        base.Die();
+        if (JSON.Audio)GameManager.Me.PlaySound(JSON.Audio);
+    }
 }

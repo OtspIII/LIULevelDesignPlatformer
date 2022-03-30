@@ -13,6 +13,12 @@ public class BulletController : ThingController
         RB = GetComponent<Rigidbody2D>();
     }
 
+    public override void ApplyJSON(JSONData data)
+    {
+        base.ApplyJSON(data);
+        if (data.Audio)GameManager.Me.PlaySound(data.Audio);
+    }
+
     void Update()
     {
         RB.velocity = transform.right * -Speed;
