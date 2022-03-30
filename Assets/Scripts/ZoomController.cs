@@ -12,6 +12,5 @@ public class ZoomController : ThingController
         if(JSON.Color != MColors.None)
             CameraController.Me.SetBG(JSON.Color);
         if (JSON.Audio)GameManager.Me.PlaySound(JSON.Audio);
-
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 
@@ -21,6 +22,7 @@ public class JSONData
     public string Tag = "";
     public string Toggle = "";
     public Targets Target;
+    public int Layer = -1;
 
     public JSONData(JSONTemp source,string author,TextAsset ta)
     {
@@ -44,6 +46,7 @@ public class JSONData
         if (source.Drop != null)
             Drop = source.Drop.Length > 0 ? source.Drop[0] : ' ';
         Target = source.Target != null ? (Targets)Enum.Parse(typeof(Targets), source.Target) : Targets.None;
+        if (source.Layer != null) Layer = LayerMask.NameToLayer(source.Layer);
     }
 }
 
@@ -64,6 +67,7 @@ public class JSONTemp
     public string Tag;
     public string Toggle;
     public string Target;
+    public string Layer;
 }
 
 [System.Serializable]

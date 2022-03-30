@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7698480749570927624}
   - component: {fileID: 8917059774679480410}
   - component: {fileID: 1533866373008581403}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -121,4 +121,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1840cf9e0b86e234fb632854d7f2f8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Body: {fileID: 7698480749570927624}
+  SR: {fileID: 0}
+  JSON:
+    Symbol: 0
+    Type: 0
+    Color: 0
+    Sprite: {fileID: 0}
+    Audio: {fileID: 0}
+    Text: 
+    Amount: 0
+    Size: 0
+    Size2: 0
+    Bullet: 0
+    Drop: 0
+    Tag: 
+    Toggle: 
+    Target: 0
+    Layer: 0
+  AS: {fileID: 0}
+  RB: {fileID: 0}
+  Coll: {fileID: 0}
+  Shaking: 0
+  Knock: {x: 0, y: 0}
+  Belted: 0
+  Alive: 1
+  Mobile: 0
+  Source: {fileID: 0}
