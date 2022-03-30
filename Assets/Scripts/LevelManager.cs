@@ -43,7 +43,7 @@ public class LevelManager : GameManager
                     Levels[ta.name].Add(current);
                     current = new List<string>();
                 }
-                else
+                else if (str.Length > 2)
                     current.Add(str);
             }
             if (current.Count > 0)
