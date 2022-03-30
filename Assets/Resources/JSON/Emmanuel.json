@@ -1,5 +1,5 @@
 {"Items":[
-{"Type":"Player", "Symbol":"P"},
+{"Type":"Player", "Symbol":"P","Sprite":"Shooting Star(Protagonist)"},
 {"Type":"Enemy", "Symbol":"G", "Color":"Green"},
 {"Type":"Enemy", "Symbol":"R", "Color":"Red"},
 {"Type":"Enemy", "Symbol":"Y", "Color":"Yellow"},
