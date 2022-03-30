@@ -7,11 +7,13 @@ using UnityEngine;
 public class EventController : ThingController
 {
     
-    public TextMeshPro Text;
+    //public TextMeshPro Text;
     
     public override void ApplyJSON(JSONData data)
     {
         base.ApplyJSON(data);
+        if (data.Color2 != MColors.None)
+            GameManager.Me.NarrateText.color = God.GetColor(data.Color2);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
