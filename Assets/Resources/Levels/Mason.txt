@@ -11,89 +11,47 @@ xxxxxxxxxxxx       v     x
            x       v          x                        x               
            x       1   Y      x                    G   x                  
            x                  !                        x              
-           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx         
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-
-
-
-
-
-
-
-
-
+           
                                           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                       xxx              G              x                
+                                       xxx              G              xx                
                                     xxx   ^v                             x
                                  xxx      ^v            G                x 
-                              xxx         ^v         xxxxxxxxxxxxxxxxxxxx
-                           xxx            ^v      xx                     xxxxxx
-                          x               ^v   x          U                   xxx  
-                          x  Y     Y        xx                                   x  
-                          x              xx                 xxxxxxxxxx            x  
-                          x              xx     B                    x            x
-                          x               xxxx                    P  x            x           
-                            x                 xxx                    x           x              
-                              xx                  xxxxxxxxxxxxxxxxxxxx          x
-                                xx                                           xxx                 
-                                  xx                                   R   xxx   
-                                     xx                                  xxx
+                              xxx         ^v        xxxxxxxxxxxxxxxxxxxxx
+                           xxx            ^v     xxx                     xxxxxx
+                          x               ^v  xxx          U                   xxx  
+                          x  Y     Y       xxx                                   x  
+                          x              xx                 xxxxxxxxxx   ^ ^ v v  x  
+                          x              xx     B                    x   ^ ^ v v  x
+                          xx              xxxx                    P  x   ^ ^ v v  x           
+                            xx                xxxxx                   x  ^ ^ v v  x              
+                              xx                   xxxxxxxxxxxxxxxxxxxx  ^ ^ v v  x
+                                xx                                       ^ ^ v xxx                 
+                                  xxx                                   R   xxxx   
+                                     xx         >>>>>>>>>>>>>>          xxxx
                                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                                         
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 xxxxxxxxxxxxxxxxxxxxxxx                                      xxxxxxxxxxxxxxxxxxxx
- x               P     x                                      x                  x
-  x                     x                                      x                  x
-   x                     x                                     x                   x
-    x                     x                                   x    B              x
-    x                     x                                  x                   x
+ x     llll      P     x                                      x                  x
+  x    llll             x                                      x                  x
+   x   llll              x                                     x        llll       x
+    x                     x                                   x    B    llll      x
+    x                     x                                  x          llll     x
    x                     x                                  x                   x
   x                     x                                  x                   x
  x      R         Y    x                                   x                   x
-x                       x                         xx        x   U               x
-x                        x                     xx   x        x                   x
- x                        x                xx        x        x                   x
-  x                        x            xx            x       x                   x
-   x                       x       xx                 x     x                    x
-    x                     x  xx                      x  x                       x
-    x                    x                            x                   R    x
+x                       x                        xxx        x   U               x
+x             llll       x                    xxx   x        x                   x
+ x            llll        x               xxxx       xx       x                   x
+  x           llll         x         xxxxx            x      xx                   x
+   x                       x   xxxxxx                 x   xxx llll                x
+    x                     x xxx                       x xx    llll               x
+    x                    x                             x      llll         R    x
    x                                                                           x
   x                                       x          Y                          x
  x            G                         xx xx                                    x
-x                                     xx     xx                                   x
+xlllllllllllllllllllllllllllllllllllllxx     xxlllllllllllllllllllllllllllllllllllx
 Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
