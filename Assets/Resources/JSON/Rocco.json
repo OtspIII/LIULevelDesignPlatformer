@@ -14,7 +14,7 @@
 {"Type":"Enemy", "Symbol":"W", "Color":"White"},
 
 {"Type":"Wall", "Symbol":"x", "Color":"Green"},
-{"Type":"Floor", "Symbol":" ", "Color":"Ebony", "Sprite":"SquareStolenFromMishaLmao", "Size":4},
+{"Type":"Floor", "Symbol":" ", "Color":"Ebony"},
 {"Type":"ConveyorL", "Symbol":"<"},
 {"Type":"ConveyorR", "Symbol":">"},
 {"Type":"ConveyorU", "Symbol":"^"},
@@ -33,7 +33,11 @@
 {"Type":"Lava", "Symbol":"l"},
 {"Type":"Explosion", "Symbol":"e","Amount":2, "Size":"5"},
 
-{"Type":"Music", "Symbol":"♪","Audio":"Yell"},
+{"Type":"Music", "Symbol":"♪","Audio":"Final Main 1", "Color":"Ebony"},
+{"Type":"Music", "Symbol":"♫","Audio":"Final Main 2", "Color":"Ebony"},
+{"Type":"Music", "Symbol":"♯","Audio":"Final Main 3", "Color":"Ebony"},
+{"Type":"Music", "Symbol":"Ⱡ","Audio":"Final Main 4", "Color":"Ebony"},
+{"Type":"Music", "Symbol":"ⱡ","Audio":"Final Main 5", "Color":"Ebony"},
 {"Type":"Event", "Symbol":"E","Sprite":"Hi","Color":"Purple","Text":"And that's how it all\nhappened! ;)","Audio":"Yell"},
 {"Type":"Goal", "Symbol":"G", "Color":"Ebony"},
 {"Type":"Zoom", "Symbol":"z","Amount":1.75},
