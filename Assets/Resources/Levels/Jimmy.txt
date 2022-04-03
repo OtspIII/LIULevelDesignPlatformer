@@ -7,11 +7,32 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     x
                                                                   x   Y x
                                                                   xxxxxxx
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx      
+x                                             R      x      
+x R                    b                             x
+x                                           xxx      x
+x      +                                             x
+x  b                                                 x
+x                                                    x
+x       xxxxxx                                       x
+x      b                                             x
+x                                      b             x
+x                                                    x
+x        b                                           x
+x                                                    x
+x                                      +             x
+x                                                    x
+x                                                    x
+x      xxxxx                                         x
+x                                                    x
+x       P (                                          x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx       xxxxxx
 x                                                x   x       x P  x
 x   B                                            x   xxxxxxxxx    x
 x                                                x            j   x
-x                                                                 x
+x                                                     +           x
 x                                                    xxxxxxxxxxxxxx
 x                                                    x
 x      B                                             x
@@ -59,8 +80,6 @@ x R                                                  x
 x                                                    x
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-
-
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx      
 x                                                    x      
 x                                                    x
@@ -90,8 +109,8 @@ x                                                    x
 x                                                    x
 x                                                    x
 x                                                    xxxxxxxxxxxxx
-x                                                          u  P  x
-x                                                                x
+x                                                    +      u  P x
+x                                                       m        x
 x                                                    xxxxxxxxxxxxx
 x                                                    x
 x                                                    x
@@ -210,4 +229,50 @@ x                                                    x
 x                                                    x
 x    q                                               x
 x                                                    x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx      
+x    B                                               x      
+x                                             B      x
+x                 x   x                              x
+x +                xx                                x
+x                                               +    x
+x                                                    x
+x                                                    x
+x         x                                  x       x
+x                                                    x
+x                                                    x
+x                   xxxxx                            x
+x                                                    x
+x                 x P   o   x                        x
+x                 x        x                         x
+x                                                    x
+x                   xxxx                             x
+x       +                              x  x          x
+x                                       xx           x
+x                                                    x
+x                                                    x
+x                                       B            x
+x                                                    x      
+x             xxxx                                   x      
+x                                                    x
+x  B                                                 x
+x                                   xxx              x
+x x   x                                              x
+x  xx                                                x
+x                                 xxx                x
+x                 x                                  x
+x                 x                                  x
+x                                                    x
+x     B                xxx                           x
+x                     x   x                          x
+x                                                    x
+x         x                                          x
+x                                                    x
+x                                       B            x
+x               x   x                                x
+x                xxx                                 x
+x        x                            xx             x
+x  B     x                            +              x
+x        x                                         B x
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
