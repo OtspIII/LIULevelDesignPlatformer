@@ -28,13 +28,16 @@
 {"Type":"Door2", "Symbol":"@"},
 {"Type":"Key3", "Symbol":"3"},
 {"Type":"Door3", "Symbol":"#"},
-{"Type":"Event", "Symbol":"h","Sprite":"Hi","Color":"Purple","Text":"And that's how it all\nhappened! ;)","Audio":"Yell"},
-{"Type":"Event", "Symbol":"4","Sprite":"question","Color":"Red","Text":"ESCAPE THE BOX\nFIND THE KEYHOLDER"},
-{"Type":"Event", "Symbol":"5","Sprite":"question","Color":"Red","Text":"WATCH FOR\nORANGE SNIPERS"},
-{"Type":"Event", "Symbol":"6","Sprite":"question","Color":"Red","Text":"GOOD LUCK AND\nSTAY COOL"},
+{"Type":"Event", "Symbol":"4","Sprite":"volume","Color":"Red","Text":"I think it's awake.\n We should be careful."},
+{"Type":"Event", "Symbol":"5","Sprite":"volume","Color":"Red","Text":"Did it break through the boxes?\n Be on guard."},
+{"Type":"Event", "Symbol":"6","Sprite":"volume","Color":"Orange","Text":"We've called protective sniper units. \n It's our last resort."},
+{"Type":"Event", "Symbol":"q","Sprite":"volume","Color":"Yellow","Text":"Containment has been breached. \n Protect the boss."},
+{"Type":"Event", "Symbol":"u","Sprite":"volume","Color":"White","Text":"We have you surrounded! You won't kill the boss!"},
+{"Type":"Event", "Symbol":"k","Sprite":"volume","Color":"Blue","Text":"No, you won't take me! Go away!"},
 {"Type":"Destructable", "Symbol":"d","Color":"Algea","Amount":3},
 {"Type":"Bomb", "Symbol":"b","Color":"Slate","Size":0.5,"Drop":"~"},
 {"Type":"Music", "Symbol":"m","Audio":"Yell"},
 {"Type":"Bullet", "Symbol":".","Size":0.2},
-{"Type":"Explosion", "Symbol":"~","Amount":4}
+{"Type":"Explosion", "Symbol":"~","Amount":4},
+{"Type":"Goal", "Symbol":"="}
 ]}
