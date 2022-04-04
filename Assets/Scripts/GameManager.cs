@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(gameOver());
     }
 
-    public IEnumerator gameOver()
+    public virtual IEnumerator gameOver()
     {
         PC.Reset();
         AnnounceText.text = "GAME OVER\n\nLEVEL " + Level + "\n\n"+Creator+"\n\nHit 'x' To Continue";
@@ -246,6 +246,7 @@ public class GameManager : MonoBehaviour
             case SpawnThings.Enemy:
             {
                 EnemyController enemy = (EnemyController)Instantiate(Prefabs[SpawnThings.Enemy], pos, Quaternion.identity);
+                if(!MonDict[creator].ContainsKey(data.Color)) Debug.Log("MISSING COLOR: " + data.Color + " / " + creator);
                 enemy.Setup(MonDict[creator][data.Color]);
                 enemy.ApplyJSON(data);
                 return enemy;

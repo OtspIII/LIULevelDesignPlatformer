@@ -83,6 +83,9 @@ public class PlayerController : CharController
         Moved = false;
         RB.velocity = Vector2.zero;
         Keys.Clear();
+        Alive = true;
+        Coll.enabled = true;
+        SetColor(Data.Color);
     }
 
     public override void TakeDamage(int amt)

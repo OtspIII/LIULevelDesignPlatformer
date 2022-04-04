@@ -142,6 +142,8 @@ MonoBehaviour:
     Drop: 0
     Tag: 
     Toggle: 
+    Target: 0
+    Layer: 0
   AS: {fileID: 0}
   RB: {fileID: 2013191342}
   Coll: {fileID: 2013191341}
@@ -150,6 +152,7 @@ MonoBehaviour:
   Belted: 0
   Alive: 1
   Mobile: 0
+  Source: {fileID: 0}
   Data:
     Creator: 
     Color: 0
@@ -197,7 +200,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &2013191341
 BoxCollider2D:
