@@ -1,21 +1,41 @@
 {"Items":[
 {"Type": "Player", "Symbol": "P", "Sprite": "Mewhen", "Size": 1},
-{"Type":"Enemy", "Symbol": "G",  "Color":"Green", "Sprite": "Rat", "Size": 1},
-{"Type":"Enemy", "Symbol":"R", "Color":"Red"},
-{"Type":"Enemy", "Symbol":"Y", "Color":"Yellow"},
-{"Type":"Enemy", "Symbol":"I", "Color":"Pink"},
-{"Type":"Enemy", "Symbol":"O", "Color":"Orange"},
-{"Type":"Enemy", "Symbol":"B", "Color":"Blue"},
-{"Type":"Enemy", "Symbol":"U", "Color":"Purple"},
-{"Type":"Enemy", "Symbol":"W", "Color":"White"},
-{"Type":"Wall", "Symbol":"X", "Sprite":"Mywall"},
-{"Type":"Lava", "Symbol":"l", "Color":"Red"},
+{"Type":"Enemy", "Symbol": "Y",  "Color":"Yellow", "Sprite": "Rat", "Size": 2},
+{"Type":"Enemy", "Symbol": "R",  "Color":"Red", "Sprite": "Rat", "Size": 2},
+{"Type":"Enemy", "Symbol": "B",  "Color":"Blue", "Sprite": "Rat", "Size": 2},
+{"Type":"Enemy", "Symbol":"U", "Color":"Purple", "Sprite": "Rat", "Size": 3, "Drop":"1"},
+{"Type":"Door1", "Symbol":"!","Audio":"fnfr"},
+{"Type":"Wall", "Symbol":"X", "Sprite":"Wall"},
 {"Type":"ConveyorL", "Symbol":"<"},
 {"Type":"ConveyorR", "Symbol":">"},
 {"Type":"ConveyorU", "Symbol":"^"},
 {"Type":"ConveyorD", "Symbol":"v"},
-{"Type":"Event", "Symbol":"h","Sprite":"Cheese","Text":"um cheesed to meet you"},
-{"Type":"Event", "Symbol":"e","Sprite":"Cheese","Text":"cheese wisely"},
-{"Type":"Music", "Symbol":"m","Audio":"drawadogclip"},
-{"Type": "Bullet","Symbol": ".", "Size": 0.5,"Sprite": "Tom"}
+{"Type":"Music", "Symbol":"m","Audio":"cool"},
+{"Type":"Music", "Symbol":"n","Audio":"dink"},
+{"Type":"Music", "Symbol":"o","Audio":"funky"},
+{"Type": "Bullet","Symbol": ".", "Size": 1,"Sprite": "Tom"},
+{"Type":"Health", "Sprite":"HP","Symbol":"+","Size": 2,"Amount":100},
+
+{"Type":"Goal", "Symbol":"=", "Sprite": "Ship", "Size": 1,"Audio":"wroom"},
+{"Type":"Event", "Symbol":"h","Sprite":"Cheese","Color2":"Ebony", "Text":"Um cheesed to meet you!"},
+{"Type":"Event", "Symbol":"j","Sprite":"Cheese", "Color2":"Ebony","Text":"your spaceship is down there."},
+{"Type":"Event", "Symbol":"s","Sprite":"Cheese","Text":"rotate."},
+
+
+{"Type":"Event", "Symbol":"e","Sprite":"Cheese","Text":"The DMV is close"},
+{"Type":"Event", "Symbol":"q", "Sprite":"Destroy","Text":" I crashed landed. I do not own a spaceship license. It is destroyed."},
+{"Type":"Goal", "Symbol":"*", "Sprite": "DMV" ,"Size": 2},
+{"Type":"Wall", "Symbol":"x", "Sprite":"DMVWall"},
+
+{"Type":"Goal", "Symbol":"$", "Sprite": "Lis", "Size": 1,"Color":"White"},
+{"Type":"Event", "Symbol":"z","Sprite":"Cheese","Text":"The license is here. I need 445851839 space bucks.","Audio":"chcng"},
+
+{"Type":"Event", "Symbol":"_","Sprite":"Lis","Text":"I can buy a new ship now."},
+{"Type":"Event", "Symbol":"t","Sprite":"Cheese","Text":"kill those damn rats and the key is yours. One ate it."},
+{"Type":"Goal", "Symbol":"%", "Sprite": "NewShip", "Size": 1 },
+
+{"Type":"Event", "Symbol":"k","Sprite":"NewShip","Text":"Time to see my wife and kids."},
+{"Type":"Event", "Symbol":"~","Sprite":"Slug","Text":"*Slug noise*"},
+{"Type":"Goal", "Symbol":"?", "Sprite": "End", "Size": 4}
+
 ]}
