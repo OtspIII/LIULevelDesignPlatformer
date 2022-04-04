@@ -1,49 +1,208 @@
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x I              !            cx
+x   xxxxxxxxxxxxxx   x  xxxxxxxx
+x         cx    cxcccx   R  xccx
+x   xxxxxxxx   xxxxxxxxx    x  x
+x   xc     x  I        x    x  x
+x   xxxxx  x  xxxxxxx  x       x
+x       I  x  x1 x= x  xx xx   x
+xxxx       x  x  x  x  xccxx   x
+x             x  x@xx 2xccxx   x
+x xxxxxxxxx   x  x  xxxxxxx    x
+x x      cx   x  x  x     x    x
+xP   xxxxxx      x     x       x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xR             =             Rx
+x                             x
+x        x     b     x        x
+x    b   x           x   b    x
+x        x     R     x        x
+xR                           Rx
+x        R     b     R        x
+x        xxxxxxxxxxxxx        x
+x        x+    P    +x        x
+x        xgggggggggggx        x
+x    b         b         b    x
+xR                           Rx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+                        xxxxxxxxxxxxx                        
+                        x     P     x                        
+                        x           x                        
+                        x   xxxxx   x                        
+                        x   xxxxx   x                        
+                        x   xxxxx   x                        
+                        x   xxxxx   x                        
+                        x   xxxxx   x                        
+                        x   xxxxx   x                        
+                        x   xxxxx   x                        
+                        x   xxxxx   x                        
+xxxxxxxxxxxxxxxxxxxxxxxxx     x     xxxxxxxxxxxxxxxxxxxxxxxxx
+x                                                           x
+x   Y    +    b    Y          x                             x
+x                             x                             x
+x   b   xxxxxxxxxxxxxx b xxxxxxxxxxx   xxxxxxxxxxxxx        x
+x                             x                             x
+x   Y    +    b   Y           x                             x
+x                             1                             x
+x    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     x
+x  + xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     x
+x    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     x
+x    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     x
+x     ++++++++++++++++++++++ x=x                            x
+x     xxxxxxxxxxxxxxxxxxxxxx x!x xxxxxxxxxxxxxxxxxxxxx      x
+x  I           b      I    x x x x                          x
+x         I                                                 x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+xxxxxxxxxxxxxxx
+x+++x  P  x+++x
+xxxxxaaaaaxxxxx
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+    xvvvvvx    
+xxxxx     x    
+x1  x     x    
+x   x     x    
+x   x     x    
+x   xvvvvvx    
+x   xvvvvvx    
+x   xvvvvvx    
+x   xvvvvvx    
+x         x    
+xxxxx     x    
+    x     x    
+    x     x    
+    x     x    
+    x     x    
+    x     x    
+    xxx   x    
+    x     x    
+    x     x    
+    x     x    
+    x     x    
+    x     x    
+    x   xxx    
+    x     x    
+    x     x    
+    x     x    
+    x     x    
+    x     x    
+    xxx   x    
+    x     x    
+    x     x    
+    x     x    
+xxxxx     xxxxx
+x             x
+x    Y   Y    x
+x             x
+x      Y      x
+x             x
+x             x
+xxxxxxx!xxxxxxx
+     xx=xx
+     xxxxx
+
+
 xxxxxxxxxxx
-x   b     x   xxxxxxxxxxxx
-xfx   G   xxxxx          x
-xPf  b G  >>>>>+x  Y b  Gx
-xfx       xxxxx x        x   xxxxxxxxxxxxx
-x   b Y G x   x xI   b B x   x     R     x
-xxxxxxxxxxx   x     G    xxxxx  x    R   x
-              x          >>>>>+ xx xxx   x
-              xxxxxxxxxxxxxxxx  x  b     x
-                             x b   x   R x
-                             x     x     x
-                             x   xxx R   x
-                             x  R       =x
-                             xxxxxxxxxxxxx
-
-xxxxxxxxxxxxxxxxxxxxx
-xlvv<<<<<<<<<<<<<<<<x
-xlvv<<<<<<<<<<<<<<<<x
-xlvvl      R    Rl^^x
-xlvv              ^^x
-xlvv              ^^x
-xlvv       R      ^^x
-xPvv      xx     R^^x
-xlvv       R      ^^x
-xlvv              ^^x
-xlvv              ^^x
-xlvvl     R     Rl^^x
-xl>>>>>>>>>>>>>>>>^^x
-xl>>>>>>>>>>>>>>>>^^x
-xxxxxxxxxxxxxxxxxxxxx
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x      R      2xI      x^       x
-x        x     x     x x^xxxxxx x
-x  G     x     R     x x^x P  x1x
-x   xxxxxxxxxxxxxxxxxxBx^x    xvx
-x<<<<<<<<<<<<<<<<<<<<<<!^x    xYx
-xxxxxxxxxxx@xxxxxxxxxxxx^x    x x
-x=        x          B x^x      x
-x     Y   xxxxxxxxxxxx x^x      x
-x  Y      xxxxxxx  R   x^x      x
-x  G               R   x^   B   x
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
-
-
-
+xxxxx=xxxxx
+xxxxx!xxxxx
+xxxxjjjxxxx
+xxx     xxx
+xx       xx
+x         x
+x         x
+x         x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x         x
+x    B    x
+x         x
+x         x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x         x
+xB       Bx
+x         x
+x         x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x         x
+xB       Bx
+x    B    x
+x         x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x^^^^^^^^^x
+x         x
+xx   1   xx
+xxxeeeeexxx
+xxxxeeexxxx
+xxxxxPxxxxx
+xxxxxxxxxxx

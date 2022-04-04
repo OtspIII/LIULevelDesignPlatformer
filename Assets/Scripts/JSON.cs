@@ -11,7 +11,6 @@ public class JSONData
     public char Symbol;
     public SpawnThings Type;
     public MColors Color;
-    public MColors Color2;
     public Sprite Sprite;
     public AudioClip Audio;
     public string Text = "";
@@ -34,7 +33,6 @@ public class JSONData
         Symbol = source.Symbol.Length > 0 ? source.Symbol[0] : ' ';
         Type = source.Type != null ? (SpawnThings)Enum.Parse(typeof(SpawnThings), source.Type) : SpawnThings.None;
         Color = source.Color != null ? (MColors)Enum.Parse(typeof(MColors), source.Color) : MColors.None;
-        Color2 = source.Color2 != null ? (MColors)Enum.Parse(typeof(MColors), source.Color2) : MColors.None;
         if (source.Sprite != null) Sprite = GameManager.GetResourceSprite(source.Sprite, author);
         if (source.Audio != null) Audio = Resources.Load<AudioClip>("Assets/"+author+"/"+source.Audio);
         if (source.Text != null) Text = source.Text;
@@ -58,7 +56,6 @@ public class JSONTemp
     public string Symbol;
     public string Type;
     public string Color;
-    public string Color2;
     public string Sprite;
     public string Audio;
     public string Text;

@@ -65,3 +65,5 @@ Packages/
 ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/EditorBuildSettings.asset~1425f4505d14f227b7878c021bf43ddcae994949
 
+Assets/Resources/JSON/Allison.json.meta
+Assets/Resources/Levels/Allison.txt.meta

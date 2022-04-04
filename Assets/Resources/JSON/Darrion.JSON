@@ -1,11 +1,11 @@
 {"Items":[
-{"Type":"Player", "Symbol":"P", "Sprite":"Player"},
-{"Type":"Enemy", "Symbol":"G", "Color":"Green", "Sprite":"BlueCharger"},
+{"Type":"Player", "Symbol":"P", "Sprite":"Player2"},
+{"Type":"Enemy", "Symbol":"G", "Color":"Green", "Sprite":"GreenCharger"},
 {"Type":"Enemy", "Symbol":"R", "Color":"Red", "Sprite":"Leaper"},
 {"Type":"Enemy", "Symbol":"Y", "Color":"Yellow", "Sprite":"YellowShooter"},
 {"Type":"Enemy", "Symbol":"I", "Color":"Pink", "Sprite":"PinkShooter"},
 {"Type":"Enemy", "Symbol":"O", "Color":"Orange"},
-{"Type":"Enemy", "Symbol":"B", "Color":"Blue", "Sprite":"GreenCharger"},
+{"Type":"Enemy", "Symbol":"B", "Color":"Blue", "Sprite":"BlueCharger"},
 {"Type":"Enemy", "Symbol":"U", "Color":"Purple"},
 {"Type":"Enemy", "Symbol":"W", "Color":"White"},
 {"Type":"Enemy", "Symbol":"E", "Color":"Ebony","Drop":"1"},
@@ -13,7 +13,7 @@
 {"Type":"Enemy", "Symbol":"A", "Color":"Algea"},
 {"Type":"Enemy", "Symbol":"S", "Color":"Slate"},
 {"Type":"Wall", "Symbol":"x", "Sprite":"Wall"},
-{"Type":"Floor", "Symbol":" ", "Sprite":"Ground"},
+{"Type":"Floor", "Symbol":" ", "Sprite":"Floor"},
 {"Type":"Lava", "Symbol":"l"},
 {"Type":"ConveyorL", "Symbol":"<", "Sprite":"ArrowLeft"},
 {"Type":"ConveyorR", "Symbol":">", "Sprite":"ArrowRight"},
@@ -27,6 +27,11 @@
 {"Type":"Door3", "Symbol":"#"},
 {"Type":"Event", "Symbol":"h","Sprite":"Hi","Color":"Purple","Text":"And that's how it all\nhappened! ;)","Audio":"Yell"},
 {"Type":"Event", "Symbol":"f","Sprite":"Hi","Color":"Purple","Text":"BOMBS AWAY!","Audio":"Yell"},
+{"Type":"Event", "Symbol":"c","Sprite":"Hi","Color":"Purple","Text":"Blocked...","Audio":"Yell"},
+{"Type":"Event", "Symbol":"a","Sprite":"Hi","Color":"Purple","Text":"Sadness...","Audio":"Yell"},
+{"Type":"Event", "Symbol":"g","Sprite":"Hi","Color":"Purple","Text":"RAGE","Audio":"Yell"},
+{"Type":"Event", "Symbol":"e","Sprite":"Hi","Color":"Purple","Text":"Acceptance?","Audio":"Yell"},
+{"Type":"Event", "Symbol":"j","Sprite":"Hi","Color":"Purple","Text":"The End...","Audio":"Yell"},
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3},
 {"Type":"Bomb", "Symbol":"b","Color":"Pink","Size":0.5,"Drop":"~", "Sprite":"Bomb"},
 {"Type":"Music", "Symbol":"m","Audio":"Yell"},
@@ -35,5 +40,5 @@
 {"Type":"Zoom", "Symbol":"(","Amount":2},
 {"Type":"Zoom", "Symbol":")","Amount":1},
 {"Type":"Health", "Symbol":"+","Amount":10, "Sprite":"HP"},
-{"Type":"Goal", "Symbol":"="}
+{"Type":"Goal", "Symbol":"=", "Sprite":"Door"}
 ]}

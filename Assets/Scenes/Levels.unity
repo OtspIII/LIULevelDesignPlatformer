@@ -118,8 +118,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    maxJobWorkers: 0
-    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -226,6 +224,11 @@ PrefabInstance:
       propertyPath: Target
       value: 
       objectReference: {fileID: 1702348085}
+    - target: {fileID: 1444854468155545558, guid: d0facc5ccca58f742a8e3532c2d3ee42,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1719166612456067674, guid: d0facc5ccca58f742a8e3532c2d3ee42,
         type: 3}
       propertyPath: m_Name
@@ -313,8 +316,13 @@ PrefabInstance:
       objectReference: {fileID: 1347121283}
     - target: {fileID: 5414933748289262411, guid: d0facc5ccca58f742a8e3532c2d3ee42,
         type: 3}
+      propertyPath: Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414933748289262411, guid: d0facc5ccca58f742a8e3532c2d3ee42,
+        type: 3}
       propertyPath: Creator
-      value: Emmanuel
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6979882516066568915, guid: d0facc5ccca58f742a8e3532c2d3ee42,
         type: 3}

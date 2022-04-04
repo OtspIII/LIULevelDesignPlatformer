@@ -1,0 +1,109 @@
+﻿xxxxxxxxxxxxxxxxxxxxxxxxxx
+x  P                     x
+x                        x
+x                        x
+x        R         v   Y x
+x        R         v     x
+x                  v     x
+xxxxxxxxxxxx       v     x
+           x       v     x
+           x       v     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           x       v          x                        x               
+           x       1   Y      x                    G   x                  
+           x                  !                        x              
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+           
+                                          xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                       xxx              G              xx                
+                                    xxx   ^v                             x
+                                 xxx      ^v            G                x 
+                              xxx         ^v        xxxxxxxxxxxxxxxxxxxxx
+                           xxx            ^v     xxx                     xxxxxx
+                          x               ^v  xxx          U                   xxx  
+                          x  Y     Y       xxx                                   x  
+                          x              xx                 xxxxxxxxxx   ^ ^ v v  x  
+                          x              xx     B                    x   ^ ^ v v  x
+                          xx              xxxx                    P  x   ^ ^ v v  x           
+                            xx                xxxxx                   x  ^ ^ v v  x              
+                              xx                   xxxxxxxxxxxxxxxxxxxx  ^ ^ v v  x
+                                xx                                       ^ ^ v xxx                 
+                                  xxx                                   R   xxxx   
+                                     xx         >>>>>>>>>>>>>>          xxxx
+                                       xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  
+
+  
+xxxxxxxxxxxxxxxxxxxxxxx                                      xxxxxxxxxxxxxxxxxxxx
+ x     llll      P     x                                      x                  x
+  x    llll             x                                      x                  x
+   x   llll              x                                     x        llll       x
+    x                     x                                   x    B    llll      x
+    x                     x                                  x          llll     x
+   x                     x                                  x                   x
+  x                     x                                  x                   x
+ x      R         Y    x                                   x                   x
+x                       x                        xxx        x   U               x
+x             llll       x                    xxx   x        x                   x
+ x            llll        x               xxxx       xx       x                   x
+  x           llll         x         xxxxx            x      xx                   x
+   x                       x   xxxxxx                 x   xxx llll                x
+    x                     x xxx                       x xx    llll               x
+    x                    x                             x      llll         R    x
+   x                                                                           x
+  x                                       x          Y                          x
+ x            G                         xx xx                                    x
+xlllllllllllllllllllllllllllllllllllllxx     xxlllllllllllllllllllllllllllllllllllx
+Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+xxx                                          xxx
+xPx                                          x=x
+xvx                                          x^x
+xvx                                          x^x
+xvx                                          x^x
+xvx                                          x^x
+xvxxxxxxxxxxxx                    xxxxxxxxxxxx^x
+x>>>>>>>>>>>vx                    x>>>>>>>>>>>^x
+xxxxxxxxxxxxvx                    x^xxxxxxxxxxxx
+           xvx                    x^x
+           xvx                    x^x
+           xvx                    x^x
+xxxxxxxxxxxxvx                    x^xxxxxxxxxxxx
+x<<<<<<<<<<<<x                    x^<<<<<<<<<<<x
+xvxxxxxxxxxxxx                    xxxxxxxxxxxx^x
+xvx                                          x^x
+xvx                                          x^x
+xvxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx^x
+x>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>^x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ xB>>>>>>>>>>>>>>>Y>>>>>>>>>>>>>>>>>>vvvvGx
+ x>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>vvvvvx
+ x>>>>>>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxvvvvvx
+ x^^^^^x                            xvvvvvx
+ x^^^^^x                            xvvvvvx
+ x^RRR^x                            xvvvvvx
+ x^^^^^x        xxxxxxxxxxxxxxxxxxxxx<<<<<x
+ x^^^^^x        xvvvvvv<<<<<<Y<<<<<<<<<<<<x
+ x^^^^^x        xvvvvvv<<<<<<<<<<<<<<<<<<<x
+ x^^^^^x        xvvvvvxxxxxxxxxxxxxxxxxxxxx
+ x^^^^^x        xvvvvvx
+ x^^^^^x        xvvvvvxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ x^^+^^x        x>>>>>>>>>>>>>>>>>>>>>>>>>>vvvvvvx
+ x^^P^^x        x>>>B>>>>>>>>>>>>>>>>>>>>>>vvvvBvx
+ xxxxxxx        xxxxxxxxxxxxxxxxxxxxxxxxxxxvvvvvvx
+ x=====x         xxxxxxxxxxxx             xvvvvvvx
+ x^^^^^x      xxxx<<<<<<<<<<<xxx          xvvvvvvx
+ x^^^^^xxxxxxxx<<<<<<<<<<<<<<<<<xxxxxxxxxxxvvvvvvx
+ x^^^^^^^<<<<<<<<<xxxxxxxxxxx<<<<<<<<<<<<<<<<<<<<x
+ x^^^^^^^^<<<<<<<<xxxxxxxxxxxU<<<<<<<<<<<<<<<<<<<x
+ xxxxxxxxxxxxx<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<xx
+              xxxx<<<<<<<<<<<<<<xxxxxxxxxxxxxxxxxx
+                 xxxxxxxxxxxxxxx
+
+
+
+
+
