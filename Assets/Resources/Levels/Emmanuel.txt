@@ -1,1 +1,353 @@
-P           G
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x                                               x                                                                    
+x                                               x                                                                                                                 
+x                                        G      x                                                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                            
+X                                               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                          x    B                                   1 x                                            x
+x                                                                                           x                          x                                    R     x
+X                                                  R                                        x                          x                                          x
+x                                                                                           x                          x                                          x
+x                                                                                           x                          x                                          x
+x                                               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx!xxxxxxxx                          x                                          x
+x              G                                x                          x                x                          x       G                     G            x
+x                                               x                          x                x                          xxxxxxxxxxxxxxxx             xxxxxxxxxxxxxxx  
+xxxxxxxxxxxxxxxxxxxxx             xxxxxxxxxxxxxxx                          x                x                                         x             x
+                    x             x                                        x                x                                         x             x
+                    x             x                                        x                x                                         x             x
+                    x             x                                   xxxxxx                xxxxxx                                    x             x
+                    x             x                                   x                          x                                    x             x
+                    x             x                                   x             =            x                                    x        U    x
+                    x             x                                   x                          x                                    x             x
+                    x             x                                   xxxxxxxxxxxxxxxxxxxxxxxxxxxx                                    x             x
+                    x             x                                                                                                   x             x
+                    x             x                                                                                                   x             x      
+                    x             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx             x
+                    x                                                                                                                               x
+                    x                                                                                                                     U         x
+                    x                                               U                                                                               x
+                    x                                               U                                                                               x
+                    x                                                                                                                               x
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+                                                     x              x                               x            x
+                                                     x              x                               x            x
+                                                     x              x                               x            x
+                                                     x              x                               x            x
+                                                     x              x                               x      R     x
+                                                     x      R       x                               x            x
+                                                     x              x                               x            x
+                                                     x              x                               x            x
+                                                     x              x                               x            x
+                                   xxxxxxxxxxxxxxxxxxx              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx            xxxxxxxxxxxxxxxxxxx
+                                   x                                                                                               x
+                                   x                                               R             G                                 x
+                                   x                                     xxxxxxxxxxxxxxxxxxxxx                                     x
+                                   x                                                                         B                     x
+                                   x                                                                                               x
+                                   x                                                                                               x
+                                   x                                                                                               x
+                                   x                                                         G                                     x
+                                   x                                                                                               x
+                                   x                               B                                                               x
+                                   x                                                                                               x
+                                   x                                                                                               x
+                                   x                                                                                               x
+                                   x                                                                                               x
+                                   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                                                  x m                 P       h     x
+                                                                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x P        c              x                                                            x
+x                        x  B        U                             R               G   x
+x                        x           U         x                   R                   x                                                                                                    
+x                                              x  B                                    x
+x k                                            x                                       x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx               x
+                                                                       x               x
+                                                                       x   xxx         x 
+                                                                       x    B          x
+                                                                       x         U     x
+                                                                       x               x
+                                                                       x          xxx  x
+                                                                       x           B   x
+                                                                       x               x
+                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx               x
+                     x 1                     x    Y                     G              x
+                     x   R                  O x                                        x
+                     x                       x                  x                      x
+                     x                               B     Y    x                  G   x
+                     x     G                                     x                     x
+                     xxxxxx!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                     x             x
+                     x             x
+                     x             x
+                     x             x
+                     x      W      x
+                     x             x
+                     x             x
+                     x             x
+                     x             x
+                     x             x          
+                     x             x
+                     x             x
+                     x             x
+                     x             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                     x                                                                l      2    x
+                     x                   O                  R                 l       l           x
+                     x                              l                                 ll    Y Y   x
+                     x   R                          l                                             x
+                     x                      llll                   l              O               x
+                     x             B                          B                                   x
+                     x                              l                               W             x
+                     x  G                     U                             l                     x
+                     x                                             W        l                     x
+                     x      U      l                l                                             x
+                     x             l                           ll                                 x
+                     x             l       l                                                      x
+                     x                                                  l                         x
+                     x            R                 G                                             x
+                     x   lll                                    l                                 x
+                     x o                                                                          x
+                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@xxxxxxxx
+                                                                                   x              x
+                                                                                   x              x
+                                                                                   x              x
+                                                                                   x              x
+                                                                                   x   y          x
+                                                                                   x              x
+                                                                                   x              x
+                                                                                   x              x
+                                                                                   x          y   x
+                                                                                   x              x
+                                                                                   x              x
+                                                                                   x              x
+                                                                                   x  B           x
+                                                                                   x              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                                                                   x                             R                     G    x
+                                                                                   x        W                                               x
+                                                                                   x                                                        x
+                                                                                   x                             R                          x                                                  
+                                                                                   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     R      x
+                                                                                                                               x            x
+                                                                                                                               x            x
+                                                                                                                               x            x
+                                                                                                                               x            x
+                                                                                                                               x            x
+                                                                                                                               x            x
+                                                                                                                               x       U    x
+                                                                                                                               x            x
+                                                                                                                           xxxxx            xxxxx
+                                                                                                                           x                    x
+                                                                                                                           x          =         x
+                                                                                                                           x                    x
+                                                                                                                           xxxxxxxxxxxxxxxxxxxxxx
+
+             xxxxxxxxxxxxxxxx
+             x q      P     x
+             x              x
+             x              x
+             x              x
+             x              x 
+             x              x
+             x              x
+             x              x
+        xxxxxx              xxxxxx
+        x                        x
+        x                        x
+        x   G                    x
+        x                        x
+        xxxxxx              xxxxxx
+             x              x
+             x              x
+             x   B    O     x
+             x           B  x
+             x   W          x
+             x              x
+             x              x
+             x              x
+        xxxxxx              xxxxxx
+        x                        x
+        x                        x
+        x                     O  x
+        x                        x
+        xxxxxx              xxxxxx
+             x         Y    x
+             x    R         x
+             x              x
+             x          G   x
+             x              x
+             x              x
+             x              x
+             x              x
+             x              x
+             x              x
+             x              x                
+             x              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx              
+             x                          x     U           x                         x
+             x                                            x                         x
+             x                        I           x     U                R          x
+             x                                                                      xxxxx
+             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                        x
+                                                               x    xxx    xxx          x                
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx      W     B           x                                         
+x                            U     O x              Y                      R     xxx    x                                                         
+x                     W              x                                           x x    x
+x  R                                     B           x            G              x xxxxxx
+x            G                U       x             Y x                          x
+x              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                                                                                 
+x              x
+x              x
+x xxxx         x
+x  O           xxxxxxx
+x                    x
+x                    x
+x              xxx   x  
+x              x xxxxx
+x           B  x
+x     W    xxx x
+x              x
+x          U   x
+x              x
+x xxx          x
+x              x             xxxxxxxxxx              xxxxxxxxxxx
+x          G   x             x    I   x              x    U    x
+x              xxxxxxxxxxxxxxx        xxxxxxxxxxxxxxxx         xxxxxxxxxxxxxxxxxxxxxxx
+x                                                                         R          x
+x                                             Y                           B          x
+x        W                                    Y                           B        = x
+x                                                                         R          x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx        xxxxxxxxxxxxxxxx         xxxxxxxxxxxxxxxxxxxxxxx 
+                             x    I   x              x    U    x
+                             xxxxxxxxxx              xxxxxxxxxxx
+
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           x                                          W                       x
+           x P                   I                                U           x
+           x                     G                                            x                                           xxxxxxxxxxxxxx
+           x j                                                 W              x                                           x            x
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx           x                                           x      =     x
+                                                                  x           x                                           x            x
+                                                                  x           x                                           x            x
+                                                                  x  B        x                                           x            x
+                                                                  x           x                                           x            x
+                                                                  x         O x                                           x            x
+                                                                  x           x                                           xxxxxx!xxxxxxx
+                                                                  x           x                                           x            x
+                                                                  x           x                                           x            x
+                                                                  x           x                                           x            x
+                                                                  x           x                                           x            x
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx            x            x
+                    x               v<<<<<<<<<<<<<<<<<<<<<<<<<<<<               >>>>>>>>>>>>>>>>>>>>     a   x            x            x         
+                    x     l         v                                               x                        x            xxxxxx@xxxxxxx
+                    x     l         v                            I                R x                    l   x            x            x
+                    x               v               lll             R   B  B   O    x                    l   x            x  R      R  x
+  xxxxxxxxxxxxxxxxxxx    x        lllll                                                                      x            x            x
+  x                                         x    G                      W       l             xx             x            x      I     x
+  x            W                    I       x                                                                xxxxxxxxxxxxxx            x
+  x                                 I       x           x     B                                  v                                     x
+  x                                                   G x                           l            v           W                         x
+  x          xxxxxxxx                     l                          llll           x            v           Y                      O  x
+  x          x      x         x                  B                                  x    G   B   v                                     x
+  x          x      x                                                                            v           xxxxxxxxxxxxxxxxxxxxxxxxxxx
+  x          x      x                     Y     x x                                 l<<<<<<<<<<<<<           x
+  x  I       x      x                                                 l             l                        x
+  x          x      x          ll                                                                     l      x
+  x          x      x                          l                                                             x
+  x       I  x      x                                                                                        x
+  x          x      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx     W     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  x          x                                       x           x
+  x          x                                       x           x
+  x          x                                       x           x                                          xxxxxxxxxxxxx          
+  x          x                                       x           x                                          x     1  z  x
+  x          xxxxxxxxxxxxxxxxxxxxx                   x           x                                          x           x
+  x  R                           x                   x G       G x                                          x  I        x
+  x        R        O            x                   x           x                                          x           x
+  x                       O      x                   x           x                                          x        I  x
+  x              I             2 x                   x           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    R      x
+  x                    O         x                   x              B                           U                       x
+  x        I                     x                   x                                                                  x
+  x               O              x                   x                                                                  x
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                   x                             B                      U             x
+                                                     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+                                      xxxxxxxxxxxxxxxxxxxxx
+                                      x    S              x
+                                      x                   x
+llllllllllllllllllllllllllllllllllllllxxxxxxxxxxxxxxxxxxxxxlllllllllllllllllllllllllllllllllllllllllllll
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                               E                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+l                                                                                                      l
+llllllllllllllllllllllllllllllllllllllllll             lllllllllllllllllllllllllllllllllllllllllllllllll
+                                         x             x
+                                         x             x
+                                         x             x
+                                         x             x
+                                         x             x
+                                         x             x                 
+                                         x             x
+                                    xxxxxx             xxxxxx
+                                    x                       x
+                                    x                       x
+                                    x                       x
+                                    x                       x
+                                    x                       x
+                                    x                       x
+                                    x                       x
+                                    x                       x
+                                    x                       x
+                                    x                       x
+                                    x                       x
+                             xxxxxxxx                       xxxxxxxx
+                             x                                     x
+                             x                                     x
+                             x                                     x
+                             x                                     x
+                             x                                     x
+                             x                                     x
+                             x                  P             f    x
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                             
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x                            =                              x
+x                                                           x
+x                                                           x
+x                                                           x 
+x                                                           x
+x                                                           x
+x                                                           x
+x                                                           x
+x                                                           x
+x     T                                                     x
+x                                                           x
+x                                                           x
+x                                                           x
+x                                                           x
+x                                                           x
+x                                                           x
+x                                                           x
+x                                                           x
+x                          P   S          g                 x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
