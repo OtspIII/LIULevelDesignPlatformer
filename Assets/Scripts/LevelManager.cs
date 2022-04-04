@@ -132,8 +132,21 @@ public class LevelManager : GameManager
         AnnounceText.text = "";
         Paused = false;
     }
-    
-    
+
+    public override IEnumerator gameOver()
+    {
+        
+        AnnounceText.text = "GAME OVER\n\nLEVEL " + Level + "\n\n"+Creator+"\n\nHit 'x' To Continue";
+        while(!Input.GetKeyDown(KeyCode.X))
+            yield return null;
+        PC.Reset();
+        PC.HP = PC.MaxHP;
+        Paused = true;
+        Victory = false;
+        GoalExists = false;
+        SpawnLevel(Level);
+        
+    }
 }
 
 
