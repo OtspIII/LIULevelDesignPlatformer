@@ -186,7 +186,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(gameOver());
     }
 
-    public IEnumerator gameOver()
+    public virtual IEnumerator gameOver()
     {
         PC.Reset();
         AnnounceText.text = "GAME OVER\n\nLEVEL " + Level + "\n\n"+Creator+"\n\nHit 'x' To Continue";
