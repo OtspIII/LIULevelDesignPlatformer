@@ -1,37 +1,60 @@
-xxxxxxxxxxxxxxxxxxxxxxxxxx
-x           P            x
-x    x            x      x
-x    x            x      x
-x    x            x      x
-x                        x
-x           O            x
-x   x               x    x
-x Y  x             x   Y x
-x     x           x      x
-x      x   B  B  x       x
-x       xxxxxxxxx        x
-x           O            x
-xxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxP      1x    O              3lxx
+xx        x                   lxx
+xx       Ox                  lxx
+xxxxxxxxx!x           Y     lxx
+xx Y     vl                lxx
+xx       vx               lxx
+xx       vl            Y lxx
+xx       vx             lxx
+xx Y     vl             lxx
+xxlxxl                   lxx
+xx         xl@lx          lxx
+xx O       xx  xx          lxx
+xx         xx   xx     Y    lxx
+xxxxxl lxxxxx    xx     B    lxx
+xx         xx     xx         xxxx
+xxB   2    xx G    xx        #RRxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+              xxxxxx
+             xxxxxxxx
+            xxx Px2xxx
+           xxx   xY xxx
+          xxx    x   xxx
+         xxx     x    xxx
+        xxx      x     xxx
+       xxx       x      xxx
+      xxxl      YxR     Rxxx
+     xxxl       xxx       xxx
+    xxxl       xxxxx       xxx
+   xxx        xlllllx       xxx
+  xxx        !>>>>>>>!       xxx
+ xxx         @<<<<<<<@        xxx
+xxx  B        xlllllx          xxx
+xxx1  B       xxxxxxx         Gxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x P                              B   x
-x   x     x     x  x  xxx    x       x
-x    x   x x B x   x  x  x Y x       x
-x     xOx B x x    x Ox   x  x       x
-x      x     x     x  x Y  xxx       x
-x                    O               x
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxx
-x             P           x
- x                       x
-  x   O              O  x
-   x         Y         x
-    x                 x
-     xxxxxx xxxx xxxxx
-    x                 x
-   x    Y    Y    Y    x
-  x                     x
- x                       x
-x   R G R G R G R G R G   x
-xxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxv<<<<<<<<<             >>>>>>>>>>vxx
+xxvP     ^lx             x^       Ovxx
+xxv  O B ^lx             x^Y       vxx
+xx>>>>>>>^lx             x^<<<<<<<<<xx
+xxxxxxxxxxxx             xxxxxxxxxxxxx
+xxxxxxxxxxxx             xxxxxxxxxxxxx
+          xx     v^      xx
+          xx     v^      xx
+          xx     v^      xx
+          xx     v^      xx
+          xx     v^      xx
+          xx     v^      xx
+          xx G   v^    G xx
+          xx     v^      xx
+          xx     v^      xx
+          xx Y    Y    Y xx
+          xxxxxxxxxxxxxxxxx
+          xxxxxxxxxxxxxxxxx
