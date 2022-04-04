@@ -56,16 +56,54 @@ x             llll       x                    xxx   x        x                  
 xlllllllllllllllllllllllllllllllllllllxx     xxlllllllllllllllllllllllllllllllllllx
 Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-v
-v
-v
-v
-v
-v
-v>>>>>>>>>>>
-           v
-           v
-           v
-           v
-           v
-v<<<<<<<<<<v
+xxx                                          xxx
+xPx                                          x=x
+xvx                                          x^x
+xvx                                          x^x
+xvx                                          x^x
+xvx                                          x^x
+xvxxxxxxxxxxxx                    xxxxxxxxxxxx^x
+x>>>>>>>>>>>vx                    x>>>>>>>>>>>^x
+xxxxxxxxxxxxvx                    x^xxxxxxxxxxxx
+           xvx                    x^x
+           xvx                    x^x
+           xvx                    x^x
+xxxxxxxxxxxxvx                    x^xxxxxxxxxxxx
+x<<<<<<<<<<<<x                    x^<<<<<<<<<<<x
+xvxxxxxxxxxxxx                    xxxxxxxxxxxx^x
+xvx                                          x^x
+xvx                                          x^x
+xvxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx^x
+x>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>^x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ xB>>>>>>>>>>>>>>>Y>>>>>>>>>>>>>>>>>>vvvvGx
+ x>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>vvvvvx
+ x>>>>>>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxvvvvvx
+ x^^^^^x                            xvvvvvx
+ x^^^^^x                            xvvvvvx
+ x^RRR^x                            xvvvvvx
+ x^^^^^x        xxxxxxxxxxxxxxxxxxxxx<<<<<x
+ x^^^^^x        xvvvvvv<<<<<<Y<<<<<<<<<<<<x
+ x^^^^^x        xvvvvvv<<<<<<<<<<<<<<<<<<<x
+ x^^^^^x        xvvvvvxxxxxxxxxxxxxxxxxxxxx
+ x^^^^^x        xvvvvvx
+ x^^^^^x        xvvvvvxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ x^^+^^x        x>>>>>>>>>>>>>>>>>>>>>>>>>>vvvvvvx
+ x^^P^^x        x>>>B>>>>>>>>>>>>>>>>>>>>>>vvvvBvx
+ xxxxxxx        xxxxxxxxxxxxxxxxxxxxxxxxxxxvvvvvvx
+ x=====x         xxxxxxxxxxxx             xvvvvvvx
+ x^^^^^x      xxxx<<<<<<<<<<<xxx          xvvvvvvx
+ x^^^^^xxxxxxxx<<<<<<<<<<<<<<<<<xxxxxxxxxxxvvvvvvx
+ x^^^^^^^<<<<<<<<<xxxxxxxxxxx<<<<<<<<<<<<<<<<<<<<x
+ x^^^^^^^^<<<<<<<<xxxxxxxxxxxU<<<<<<<<<<<<<<<<<<<x
+ xxxxxxxxxxxxx<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<xx
+              xxxx<<<<<<<<<<<<<<xxxxxxxxxxxxxxxxxx
+                 xxxxxxxxxxxxxxx
+
+
+
+
+
