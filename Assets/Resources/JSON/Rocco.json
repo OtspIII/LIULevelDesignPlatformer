@@ -26,7 +26,7 @@
 {"Type":"Door2", "Symbol":"@"},
 {"Type":"Key3", "Symbol":"3"},
 {"Type":"Door3", "Symbol":"#"},
-{"Type":"Health", "Symbol":"♥","Amount":5, "Color":"Green"},
+{"Type":"Health", "Symbol":"♥","Amount":8, "Color":"Green", "Sprite":"Heart"},
 
 {"Type":"Destructable", "Symbol":"d","Color":"White","Amount":2},
 {"Type":"Bomb", "Symbol":"b","Color":"Red","Size":0.5,"Drop":"e"},
@@ -38,7 +38,8 @@
 {"Type":"Music", "Symbol":"♯","Audio":"Final Main 3", "Color":"Ebony"},
 {"Type":"Music", "Symbol":"Ⱡ","Audio":"Final Main 4", "Color":"Ebony"},
 {"Type":"Music", "Symbol":"ⱡ","Audio":"Final Main 5", "Color":"Ebony"},
-{"Type":"Event", "Symbol":"E","Sprite":"Hi","Color":"Purple","Text":"And that's how it all\nhappened! ;)","Audio":"Yell"},
+{"Type":"Event", "Symbol":"E","Sprite":"SquareStolenFromMishaLmao","Color":"Purple","Text":"You are my creation\nWITH_LOVE_FROM_AMERICA\n\nDestroy their files!","Audio":"Vlad"},
+{"Type":"Event", "Symbol":"•","Sprite":"SquareStolenFromMishaLmao","Color":"Purple","Text":"You're past the firewall!\n\nKeep going!","Audio":"Vlad 2"},
 {"Type":"Goal", "Symbol":"G", "Color":"Ebony"},
 {"Type":"Zoom", "Symbol":"z","Amount":1.75},
 {"Type":"Zoom", "Symbol":"Z","Amount":1},
