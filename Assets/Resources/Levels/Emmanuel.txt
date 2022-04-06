@@ -270,9 +270,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx        xxxxxxxxxxxxxxxx         xxxxxxxxxxxxxxxxx
                                                      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
                                       xxxxxxxxxxxxxxxxxxxxx
-                                      x    S              x
+                                      x    S    =       T x
                                       x                   x
-llllllllllllllllllllllllllllllllllllllxxxxxxxxxxxxxxxxxxxxxlllllllllllllllllllllllllllllllllllllllllllll
+llllllllllllllllllllllllllllllllllllllxxxxxxxxxx!xxxxxxxxxxlllllllllllllllllllllllllllllllllllllllllllll
 l                                                                                                      l
 l                                                                                                      l
 l                                                                                                      l
@@ -330,24 +330,3 @@ llllllllllllllllllllllllllllllllllllllllll             lllllllllllllllllllllllll
                              x                  P             f    x
                              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                              
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x                            =                              x
-x                                                           x
-x                                                           x
-x                                                           x 
-x                                                           x
-x                                                           x
-x                                                           x
-x                                                           x
-x                                                           x
-x     T                                                     x
-x                                                           x
-x                                                           x
-x                                                           x
-x                                                           x
-x                                                           x
-x                                                           x
-x                                                           x
-x                                                           x
-x                          P   S          g                 x
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
