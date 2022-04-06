@@ -23,6 +23,6 @@
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3},
 {"Type":"Bomb", "Symbol":"b","Color":"Pink","Size":0.5,"Drop":"~"},
 {"Type":"Music", "Symbol":"m","Audio":"Yell"},
-{"Type":"Bullet", "Symbol":".","Size":0.2, "Sprite": "Bullet"},
+{"Type":"Bullet", "Symbol":".","Size":0.2, "Sprite": "bullet"},
 {"Type":"Explosion", "Symbol":"~","Amount":4}
 ]}
