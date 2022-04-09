@@ -56,8 +56,8 @@ x        <<<<<<<<<<<<<          x
 x  7                @xxxxxxxxxxxx
 x     <<<<<<<<<<<<<x        O   x
 x                  x            x
-x    R             x           @x
-x              R   x     O    @=x
+x    R             x           !x
+x              R   x     O    !=x
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
