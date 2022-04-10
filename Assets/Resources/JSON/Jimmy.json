@@ -28,7 +28,7 @@
 {"Type":"Door3", "Symbol":"#"},
 {"Type":"Event", "Symbol":"h","Sprite":"Tank","Color":"Purple","Text":"Its up to you soldier to stop the Aliens" },
 {"Type":"Event", "Symbol":"(","Sprite":"Gun","Text":"We must Destroy the nests. Without the nest, there can't be anymore aliens" },
-{"Type":"Event", "Symbol":"j","Sprite":"Find","Color":"Blue","Text":"We me destroy as many Aliens as possible, becareful I heard a queen was spotted in the area"},
+{"Type":"Event", "Symbol":"j","Sprite":"Find","Color":"Blue","Text":"We me destroy as many Aliens as possible, becareful I heard a nest was spotted in the area"},
 {"Type":"Event", "Symbol":"o","Sprite":"Cloud2","Text":"This place are where the last of the aliens are, Once we destroy them earth will be free from the aliens" },
 {"Type":"Event", "Symbol":"u","Sprite":"Run","Color":"Red","Text":"The king has arrived, you can't beat him. Try to find the ship and get out of here" },
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3},
