@@ -56,14 +56,14 @@ x        <<<<<<<<<<<<<          x
 x  7                @xxxxxxxxxxxx
 x     <<<<<<<<<<<<<x        O   x
 x                  x            x
-x    R             x           @x
-x              R   x     O    @=x
+x    R             x           !x
+x              R   x     O    !=x
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x    l    R       l         xxxxxxxxxxxxxxxxxxxxxxxxx
-x  >>l ^l   v   >>l   l     x   W    d    O   d     xxxxxxxxxxxxxxxxxxxx
-x      ^l   l    R    l     d   W    x    O   x     dddddddddddd k dd Bx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x  P  l    R       l         xxxxxxxxxxxxxxxxxxxxxxxxx
+x   >>l ^l   v   >>l   l     x   W    d    O   d     xxxxxxxxxxxxxxxxxxxx
+x       ^l   l    R    l     d   W    x    O   x     dddddddddddd k dd Bx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

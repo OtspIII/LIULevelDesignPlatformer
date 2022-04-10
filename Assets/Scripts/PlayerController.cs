@@ -85,7 +85,8 @@ public class PlayerController : CharController
         Keys.Clear();
         Alive = true;
         Coll.enabled = true;
-        SetColor(Data.Color);
+        if(JSON.Sprite == null)
+            SetColor(Data.Color);
     }
 
     public override void TakeDamage(int amt)
