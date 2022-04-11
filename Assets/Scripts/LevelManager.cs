@@ -7,17 +7,25 @@ using Random = UnityEngine.Random;
 
 public class LevelManager : MonoBehaviour
 {
+    public string Creator;
+    public JSONCreator Ruleset;
     public List<PlayerSpawnController> PSpawns;
     public List<ItemSpawnController> ISpawns;
     public PlayerSpawnController LastPS;
     public List<string> Announces;
 
     public Dictionary<FirstPersonController, int> Scores = new Dictionary<FirstPersonController, int>();
-    public int ToWin = 5;
 
     void Awake()
     {
         God.LM = this;
+    }
+
+    void Start()
+    {
+        string cr = Creator != "" ? Creator : "Misha";
+        if (!God.LS.Rulesets.ContainsKey(cr)) cr = "Misha";
+        Ruleset = God.LS.Rulesets[cr];
     }
 
     void Update()
@@ -44,7 +52,7 @@ public class LevelManager : MonoBehaviour
     {
         if (!Scores.ContainsKey(who)) Scores.Add(who, amt);
         else Scores[who] += amt;
-        if(Scores[who] >= ToWin) SetWinner(who);
+        if(Scores[who] >= Ruleset.ScoreGoal) SetWinner(who);
         string txt = who.Name.Value.ToString();
         if (targ != "") txt += " > " + targ;
         txt += " ("+Scores[who]+")";
@@ -60,7 +68,7 @@ public class LevelManager : MonoBehaviour
 
     public void SetWinner(FirstPersonController who)
     {
-        Debug.Log(who.Name.Value + " Wins!");
+//        Debug.Log(who.Name.Value + " Wins!");
         God.LS.StartCoroutine(Winner(who));
 
     }

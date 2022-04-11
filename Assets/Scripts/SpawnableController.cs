@@ -42,7 +42,7 @@ public class SpawnableController : NetworkBehaviour
 
     public virtual void TakeEffects(FirstPersonController pc)
     {
-        Debug.Log("TOOK IT: " + gameObject.name);
+//        Debug.Log("TOOK IT: " + gameObject.name);
         pc.GetPoint(1);
     }
 
@@ -50,7 +50,7 @@ public class SpawnableController : NetworkBehaviour
     {
         if (!NetworkManager.Singleton.IsServer) return;
         FirstPersonController pc = other.gameObject.GetComponent<FirstPersonController>();
-        Debug.Log("OCE: " + pc + " / " + other.gameObject);
+//        Debug.Log("OCE: " + pc + " / " + other.gameObject);
         if(pc != null)
             GetTaken(pc);
     }

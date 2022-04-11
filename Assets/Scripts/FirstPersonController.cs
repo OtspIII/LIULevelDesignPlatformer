@@ -219,7 +219,7 @@ public class FirstPersonController : NetworkBehaviour
 
     void getPoint(int amt = 1,string targ="")
     {
-        Debug.Log("GET POINT: " + Name + " / " + amt + " / " + targ);
+//        Debug.Log("GET POINT: " + Name + " / " + amt + " / " + targ);
         God.LM.AwardPoint(this,amt,targ);
     }
 

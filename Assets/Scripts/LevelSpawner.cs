@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class LevelSpawner : MonoBehaviour
 {
+    public Dictionary<string,JSONCreator> Rulesets = new Dictionary<string, JSONCreator>();
     public Dictionary<string, LevelManager> Levels = new Dictionary<string, LevelManager>();
     public LevelManager Current;
     
@@ -16,6 +17,13 @@ public class LevelSpawner : MonoBehaviour
         foreach (LevelManager s in Resources.LoadAll<LevelManager>("Levels"))
             Levels.Add(s.name,s);
         God.LS = this;
+        TextAsset[] jsons = Resources.LoadAll<TextAsset>("JSON");
+        foreach (TextAsset json in jsons)
+        {
+            JSONTempCreator cr = JsonUtility.FromJson<JSONTempCreator>(json.text);
+            JSONCreator c = new JSONCreator(cr,json.name,json);
+            Rulesets.Add(json.name,c);
+        }
     }
 
     void Start()
