@@ -38,6 +38,7 @@ public class LevelSpawner : MonoBehaviour
 
     public LevelManager GetRandomLevel()
     {
+        if (God.TestLevel != null) return God.TestLevel;
         LevelManager[] all = Levels.Values.ToArray();
         return all[Random.Range(0, all.Length)];
     }
