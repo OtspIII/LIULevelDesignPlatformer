@@ -112,7 +112,7 @@ public class FirstPersonController : NetworkBehaviour
         if (IsServer && transform.position.y < -100)
             Die();
         if (!IsOwner) return;
-        God.HPText.text = HP.Value + "/" + 100;
+        God.HPText.text = HP.Value + "/" + GetMaxHP();
         God.StatusText.text = "Gun";
         //Lobbyist.Text = transform.position.ToString();
         float xRot = Input.GetAxis("Mouse X") * MouseSensitivity;
@@ -239,10 +239,15 @@ public class FirstPersonController : NetworkBehaviour
         Floors.Remove(other.gameObject);
     }
 
+    public int GetMaxHP()
+    {
+        return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.PlayerHP > 0 ? God.LM.Ruleset.PlayerHP : 100;
+    }
+    
     public void Reset()
     {
         if (!IsServer) return;
-        HP.Value = 100;
+        HP.Value = GetMaxHP();
         RandomSpawnServer();
         RB.velocity = Vector3.zero;
     }

@@ -23,13 +23,15 @@ public class JSONItem
 [System.Serializable]
 public class JSONCreator
 {
-    public int ScoreGoal;
+    public int PointsToWin;
+    public int PlayerHP;
     public List<JSONItem> Items;
     
 
     public JSONCreator(JSONTempCreator source,string author,TextAsset ta)
     {
-        ScoreGoal = source.ScoreGoal;
+        PointsToWin = source.PointsToWin;
+        PlayerHP = source.PlayerHP;
         foreach(JSONTempItem i in source.Items)
             Items.Add(new JSONItem(i));
 
@@ -52,7 +54,8 @@ public class JSONTempItem
 [System.Serializable]
 public class JSONTempCreator
 {
-    public int ScoreGoal;
+    public int PointsToWin;
+    public int PlayerHP;
     public JSONTempItem[] Items;
 }
 

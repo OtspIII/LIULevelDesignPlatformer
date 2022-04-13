@@ -178,6 +178,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Network Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 7857833352728588794, guid: 204c19b6b1db5e940a5fa6a6e4e5b1bb, type: 3}
+      propertyPath: m_MaxPayloadSize
+      value: 61440
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857833352728588794, guid: 204c19b6b1db5e940a5fa6a6e4e5b1bb, type: 3}
+      propertyPath: m_MaxSendQueueSize
+      value: 983040
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857833352728588794, guid: 204c19b6b1db5e940a5fa6a6e4e5b1bb, type: 3}
+      propertyPath: m_MaxPacketQueueSize
+      value: 1280
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204c19b6b1db5e940a5fa6a6e4e5b1bb, type: 3}
 --- !u!1 &1929304413

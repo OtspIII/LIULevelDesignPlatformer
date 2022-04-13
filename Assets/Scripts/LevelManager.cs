@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class LevelManager : MonoBehaviour
@@ -52,7 +53,7 @@ public class LevelManager : MonoBehaviour
     {
         if (!Scores.ContainsKey(who)) Scores.Add(who, amt);
         else Scores[who] += amt;
-        if(Scores[who] >= Ruleset.ScoreGoal) SetWinner(who);
+        if(Scores[who] >= Ruleset.PointsToWin) SetWinner(who);
         string txt = who.Name.Value.ToString();
         if (targ != "") txt += " > " + targ;
         txt += " ("+Scores[who]+")";
@@ -70,7 +71,6 @@ public class LevelManager : MonoBehaviour
     {
 //        Debug.Log(who.Name.Value + " Wins!");
         God.LS.StartCoroutine(Winner(who));
-
     }
     
     public IEnumerator Winner(FirstPersonController who)

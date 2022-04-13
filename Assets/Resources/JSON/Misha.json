@@ -1,4 +1,5 @@
 {
-"ScoreGoal":3,
-"Items":[]
+  "PointsToWin":3, 
+  "PlayerHP": 99,
+  "Items":[]
 }
