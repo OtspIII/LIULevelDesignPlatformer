@@ -21,11 +21,7 @@ public class SpawnableController : NetworkBehaviour
 
     void Update()
     {
-        if (God.Camera != null)
-        {
-            Desc.transform.LookAt(God.Camera.transform.position);
-            Desc.transform.Rotate(0,180,0);
-        }
+        
     }
 
     public void GetTaken(FirstPersonController pc)

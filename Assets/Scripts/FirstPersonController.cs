@@ -13,6 +13,7 @@ public class FirstPersonController : NetworkBehaviour
     public Camera Eyes;
     public Rigidbody RB;
     public NetworkRigidbody NRB;
+    public TextMeshPro NameText;
     public float MouseSensitivity = 3;
     public float WalkSpeed = 10;
     public float JumpPower = 7;
@@ -40,9 +41,15 @@ public class FirstPersonController : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         if (!IsOwner)
+        {
             Eyes.enabled = false;
+            
+        }
         else
+        {
             God.Camera = Eyes;
+            NameText.gameObject.SetActive(false);
+        }
 
         if (IsServer)
         {
@@ -67,12 +74,14 @@ public class FirstPersonController : NetworkBehaviour
     {
         if (IsServer) Name.Value = n;
         else SetNameServerRPC(n);
+        NameText.text = n;
     }
     
     [ServerRpc]
     public void SetNameServerRPC(string n)
     {
         Name.Value = n;
+        NameText.text = n;
     }
     
     [ServerRpc]
@@ -163,7 +172,16 @@ public class FirstPersonController : NetworkBehaviour
             move.y = RB.velocity.y;
         RB.velocity = move;
         transform.Rotate(0,xRot,0);
-        Eyes.transform.Rotate(yRot,0,0);
+        Vector3 eRot = Eyes.transform.localRotation.eulerAngles;
+        eRot.x += yRot;
+        if (eRot.x < -180) eRot.x += 360;
+        if (eRot.x > 180) eRot.x -= 360;
+        eRot = new Vector3(Mathf.Clamp(eRot.x, -90, 90),0,0);
+        Eyes.transform.localRotation = Quaternion.Euler(eRot);
+        //Eyes.transform.Rotate(yRot,0,0);
+        //Debug.Log("EYEROT: " + Eyes.transform.rotation.eulerAngles.x);
+        // if(Eyes.transform.rotation.eulerAngles.x > 90 && Eyes.transform.rotation.eulerAngles.x < 270)
+        //     Eyes.transform.rotation = Quaternion.Euler(eRot);
     }
     
     public void Shoot(Vector3 pos,Quaternion rot)
