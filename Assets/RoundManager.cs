@@ -18,7 +18,21 @@ public class RoundManager : NetworkBehaviour
 
     public void StartLevel()
     {
+        
         God.LS.StartLevel();
+//        Debug.Log("SL: " + Level.Value);
+        if (IsServer)
+        {
+            StartLevelClientRPC();
+        }
+    }
+
+    [ClientRpc]
+    void StartLevelClientRPC()
+    {
+//        Debug.Log("SLCRPC: " + IsServer + " / " + Level.Value);
+        if(!IsServer)
+            God.LS.StartLevel();
     }
 
     public string GetLevel()

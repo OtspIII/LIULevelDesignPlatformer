@@ -38,6 +38,8 @@ public class FirstPersonController : NetworkBehaviour
         God.Players.Add(this);
         if(IsOwner)
             SetName(God.NamePick != "" ? God.NamePick : "Player " + God.Players.Count);
+        else
+            SetName(Name.Value.ToString());
     }
     
     public override void OnNetworkSpawn()
@@ -51,6 +53,7 @@ public class FirstPersonController : NetworkBehaviour
         {
             God.Camera = Eyes;
             NameText.gameObject.SetActive(false);
+            if(!IsServer) Invoke("SpawnMap",0.01f);
         }
 
         if (IsServer)
@@ -63,6 +66,11 @@ public class FirstPersonController : NetworkBehaviour
                 rm.StartLevel();
             }
         }
+    }
+
+    public void SpawnMap()
+    {
+        God.RM.StartLevel();
     }
     
     
@@ -98,7 +106,7 @@ public class FirstPersonController : NetworkBehaviour
     public void SetName(string n)
     {
         if (IsServer) Name.Value = n;
-        else SetNameServerRPC(n);
+        else if (IsOwner) SetNameServerRPC(n);
         NameText.text = n;
     }
     
@@ -137,7 +145,8 @@ public class FirstPersonController : NetworkBehaviour
     void SetPosClientRPC(Vector3 pos)
     {
         transform.position = pos;
-        // Debug.Log("SPCRPC");
+//        if(IsOwner)
+//            Debug.Log("SETPOS");
     }
 
     public JSONWeapon GetWeapon()
@@ -264,6 +273,7 @@ public class FirstPersonController : NetworkBehaviour
     {
         if (IsServer) return;
         getPoint(amt);
+//        Debug.Log("GOT POINT");
     }
     
     void ServerGetPoint(int amt=1,string targ="")

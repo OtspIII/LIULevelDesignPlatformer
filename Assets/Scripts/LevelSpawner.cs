@@ -53,12 +53,21 @@ public class LevelSpawner : MonoBehaviour
 
     public IEnumerator LoadScene(LevelManager who)
     {
+        //Debug.Log("FOR THREAD");
         if(Current != null) Destroy(Current.gameObject);
         Current = Instantiate(who);
         Current.Name = who.name;
-        God.RM.Level.Value = who.name;
+        if(NetworkManager.Singleton.IsServer)
+            God.RM.Level.Value = who.name;
         yield return null;
         foreach(FirstPersonController pc in God.Players)
             pc.Reset();
+    }
+
+    public void PickNextLevel()
+    {
+        LevelManager[] all = Levels.Values.ToArray();
+        LevelManager chosen=  all[Random.Range(0, all.Length)];
+        God.RM.Level.Value = chosen.name;
     }
 }

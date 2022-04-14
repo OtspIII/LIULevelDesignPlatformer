@@ -7,7 +7,6 @@ Capture Flag Zones
 KotH
 
 --TO TEST--
-Do Players Load The Same Levels?
 Shift Run
 Backup Camera
 Trampolines

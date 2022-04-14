@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -86,7 +87,10 @@ public class LevelManager : MonoBehaviour
     public IEnumerator Winner(FirstPersonController who)
     {
         God.AnnounceText.text = who.Name.Value + " WINS!";
+        if (NetworkManager.Singleton.IsServer)
+            God.LS.PickNextLevel();
         yield return new WaitForSeconds(3);
+        God.RM.Scores.Clear();
         God.AnnounceText.text = "";
         God.LS.StartLevel();
     }
