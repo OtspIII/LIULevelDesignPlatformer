@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -26,19 +27,26 @@ public class LevelSpawner : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        StartLevel();
-    }
+//    void Start()
+//    {
+//        StartLevel();
+//    }
 
     public void StartLevel()
     {
-        StartCoroutine(LoadScene(GetRandomLevel()));
+        StartCoroutine(LoadScene(GetLevel()));
     }
 
-    public LevelManager GetRandomLevel()
+    public LevelManager GetLevel()
     {
-        if (God.TestLevel != null) return God.TestLevel;
+        if (God.TestLevel != null && NetworkManager.Singleton.IsServer) return God.TestLevel;
+        if (God.RM != null)
+        {
+            string lvl = God.RM.GetLevel();
+            if (Levels.ContainsKey(lvl)) return Levels[lvl];
+        }
+        if(!NetworkManager.Singleton.IsServer)
+            Debug.Log("INVALID LEVEL SPAWN");
         LevelManager[] all = Levels.Values.ToArray();
         return all[Random.Range(0, all.Length)];
     }
@@ -47,6 +55,8 @@ public class LevelSpawner : MonoBehaviour
     {
         if(Current != null) Destroy(Current.gameObject);
         Current = Instantiate(who);
+        Current.Name = who.name;
+        God.RM.Level.Value = who.name;
         yield return null;
         foreach(FirstPersonController pc in God.Players)
             pc.Reset();

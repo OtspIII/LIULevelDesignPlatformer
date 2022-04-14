@@ -19,6 +19,7 @@ public static class God
     public static List<FirstPersonController> Players = new List<FirstPersonController>();
     public static string NamePick;
     public static LevelManager TestLevel;
+    public static RoundManager RM;
     
     public static NetStatus GetStatus()
     {

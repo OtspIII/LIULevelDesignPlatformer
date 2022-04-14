@@ -12,12 +12,17 @@ public class ProjectileController : NetworkBehaviour
     public float Lifetime = 10;
     public FirstPersonController Shooter;
     public bool Hit = false;
+    public JSONWeapon Data;
+    public MeshRenderer MR;
     
-    public void Setup(FirstPersonController pc)
+    public void Setup(FirstPersonController pc,JSONWeapon data)
     {
+        Data = data;
         Shooter = pc;
         NO.Spawn();
         RB.velocity = transform.forward * 50;
+        if (data.Color != IColors.None)
+            MR.material = God.Library.GetColor(data.Color);
     }
 
     void Update()

@@ -10,6 +10,7 @@ public class ItemSpawnController : MonoBehaviour
     public SpawnableController Held;
     public float RespawnTime = 15;
     float Countdown = 0;
+    public string ItemToSpawn;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class ItemSpawnController : MonoBehaviour
         if (!NetworkManager.Singleton.IsServer) return;
         Countdown = RespawnTime;
         Held = Instantiate(GetPrefab(), Holder.transform.position, Quaternion.identity);
-        Held.Setup(this);
+        Held.Setup(this,God.LM.GetItem(ItemToSpawn));
     }
     
     public SpawnableController GetPrefab()

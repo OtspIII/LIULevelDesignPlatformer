@@ -169,6 +169,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RB: {fileID: 3636206403389341866}
   NO: {fileID: 937636404836322387}
+  Lifetime: 10
+  Shooter: {fileID: 0}
+  Hit: 0
+  Data:
+    Text: 
+    Type: 0
+    Color: 0
+    Shots: 0
+    Ammo: 0
+    Damage: 0
+    RateOfFire: 0
+    Accuracy: 0
+    Speed: 0
+    Range: 0
+    Gravity: 0
+    ExplodeRadius: 0
+    ExplodeDamage: 0
+    Knockback: 0
+    Bounce: 0
+    SelfDamage: 0
+  MR: {fileID: 455500503480061372}
 --- !u!114 &937636404836322387
 MonoBehaviour:
   m_ObjectHideFlags: 0

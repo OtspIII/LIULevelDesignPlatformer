@@ -434,9 +434,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Creator: Misha
+  Name: 
   Ruleset:
-    ScoreGoal: 0
+    PointsToWin: 0
+    PlayerHP: 0
+    MoveSpeed: 0
+    SprintSpeed: 0
+    Gravity: 0
     Items: []
+    Weapons: []
   PSpawns: []
   ISpawns: []
   LastPS: {fileID: 0}
@@ -590,6 +596,10 @@ PrefabInstance:
     - target: {fileID: 5820844913317536448, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: m_Name
       value: Item Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: ItemToSpawn
+      value: 1 Point
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}

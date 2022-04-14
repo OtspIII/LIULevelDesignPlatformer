@@ -1,5 +1,25 @@
 {
   "PointsToWin":3, 
   "PlayerHP": 100,
-  "Items":[]
+  "MoveSpeed": 10,
+  "SprintSpeed": 1.5,
+  "Gravity": 1,
+  "Items":[
+    {
+      "Text": "1 Point",
+      "Type": "Points",
+      "Amount": 1,
+      "Color": "Yellow"
+    }
+  ],
+  "Weapons": [
+    {
+      "Text": "Pistol",
+      "Damage": 5
+    },
+    {
+      "Text": "Rifle",
+      "Damage": 20
+    }
+  ]
 }

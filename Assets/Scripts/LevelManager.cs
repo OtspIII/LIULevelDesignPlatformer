@@ -9,13 +9,14 @@ using Random = UnityEngine.Random;
 public class LevelManager : MonoBehaviour
 {
     public string Creator;
+    public string Name;
     public JSONCreator Ruleset;
     public List<PlayerSpawnController> PSpawns;
     public List<ItemSpawnController> ISpawns;
     public PlayerSpawnController LastPS;
     public List<string> Announces;
+    public Dictionary<string, JSONItem> Items = new Dictionary<string, JSONItem>();
 
-    public Dictionary<FirstPersonController, int> Scores = new Dictionary<FirstPersonController, int>();
 
     void Awake()
     {
@@ -27,6 +28,14 @@ public class LevelManager : MonoBehaviour
         string cr = Creator != "" ? Creator : "Misha";
         if (!God.LS.Rulesets.ContainsKey(cr)) cr = "Misha";
         Ruleset = God.LS.Rulesets[cr];
+        if (Ruleset.Gravity > 0)
+        {
+            Physics.gravity = new Vector3(0,-9.81f,0) * Ruleset.Gravity;
+        }
+        foreach(JSONItem i in Ruleset.Items)
+            Items.Add(i.Text,i);
+        foreach(FirstPersonController pc in God.Players)
+            pc.ImprintRules(Ruleset);
     }
 
     void Update()
@@ -42,6 +51,7 @@ public class LevelManager : MonoBehaviour
 
     public PlayerSpawnController GetPSpawn(FirstPersonController pc)
     {
+        if (PSpawns.Count == 0) return null;
         PlayerSpawnController r = PSpawns[Random.Range(0, PSpawns.Count)];
         if (LastPS != null) PSpawns.Add(LastPS);
         if(PSpawns.Count > 1) PSpawns.Remove(r);
@@ -51,12 +61,12 @@ public class LevelManager : MonoBehaviour
 
     public void AwardPoint(FirstPersonController who, int amt = 1, string targ="")
     {
-        if (!Scores.ContainsKey(who)) Scores.Add(who, amt);
-        else Scores[who] += amt;
-        if(Scores[who] >= Ruleset.PointsToWin) SetWinner(who);
+        if (!God.RM.Scores.ContainsKey(who)) God.RM.Scores.Add(who, amt);
+        else God.RM.Scores[who] += amt;
+        if(God.RM.Scores[who] >= Ruleset.PointsToWin) SetWinner(who);
         string txt = who.Name.Value.ToString();
         if (targ != "") txt += " > " + targ;
-        txt += " ("+Scores[who]+")";
+        txt += " ("+God.RM.Scores[who]+")";
         StartCoroutine(Announce(txt));
     }
 
@@ -79,5 +89,14 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(3);
         God.AnnounceText.text = "";
         God.LS.StartLevel();
+    }
+
+    public JSONItem GetItem(string n)
+    {
+        if (Items.ContainsKey(n)) return Items[n];
+        if (n == "" && Ruleset.Items.Count > 0) return Ruleset.Items[Random.Range(0, Ruleset.Items.Count)];
+        JSONTempItem r = new JSONTempItem();
+        r.Text = "Useless Item";
+        return new JSONItem(r);
     }
 }

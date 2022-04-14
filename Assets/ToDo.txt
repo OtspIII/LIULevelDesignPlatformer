@@ -1,7 +1,16 @@
+--TO ADD--
 Double Pickup Items
+Go To Menu
+Teleport Zones
+Flags
+Capture Flag Zones
+KotH
+
+--TO TEST--
+Do Players Load The Same Levels?
 Shift Run
 Backup Camera
-Go To Menu
+Trampolines
 Lava
-Do Players Load The Same Levels?
-Teleport Zones
+Weapons
+Healing Items
