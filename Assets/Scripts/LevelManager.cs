@@ -14,9 +14,11 @@ public class LevelManager : MonoBehaviour
     public JSONCreator Ruleset;
     public List<PlayerSpawnController> PSpawns;
     public List<ItemSpawnController> ISpawns;
+    public List<WeaponSpawnController> WSpawns;
     public PlayerSpawnController LastPS;
     public List<string> Announces;
     public Dictionary<string, JSONItem> Items = new Dictionary<string, JSONItem>();
+    public Dictionary<string, JSONWeapon> Weapons = new Dictionary<string, JSONWeapon>();
 
 
     void Awake()
@@ -35,6 +37,8 @@ public class LevelManager : MonoBehaviour
         }
         foreach(JSONItem i in Ruleset.Items)
             Items.Add(i.Text,i);
+        foreach(JSONWeapon i in Ruleset.Weapons)
+            Weapons.Add(i.Text,i);
         foreach(FirstPersonController pc in God.Players)
             pc.ImprintRules(Ruleset);
     }
@@ -102,5 +106,15 @@ public class LevelManager : MonoBehaviour
         JSONTempItem r = new JSONTempItem();
         r.Text = "Useless Item";
         return new JSONItem(r);
+    }
+
+    public JSONWeapon GetWeapon(string n)
+    {
+        if (Weapons.ContainsKey(n)) return Weapons[n];
+        if (Ruleset.Weapons.Count > 0) return Ruleset.Weapons[0];
+        JSONTempWeapon wpn = new JSONTempWeapon();
+        wpn.Damage = 10;
+        wpn.Text = "GENERIC WEAPON";
+        return new JSONWeapon(wpn);
     }
 }

@@ -7,7 +7,9 @@ public class LibraryController : MonoBehaviour
     public ProjectileController Projectile;
     public ParticleGnome Blood;
     public ParticleGnome Dust;
+    public ExplosionController Explosion;
     public SpawnableController TestSpawn;
+    public WeaponController WeaponSpawn;
     public RoundManager RM;
     public List<ColorPair> ColorSeeds;
     public Dictionary<IColors, Material> ColorDict = new Dictionary<IColors, Material>();

@@ -11,36 +11,36 @@ public class JSONWeapon
     public IColors Color;
     public int Shots;
     public int Ammo;
-    public float Damage;
+    public int Damage;
     public float RateOfFire;
     public float Accuracy;
     public float Speed;
-    public float Range;
+    public float Lifetime;
     public float Gravity;
     public float ExplodeRadius;
-    public float ExplodeDamage;
+    public int ExplodeDamage;
     public float Knockback;
-    public bool Bounce;
+    public float Bounce;
     public bool SelfDamage;
     
     public JSONWeapon(JSONTempWeapon source)
     {
-        Type = source.Type != null ? (WeaponTypes)Enum.Parse(typeof(WeaponTypes), source.Type) : WeaponTypes.None;
+        Type = source.Type != null ? (WeaponTypes)Enum.Parse(typeof(WeaponTypes), source.Type) : WeaponTypes.Projectile;
         Color = source.Color != null ? (IColors)Enum.Parse(typeof(IColors), source.Color) : IColors.None;
         Text = source.Text;
-        Damage = source.Damage;
+        Damage = source.Damage > 0 ? (int)source.Damage : 10;
         Shots = source.Shots > 0 ? source.Shots : 1;
         Ammo = source.Ammo;
         RateOfFire = source.RateOfFire > 0 ? source.RateOfFire : 0.2f;
         Accuracy = source.Accuracy;
         Speed = source.Speed > 0 ? source.Speed : 50;
-        Range = source.Range;
+        Lifetime = source.Lifetime;
         Gravity = source.Gravity;
         ExplodeRadius = source.ExplodeRadius;
-        ExplodeDamage = source.ExplodeDamage;
+        ExplodeDamage = source.ExplodeDamage > 0 ? (int)source.ExplodeDamage : 10;
         Knockback = source.Knockback;
         Bounce = source.Bounce;
-        Bounce = source.SelfDamage;
+        SelfDamage = source.SelfDamage;
     }
 }
 
@@ -116,12 +116,12 @@ public class JSONTempWeapon
     public float RateOfFire;
     public float Accuracy;
     public float Speed;
-    public float Range;
+    public float Lifetime;
     public float Gravity;
     public float ExplodeRadius;
     public float ExplodeDamage;
     public float Knockback;
-    public bool Bounce;
+    public float Bounce;
     public bool SelfDamage;
 }
 

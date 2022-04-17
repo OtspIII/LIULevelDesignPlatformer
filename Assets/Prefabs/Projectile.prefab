@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2959379966244110718}
   - component: {fileID: 997150945186904876}
   - component: {fileID: 937636404836322387}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3145624976487382944}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 83120e6dc8c07914a9baa6fb96ed72a1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -182,7 +182,7 @@ MonoBehaviour:
     RateOfFire: 0
     Accuracy: 0
     Speed: 0
-    Range: 0
+    Lifetime: 0
     Gravity: 0
     ExplodeRadius: 0
     ExplodeDamage: 0
