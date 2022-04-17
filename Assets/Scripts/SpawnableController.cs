@@ -49,7 +49,7 @@ public class SpawnableController : NetworkBehaviour
         {
             case ItemTypes.Healing:
             {
-                pc.TakeDamage(-(int)amt);
+                pc.TakeHeal((int)amt);
                 break;
             }
             case ItemTypes.Points:
@@ -60,8 +60,20 @@ public class SpawnableController : NetworkBehaviour
             case ItemTypes.Jump:
             {
                 Vector3 vel = pc.RB.velocity;
-                vel.y = amt;
-                pc.RB.velocity = vel;
+                if (Spawner.Destination == Vector3.zero)
+                {
+                    vel.y = amt;
+                    pc.RB.velocity = vel;
+                }
+                else
+                    pc.TakeKnockback(Spawner.Destination);
+                
+                
+                break;
+            }
+            case ItemTypes.Teleport:
+            {
+                pc.transform.position = God.LM.transform.position + Spawner.Destination;
                 break;
             }
         }

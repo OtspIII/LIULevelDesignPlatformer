@@ -1,15 +1,9 @@
 --TO ADD--
-Double Pickup Items
 Go To Menu
-Teleport Zones
 Flags
 Capture Flag Zones
 KotH
 
 --TO TEST--
-Shift Run
 Backup Camera
-Trampolines
-Lava
-Weapons
-Healing Items
+Double Pickup Items

@@ -16,6 +16,8 @@ public class ProjectileController : NetworkBehaviour
     public JSONWeapon Data;
     public MeshRenderer MR;
     public Vector3 OldVel;
+    public TrailRenderer TR;
+    public bool Doomed;
     
     public void Setup(FirstPersonController pc,JSONWeapon data)
     {
@@ -28,7 +30,13 @@ public class ProjectileController : NetworkBehaviour
         RB.velocity = transform.forward * Data.Speed;
         Lifetime = Data.Lifetime > 0 ? Data.Lifetime : 10;
         if (data.Color != IColors.None)
+        {
             MR.material = God.Library.GetColor(data.Color);
+            TR.material = God.Library.GetColor(data.Color);
+        }
+
+//        if (Shooter.IsOwner && Data.Type != WeaponTypes.Grenade) TR.enabled = false;
+
     }
 
     void FixedUpdate()
@@ -38,7 +46,7 @@ public class ProjectileController : NetworkBehaviour
         OldVel = RB.velocity;
         Lifetime -= Time.fixedDeltaTime;
         if(Lifetime <= 0 && NetworkManager.Singleton.IsServer) 
-            Destroy(gameObject);
+            Explode();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -50,13 +58,13 @@ public class ProjectileController : NetworkBehaviour
         {
             pc.TakeDamage(Data.Damage,Shooter);
             if(Data.Knockback >0 && Data.ExplodeRadius <= 0)
-                pc.RB.AddForce(transform.forward * Data.Knockback,ForceMode.Impulse);
+                pc.TakeKnockback(transform.forward * Data.Knockback);
             Hit = true;
         }
         
         
         if(Hit || Data.Type != WeaponTypes.Grenade)
-            Destroy(gameObject);
+            Explode();
         else if (Data.Bounce == 0)
         {
             RB.velocity = Vector3.zero;
@@ -68,17 +76,21 @@ public class ProjectileController : NetworkBehaviour
         }
     }
 
-    public override void OnDestroy()
+    public void Explode()
     {
-        base.OnDestroy();
+        if (Doomed) return;
+        Doomed = true;
         if (Data.ExplodeRadius > 0)
         {
             ExplosionController exp = Instantiate(God.Library.Explosion, transform.position, Quaternion.Euler(0,0,0));
             exp.Setup(Shooter,Data);
+            Destroy(gameObject);
             return;
         }
         ParticleGnome partic = Hit ? God.Library.Blood : God.Library.Dust;
         ParticleGnome pg = Instantiate(partic, transform.position, Quaternion.identity);
         pg.Setup(Data.Damage);
+        Destroy(gameObject);
     }
+
 }

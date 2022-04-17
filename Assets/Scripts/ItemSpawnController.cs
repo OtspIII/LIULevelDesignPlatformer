@@ -11,6 +11,7 @@ public class ItemSpawnController : MonoBehaviour
     public float RespawnTime = 15;
     float Countdown = 0;
     public string ItemToSpawn;
+    public Vector3 Destination;
 
     void Start()
     {

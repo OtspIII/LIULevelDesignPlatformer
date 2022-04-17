@@ -39,7 +39,7 @@ public class ExplosionController : NetworkBehaviour
         {
            
             if(Data.Knockback >0)
-                pc.RB.AddForce((pc.transform.position - transform.position).normalized * Data.Knockback,ForceMode.Impulse);
+                pc.TakeKnockback((pc.transform.position - transform.position).normalized * Data.Knockback);
             if (pc == Shooter && !Data.SelfDamage) return;
             pc.TakeDamage(Data.ExplodeDamage,Shooter);
         }

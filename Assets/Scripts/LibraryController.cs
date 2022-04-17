@@ -42,6 +42,7 @@ public enum ItemTypes
     Points,
     Healing,
     Jump,
+    Teleport,
 }
 
 public enum WeaponTypes

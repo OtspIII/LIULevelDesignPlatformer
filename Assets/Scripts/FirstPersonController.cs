@@ -20,12 +20,14 @@ public class FirstPersonController : NetworkBehaviour
 //    public JSONWeapon CurrentWeapon;
 //    public JSONWeapon DefaultWeapon;
     public float ShotCooldown;
+    public bool JustKnocked = false;
 
     public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
     public NetworkVariable<FixedString64Bytes> Weapon = new NetworkVariable<FixedString64Bytes>();
 //    public int ID;
     
     public NetworkVariable<Vector3> Position = new NetworkVariable<Vector3>();
+    public NetworkVariable<Vector3> Fling = new NetworkVariable<Vector3>();
     public NetworkVariable<float> XRot = new NetworkVariable<float>();
     public NetworkVariable<float> YRot = new NetworkVariable<float>();
     public NetworkVariable<int> HP = new NetworkVariable<int>();
@@ -167,6 +169,7 @@ public class FirstPersonController : NetworkBehaviour
     
     void Update()
     {
+        JustKnocked = false;
         if (IsServer && transform.position.y < -100)
             Die();
         if (!IsOwner) return;
@@ -221,16 +224,25 @@ public class FirstPersonController : NetworkBehaviour
 
     public void HandleMove(Vector3 move,bool jump, float xRot,float yRot,bool sprint)
     {
+        bool onGround = OnGround();
         if (!IsServer)
         {
             UpdatePosServerRPC(move,jump,xRot,yRot,sprint);
 //            return;
         }
         move = move.normalized * (sprint ? GetSprintSpeed() : GetMoveSpeed());
-        if (jump && OnGround())
+        if (jump && onGround)
             move.y = JumpPower;
         else
             move.y = RB.velocity.y;
+//        if (!onGround)
+//        {
+            if (Fling.Value.x != 0)
+                move.x += Fling.Value.x;
+            if (Fling.Value.z != 0)
+                move.z += Fling.Value.z;
+            if (Fling.Value != Vector3.zero && move.y == 0) move.y = 3;
+//        }
         RB.velocity = move;
         transform.Rotate(0,xRot,0);
         Vector3 eRot = Eyes.transform.localRotation.eulerAngles;
@@ -321,13 +333,18 @@ public class FirstPersonController : NetworkBehaviour
 
     public bool OnGround()
     {
-        return Floors.Count > 0;
+        return Floors.Count > 0;// && Physics.Raycast(transform.position,transform.position + new Vector3(0,-5,0),1.5f);
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (!Floors.Contains(other.gameObject))
             Floors.Add(other.gameObject);
+        if (IsServer && Fling.Value != Vector3.zero && !JustKnocked)
+        {
+//            Debug.Log("ENDFLING");
+            Fling.Value = Vector3.zero;
+        }
     }
 
     private void OnCollisionExit(Collision other)
@@ -357,6 +374,7 @@ public class FirstPersonController : NetworkBehaviour
         HP.Value = GetMaxHP();
         RandomSpawnServer();
         RB.velocity = Vector3.zero;
+        Fling.Value = Vector3.zero;
     }
 
     public void TakeDamage(int amt,FirstPersonController source=null)
@@ -388,6 +406,14 @@ public class FirstPersonController : NetworkBehaviour
     {
         base.OnDestroy();
         God.Players.Remove(this);
+    }
+
+    public void TakeKnockback(Vector3 kb)
+    {
+        RB.velocity = kb;
+        Fling.Value = new Vector3(kb.x,0,kb.z);
+//        Debug.Log("KB: " + kb);
+        JustKnocked = true;
     }
 }
 
