@@ -17,17 +17,19 @@ public class FirstPersonController : NetworkBehaviour
     public float MouseSensitivity = 3;
     public float JumpPower = 7;
     public List<GameObject> Floors;
-    public JSONWeapon CurrentWeapon;
-    public JSONWeapon DefaultWeapon;
-    public int Ammo;
+//    public JSONWeapon CurrentWeapon;
+//    public JSONWeapon DefaultWeapon;
+    public float ShotCooldown;
 
     public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
+    public NetworkVariable<FixedString64Bytes> Weapon = new NetworkVariable<FixedString64Bytes>();
 //    public int ID;
     
     public NetworkVariable<Vector3> Position = new NetworkVariable<Vector3>();
     public NetworkVariable<float> XRot = new NetworkVariable<float>();
     public NetworkVariable<float> YRot = new NetworkVariable<float>();
     public NetworkVariable<int> HP = new NetworkVariable<int>();
+    public NetworkVariable<int> Ammo = new NetworkVariable<int>();
 
     
     void Start()
@@ -88,19 +90,25 @@ public class FirstPersonController : NetworkBehaviour
 
     public void ImprintRules(JSONCreator ruleset)
     {
-        if (ruleset.Weapons.Count > 0)
-        {
-            SetWeapon(ruleset.Weapons[0],true);
-        }
+//        if (ruleset.Weapons.Count > 0)
+//        {
+//            SetWeapon(ruleset.Weapons[0]);
+//        }
 
         if (IsServer)
             RandomSpawnServer();
     }
 
-    public void SetWeapon(JSONWeapon wpn,bool def=false)
+    public void SetWeapon(JSONWeapon wpn)
     {
-        if (def) DefaultWeapon = wpn;
-        else CurrentWeapon = wpn;
+        Weapon.Value = wpn.Text;
+        Ammo.Value = wpn.Ammo;
+//        if (def) DefaultWeapon = wpn;
+//        else
+//        {
+//            CurrentWeapon = wpn;
+//            Ammo = CurrentWeapon.Ammo;
+//        }
     }
 
     public void SetName(string n)
@@ -151,12 +159,10 @@ public class FirstPersonController : NetworkBehaviour
 
     public JSONWeapon GetWeapon()
     {
-        if (CurrentWeapon != null) return CurrentWeapon;
-        if (DefaultWeapon != null) return default;
-        JSONTempWeapon wpn = new JSONTempWeapon();
-        wpn.Damage = 10;
-        wpn.Text = "GENERIC WEAPON";
-        return new JSONWeapon(wpn);
+        return God.LM.GetWeapon(Weapon.Value.ToString());
+//        if (CurrentWeapon != null) return CurrentWeapon;
+//        if (DefaultWeapon != null) return DefaultWeapon;
+        
     }
     
     void Update()
@@ -165,7 +171,7 @@ public class FirstPersonController : NetworkBehaviour
             Die();
         if (!IsOwner) return;
         God.HPText.text = HP.Value + "/" + GetMaxHP();
-        God.StatusText.text = GetWeapon().Text;
+        God.StatusText.text = GetWeapon().Text + (Ammo.Value > 0 ? " - " + Ammo.Value : "");
         //Lobbyist.Text = transform.position.ToString();
         float xRot = Input.GetAxis("Mouse X") * MouseSensitivity;
         float yRot = -Input.GetAxis("Mouse Y") * MouseSensitivity;
@@ -196,9 +202,18 @@ public class FirstPersonController : NetworkBehaviour
 //            RB.velocity = move;
         }
         HandleMove(move,jump,xRot,yRot,sprint);
-        if (Input.GetMouseButtonDown(0))
+        ShotCooldown -= Time.deltaTime;
+        if (Input.GetMouseButton(0) && ShotCooldown <= 0)
         {
+            JSONWeapon wpn = GetWeapon();
+            ShotCooldown = wpn.RateOfFire;
             Shoot(Eyes.transform.position + Eyes.transform.forward,Eyes.transform.rotation);
+//            if (Ammo.Value > 0)
+//            {
+//                Ammo.Value--;
+//                if (Ammo.Value <= 0)
+//                    Weapon.Value = "";
+//            }
         }
         
         
@@ -248,8 +263,24 @@ public class FirstPersonController : NetworkBehaviour
 
     void ServerShoot(Vector3 pos, Quaternion rot)
     {
-        ProjectileController p = Instantiate(God.Library.Projectile, pos,rot);
-        p.Setup(this,CurrentWeapon != null ? CurrentWeapon : DefaultWeapon);
+//    public WeaponTypes Type;
+
+        JSONWeapon wpn = GetWeapon();
+        if (Ammo.Value > 0)
+        {
+            Ammo.Value--;
+            if (Ammo.Value <= 0)
+                Weapon.Value = "";
+        }
+        for (int n = 0; n < Math.Max(1, wpn.Shots); n++)
+        {
+            Vector3 r = rot.eulerAngles;
+            r.y += Random.Range(-wpn.Accuracy, wpn.Accuracy);
+            r.x += Random.Range(-wpn.Accuracy, wpn.Accuracy);
+            ProjectileController p = Instantiate(God.Library.Projectile, pos,Quaternion.Euler(r));
+            p.Setup(this,wpn);
+        }
+        
     }
     
     public void GetPoint(int amt=1,string targ="")
