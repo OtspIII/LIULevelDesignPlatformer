@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6f5a6b39b5b772a4badc1261b741f521, type: 2}
+  - {fileID: 2100000, guid: 546c83438f2c98f4b879662087c1a7f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,6 +134,12 @@ MonoBehaviour:
   Spawner: {fileID: 0}
   Desc: {fileID: 1481954065270553257}
   NO: {fileID: -607718499273347486}
+  Data:
+    Text: 
+    Amount: 0
+    Type: 0
+    Color: 0
+  MR: {fileID: 1488043482110913029}
 --- !u!135 &8495042861461188732
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -229,6 +235,7 @@ GameObject:
   - component: {fileID: 6343775498886024616}
   - component: {fileID: 5488628384344580939}
   - component: {fileID: 1481954065270553257}
+  - component: {fileID: 8875417867854476594}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -388,3 +395,15 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+--- !u!114 &8875417867854476594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014965972388600274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b91a7a6fa6482f4e92193d7e25758ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

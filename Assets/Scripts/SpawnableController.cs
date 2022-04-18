@@ -11,21 +11,22 @@ public class SpawnableController : NetworkBehaviour
     public ItemSpawnController Spawner;
     public TextMeshPro Desc;
     public NetworkObject NO;
-    
-    public void Setup(ItemSpawnController s)
+    public JSONItem Data;
+    public MeshRenderer MR;
+
+    public void Setup(ItemSpawnController s,JSONItem data)
     {
+        Data = data;
         Spawner = s;
         Desc.text = GetName();
         NO.Spawn();
+        if (data.Color != IColors.None)
+            MR.material = God.Library.GetColor(data.Color);
     }
 
     void Update()
     {
-        if (God.Camera != null)
-        {
-            Desc.transform.LookAt(God.Camera.transform.position);
-            Desc.transform.Rotate(0,180,0);
-        }
+        
     }
 
     public void GetTaken(FirstPersonController pc)
@@ -37,13 +38,47 @@ public class SpawnableController : NetworkBehaviour
 
     public virtual string GetName()
     {
+        if (Data != null) return Data.Text;
         return "TEST ITEM";
     }
 
     public virtual void TakeEffects(FirstPersonController pc)
     {
+        float amt = Data.Amount > 0 ? Data.Amount : 1;
+        switch (Data.Type)
+        {
+            case ItemTypes.Healing:
+            {
+                pc.TakeHeal((int)amt);
+                break;
+            }
+            case ItemTypes.Points:
+            {
+                pc.GetPoint((int)amt);
+                break;
+            }
+            case ItemTypes.Jump:
+            {
+                Vector3 vel = pc.RB.velocity;
+                if (Spawner.Destination == Vector3.zero)
+                {
+                    vel.y = amt;
+                    pc.RB.velocity = vel;
+                }
+                else
+                    pc.TakeKnockback(Spawner.Destination);
+                
+                
+                break;
+            }
+            case ItemTypes.Teleport:
+            {
+                pc.transform.position = God.LM.transform.position + Spawner.Destination;
+                break;
+            }
+        }
 //        Debug.Log("TOOK IT: " + gameObject.name);
-        pc.GetPoint(1);
+        
     }
 
     void OnTriggerEnter(Collider other)
