@@ -1,0 +1,97 @@
+{
+  "PointsToWin":15, 
+  "PlayerHP": 100,
+  "MoveSpeed": 10,
+  "SprintSpeed": 2,
+  "Gravity": 1,
+  "Items":[
+    {
+      "Text": "1 Point",
+      "Type": "Flag",
+      "Amount": 1,
+      "Color": "Yellow"
+    },
+    {
+      "Text": "Health",
+      "Type": "Medkit",
+      "Amount": 25,
+      "Color": "Green"
+    },
+    {
+      "Text": "Jump",
+      "Type": "Trampoline",
+      "Amount": 10,
+      "Color": "Blue"
+    },
+    {
+      "Text": "Teleporter",
+      "Type": "Teleport",
+      "Color": "White"
+    }
+  ],
+  "Weapons": [
+    {
+      "Color":"Black",
+      "Text": "Basic Pistol",
+      "Damage": 15,
+      "RateOfFire":0.4,
+      "Accuracy":3
+    },
+    {
+      "Color":"Gray",
+      "Text": "Assault Rifle",
+      "Damage": 10,
+      "Ammo": 124,
+      "RateOfFire":0.17,
+      "Accuracy":2,
+      "Speed":80
+    },
+    {
+      "Color":"Red",
+      "Text": "Rocket Launcher",
+      "Damage": 15,
+      "Ammo": 5,
+      "RateOfFire":1.34,
+      "Accuracy":1,
+      "Speed":30,
+      "ExplodeRadius":4,
+      "ExplodeDamage":75,
+      "SelfDamage":false,
+      "Knockback":10
+    },
+    {
+      "Color":"Pink",
+      "Text": "Grenade",
+      "Damage": 15,
+      "Ammo": 3,
+      "RateOfFire":0.5,
+      "Accuracy":5,
+      "Speed":20,
+      "Gravity":2,
+      "ExplodeRadius":2,
+      "ExplodeDamage":60,
+      "SelfDamage":true,
+      "Knockback":1,
+      "Bounce":0.75,
+      "Lifetime":3,
+      "Type":"Grenade"
+    },
+    {
+      "Color":"Yellow",
+      "Text": "Shotgun",
+      "Damage": 5,
+      "Ammo": 45,
+      "RateOfFire":0.4,
+      "Accuracy":15,
+      "Shots":7
+    },
+    {
+      "Color":"White",
+      "Text": "SMG",
+      "Damage": 2,
+      "Ammo": 356,
+      "RateOfFire":0.05,
+      "Accuracy":10
+    }
+  ]
+}
