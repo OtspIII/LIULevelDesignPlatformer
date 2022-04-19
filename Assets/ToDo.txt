@@ -3,6 +3,7 @@ Go To Menu
 Flags
 Capture Flag Zones
 KotH
+Teams
 
 --TO TEST--
 Backup Camera
