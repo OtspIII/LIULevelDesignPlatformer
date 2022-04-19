@@ -21,9 +21,19 @@ public class LevelSpawner : MonoBehaviour
         TextAsset[] jsons = Resources.LoadAll<TextAsset>("JSON");
         foreach (TextAsset json in jsons)
         {
-            JSONTempCreator cr = JsonUtility.FromJson<JSONTempCreator>(json.text);
-            JSONCreator c = new JSONCreator(cr,json.name,json);
-            Rulesets.Add(json.name,c);
+            try
+            {
+                JSONTempCreator cr = JsonUtility.FromJson<JSONTempCreator>(json.text);
+                JSONCreator c = new JSONCreator(cr,json.name,json);
+                Rulesets.Add(json.name,c);
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e);
+                Debug.Log("INVALID JSON: " + json.name);
+                throw;
+            }
+            
         }
     }
 

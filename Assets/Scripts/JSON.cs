@@ -70,12 +70,14 @@ public class JSONCreator
     public float MoveSpeed;
     public float SprintSpeed;
     public float Gravity;
+    public GameModes Mode;
     public List<JSONItem> Items = new List<JSONItem>();
     public List<JSONWeapon> Weapons = new List<JSONWeapon>();
     
 
     public JSONCreator(JSONTempCreator source,string author,TextAsset ta)
     {
+        Mode = source.Mode != null ? (GameModes)Enum.Parse(typeof(GameModes), source.Mode) : GameModes.Deathmatch;
         PointsToWin = source.PointsToWin;
         PlayerHP = source.PlayerHP;
         foreach(JSONTempItem i in source.Items)
@@ -133,6 +135,7 @@ public class JSONTempCreator
     public float MoveSpeed;
     public float SprintSpeed;
     public float Gravity;
+    public string Mode;
     public JSONTempItem[] Items;
     public JSONTempWeapon[] Weapons;
 }

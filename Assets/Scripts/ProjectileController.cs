@@ -49,11 +49,11 @@ public class ProjectileController : NetworkBehaviour
             Explode();
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (!NetworkManager.Singleton.IsServer || Hit) return;
         FirstPersonController pc = other.gameObject.GetComponent<FirstPersonController>();
-        
+        if (pc == Shooter) return;
         if (pc != null && pc != Shooter)
         {
             pc.TakeDamage(Data.Damage,Shooter);
@@ -63,7 +63,16 @@ public class ProjectileController : NetworkBehaviour
         }
         
         
-        if(Hit || Data.Type != WeaponTypes.Grenade)
+        if(Hit)
+            Explode();
+        
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (!NetworkManager.Singleton.IsServer || Hit) return;
+        
+        if(Data.Type != WeaponTypes.Grenade)
             Explode();
         else if (Data.Bounce == 0)
         {
@@ -73,6 +82,8 @@ public class ProjectileController : NetworkBehaviour
         else
         {
             RB.velocity -= (OldVel - RB.velocity) * Data.Bounce;
+            RB.velocity += new Vector3(0,Data.Bounce*Data.Speed/3f,0);
+            RB.velocity = RB.velocity.normalized * OldVel.magnitude;
         }
     }
 

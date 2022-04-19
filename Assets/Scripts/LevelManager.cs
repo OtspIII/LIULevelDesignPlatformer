@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using Unity.Netcode;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
@@ -19,6 +20,8 @@ public class LevelManager : MonoBehaviour
     public List<string> Announces;
     public Dictionary<string, JSONItem> Items = new Dictionary<string, JSONItem>();
     public Dictionary<string, JSONWeapon> Weapons = new Dictionary<string, JSONWeapon>();
+    public List<FirstPersonController> AlivePlayers = new List<FirstPersonController>();
+    public bool RoundComplete;
 
 
     void Awake()
@@ -39,8 +42,12 @@ public class LevelManager : MonoBehaviour
             Items.Add(i.Text,i);
         foreach(JSONWeapon i in Ruleset.Weapons)
             Weapons.Add(i.Text,i);
-        foreach(FirstPersonController pc in God.Players)
+        foreach (FirstPersonController pc in God.Players)
+        {
             pc.ImprintRules(Ruleset);
+            AlivePlayers.Add(pc);
+        }
+            
     }
 
     void Update()
@@ -85,12 +92,13 @@ public class LevelManager : MonoBehaviour
     public void SetWinner(FirstPersonController who)
     {
 //        Debug.Log(who.Name.Value + " Wins!");
-        God.LS.StartCoroutine(Winner(who));
+        God.LS.StartCoroutine(Winner(who.Name.Value.ToString()));
+        RoundComplete = true;
     }
     
-    public IEnumerator Winner(FirstPersonController who)
+    public IEnumerator Winner(string who)
     {
-        God.AnnounceText.text = who.Name.Value + " WINS!";
+        God.AnnounceText.text = who + " WINS!";
         if (NetworkManager.Singleton.IsServer)
             God.LS.PickNextLevel();
         yield return new WaitForSeconds(3);
@@ -116,5 +124,35 @@ public class LevelManager : MonoBehaviour
         wpn.Damage = 10;
         wpn.Text = "GENERIC WEAPON";
         return new JSONWeapon(wpn);
+    }
+
+    public bool Respawn(FirstPersonController pc)
+    {
+        if (Ruleset.Mode == GameModes.Elim) return false;
+        return true;
+    }
+
+    public void NoticeDeath(FirstPersonController pc,FirstPersonController source=null)
+    {
+        if(source != null && Ruleset.Mode == GameModes.Deathmatch)AwardPoint(source,1);
+        AlivePlayers.Remove(pc);
+        if (Ruleset.Mode == GameModes.Elim)
+        {
+            if (AlivePlayers.Count == 1)
+            {
+                FirstPersonController winner = AlivePlayers[0];
+                AwardPoint(winner);
+                if (RoundComplete) return;
+            }
+            if (AlivePlayers.Count <= 1)
+            {
+                AlivePlayers.Clear();
+                foreach (FirstPersonController dead in God.Players)
+                {
+                    dead.Reset();
+                    AlivePlayers.Add(dead);
+                }
+            }
+        }
     }
 }

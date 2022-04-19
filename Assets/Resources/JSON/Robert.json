@@ -7,19 +7,19 @@
   "Items":[
     {
       "Text": "1 Point",
-      "Type": "Flag",
+      "Type": "Points",
       "Amount": 1,
       "Color": "Yellow"
     },
     {
-      "Text": "Health",
-      "Type": "Medkit",
+      "Text": "Medkit",
+      "Type": "Healing",
       "Amount": 25,
       "Color": "Green"
     },
     {
-      "Text": "Jump",
-      "Type": "Trampoline",
+      "Text": "Trampoline",
+      "Type": "Jump",
       "Amount": 10,
       "Color": "Blue"
     },

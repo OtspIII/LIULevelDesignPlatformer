@@ -7,7 +7,7 @@
   "Items":[
     {
       "Text": "1 Point",
-      "Type": "Point",
+      "Type": "Points",
       "Amount": 1,
       "Color": "Yellow"
     },

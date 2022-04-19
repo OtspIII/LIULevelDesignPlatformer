@@ -1,6 +1,6 @@
 {
   "PointsToWin":2, 
-  "PlayerHP": 100,
+  "PlayerHP": 10,
   "MoveSpeed": 10,
   "SprintSpeed": 2,
   "Gravity": 1,
@@ -33,9 +33,9 @@
     {
       "Color":"Yellow",
       "Text": "Pistol",
-      "Damage": 5,
+      "Damage": 10,
       "RateOfFire":0.5,
-      "Accuracy":5
+      "Accuracy":1
     },
     {
       "Color":"Blue",
@@ -72,7 +72,7 @@
       "ExplodeDamage":20,
       "SelfDamage":true,
       "Knockback":1,
-      "Bounce":0.75,
+      "Bounce":2.5,
       "Lifetime":3,
       "Type":"Grenade"
     },

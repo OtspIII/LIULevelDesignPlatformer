@@ -13,6 +13,8 @@ public class FirstPersonController : NetworkBehaviour
     public Camera Eyes;
     public Rigidbody RB;
     public NetworkRigidbody NRB;
+    public MeshRenderer MR;
+    public Collider Coll;
     public TextMeshPro NameText;
     public float MouseSensitivity = 3;
     public float JumpPower = 7;
@@ -21,6 +23,7 @@ public class FirstPersonController : NetworkBehaviour
 //    public JSONWeapon DefaultWeapon;
     public float ShotCooldown;
     public bool JustKnocked = false;
+    public bool GhostMode;
 
     public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
     public NetworkVariable<FixedString64Bytes> Weapon = new NetworkVariable<FixedString64Bytes>();
@@ -180,6 +183,33 @@ public class FirstPersonController : NetworkBehaviour
         float yRot = -Input.GetAxis("Mouse Y") * MouseSensitivity;
         
         Vector3 move = Vector3.zero;
+        
+        if (GhostMode)
+        {
+            transform.Rotate(0,xRot,0);
+            Vector3 eRot = Eyes.transform.localRotation.eulerAngles;
+            eRot.x += yRot;
+            if (eRot.x < -180) eRot.x += 360;
+            if (eRot.x > 180) eRot.x -= 360;
+            eRot = new Vector3(Mathf.Clamp(eRot.x, -90, 90),0,0);
+            Eyes.transform.localRotation = Quaternion.Euler(eRot);
+            if (Input.GetKey(KeyCode.W))
+                move += Eyes.transform.forward;
+            if (Input.GetKey(KeyCode.S))
+                move -= Eyes.transform.forward;
+            if (Input.GetKey(KeyCode.A))
+                move -= Eyes.transform.right;
+            if (Input.GetKey(KeyCode.D))
+                move += Eyes.transform.right;
+            if (Input.GetKey(KeyCode.Space))
+                move += Eyes.transform.up;
+            if (Input.GetKey(KeyCode.LeftControl))
+                move -= Eyes.transform.up;
+            transform.position += move.normalized * GetMoveSpeed() * Time.deltaTime;
+            
+            return;
+        }
+        
         bool jump = false;
         bool sprint = false;
 
@@ -224,6 +254,7 @@ public class FirstPersonController : NetworkBehaviour
 
     public void HandleMove(Vector3 move,bool jump, float xRot,float yRot,bool sprint)
     {
+        
         bool onGround = OnGround();
         if (!IsServer)
         {
@@ -375,6 +406,7 @@ public class FirstPersonController : NetworkBehaviour
         RandomSpawnServer();
         RB.velocity = Vector3.zero;
         Fling.Value = Vector3.zero;
+        SetGhostMode(false);
     }
 
     public void TakeDamage(int amt,FirstPersonController source=null)
@@ -395,11 +427,35 @@ public class FirstPersonController : NetworkBehaviour
         }
     }
 
+    public void SetGhostMode(bool set)
+    {
+        if (set)
+        {
+            RB.velocity = Vector3.zero;
+            MR.enabled = false;
+            Coll.enabled = false;
+            RB.isKinematic = true;
+            GhostMode = true;
+            transform.position = new Vector3(0,20,0);
+        }
+        else
+        {
+            MR.enabled = true;
+            Coll.enabled = true;
+            RB.isKinematic = false;
+            GhostMode = false;
+        }
+    }
+
     public void Die(FirstPersonController source=null)
     {
         Debug.Log("KILLED BY " + source);
-        if(source!=null) source.GetPoint(1,Name.Value.ToString());
-        Reset();
+        
+        if(God.LM.Respawn(this))
+            Reset();
+        else
+            SetGhostMode(true);
+        God.LM.NoticeDeath(this,source);
     }
 
     public override void OnDestroy()
