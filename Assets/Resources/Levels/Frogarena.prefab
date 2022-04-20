@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4e1e43aed796749b1ac783a20c4cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Creator: Misha
+  Creator: Allison
   Name: Frogarena
   Ruleset:
     PointsToWin: 0

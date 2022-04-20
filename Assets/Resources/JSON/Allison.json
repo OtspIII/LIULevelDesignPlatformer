@@ -21,22 +21,6 @@
 ,
   "Weapons":[
     {
-      "Color":"Yellow",
-      "Text": "Pistol",
-      "Damage": 5,
-      "RateOfFire":0.5,
-      "Accuracy":5
-    },
-    {
-      "Color":"Blue",
-      "Text": "Rifle",
-      "Damage": 10,
-      "Ammo": 30,
-      "RateOfFire":0.2,
-      "Accuracy":2,
-      "Speed":80
-    },
-    {
       "Color":"Red",
       "Text": "Rocket",
       "Damage": 10,
