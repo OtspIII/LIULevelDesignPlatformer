@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7033630676091226201}
   - component: {fileID: 6467906636470138432}
   - component: {fileID: 5987477183295622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2235792310510159126}
   - component: {fileID: 6701280136742610446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 836801958694988444}
   - component: {fileID: 2060810082242205929}
   - component: {fileID: 698257861225215795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed00832e2dd413a4594c9b2c2c33a19c, type: 2}
+  - {fileID: 2100000, guid: e750fd54902ecd44e8340a3deb4bae41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 2284296766530852865}
   - component: {fileID: 5203221328714730910}
   - component: {fileID: 6726453494750258222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,13 +486,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eyes: {fileID: 6701280136742610446}
   RB: {fileID: 2284296766530852865}
-  NRB: {fileID: 0}
+  NRB: {fileID: 6726453494750258222}
+  MR: {fileID: 5762141610368144449}
+  Coll: {fileID: 5762141610368144448}
   NameText: {fileID: 6467906636470138432}
   MouseSensitivity: 3
-  WalkSpeed: 10
   JumpPower: 7
   Floors: []
+  ShotCooldown: 0
+  JustKnocked: 0
+  GhostMode: 0
   Name:
+    m_InternalValue:
+      utf8LengthInBytes: 0
+      bytes:
+        offset0000:
+          byte0000: 0
+          byte0001: 0
+          byte0002: 0
+          byte0003: 0
+          byte0004: 0
+          byte0005: 0
+          byte0006: 0
+          byte0007: 0
+          byte0008: 0
+          byte0009: 0
+          byte0010: 0
+          byte0011: 0
+          byte0012: 0
+          byte0013: 0
+          byte0014: 0
+          byte0015: 0
+        offset0016:
+          byte0000: 0
+          byte0001: 0
+          byte0002: 0
+          byte0003: 0
+          byte0004: 0
+          byte0005: 0
+          byte0006: 0
+          byte0007: 0
+          byte0008: 0
+          byte0009: 0
+          byte0010: 0
+          byte0011: 0
+          byte0012: 0
+          byte0013: 0
+          byte0014: 0
+          byte0015: 0
+        offset0032:
+          byte0000: 0
+          byte0001: 0
+          byte0002: 0
+          byte0003: 0
+          byte0004: 0
+          byte0005: 0
+          byte0006: 0
+          byte0007: 0
+          byte0008: 0
+          byte0009: 0
+          byte0010: 0
+          byte0011: 0
+          byte0012: 0
+          byte0013: 0
+          byte0014: 0
+          byte0015: 0
+        byte0048: 0
+        byte0049: 0
+        byte0050: 0
+        byte0051: 0
+        byte0052: 0
+        byte0053: 0
+        byte0054: 0
+        byte0055: 0
+        byte0056: 0
+        byte0057: 0
+        byte0058: 0
+        byte0059: 0
+        byte0060: 0
+        byte0061: 0
+  Weapon:
     m_InternalValue:
       utf8LengthInBytes: 0
       bytes:
@@ -563,11 +636,15 @@ MonoBehaviour:
         byte0061: 0
   Position:
     m_InternalValue: {x: 0, y: 0, z: 0}
+  Fling:
+    m_InternalValue: {x: 0, y: 0, z: 0}
   XRot:
     m_InternalValue: 0
   YRot:
     m_InternalValue: 0
   HP:
+    m_InternalValue: 0
+  Ammo:
     m_InternalValue: 0
 --- !u!54 &2284296766530852865
 Rigidbody:
@@ -584,7 +661,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!114 &5203221328714730910
 MonoBehaviour:
   m_ObjectHideFlags: 0

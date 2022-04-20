@@ -69,3 +69,11 @@ public enum IColors
     Gray,
     Slate
 }
+
+public enum GameModes
+{
+    None,
+    Deathmatch,
+    Farming,
+    Elim
+}
