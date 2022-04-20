@@ -1,6 +1,6 @@
 {
   "PointsToWin":2, 
-  "PlayerHP": 10,
+  "PlayerHP": 100,
   "MoveSpeed": 10,
   "SprintSpeed": 2,
   "Gravity": 1,
