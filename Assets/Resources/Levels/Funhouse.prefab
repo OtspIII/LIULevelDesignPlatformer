@@ -2578,6 +2578,7 @@ MonoBehaviour:
     MoveSpeed: 0
     SprintSpeed: 0
     Gravity: 0
+    Mode: 0
     Items: []
     Weapons: []
   PSpawns: []
@@ -2585,6 +2586,8 @@ MonoBehaviour:
   WSpawns: []
   LastPS: {fileID: 0}
   Announces: []
+  AlivePlayers: []
+  RoundComplete: 0
 --- !u!1 &4076573673634294357
 GameObject:
   m_ObjectHideFlags: 0
@@ -5059,7 +5062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5682837422191506478, guid: 0ba94641dd9a3174bb585b4a8370c6a8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -72
+      value: -67.8
       objectReference: {fileID: 0}
     - target: {fileID: 5682837422191506478, guid: 0ba94641dd9a3174bb585b4a8370c6a8, type: 3}
       propertyPath: m_LocalPosition.z
