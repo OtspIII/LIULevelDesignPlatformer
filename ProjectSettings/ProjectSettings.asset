@@ -681,11 +681,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: e3e59bde-ea53-4f88-ac48-4f59a7c4fe3c
+  cloudProjectId: c5f97958-2ba7-44d3-b524-781329e2e3d5
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: LIU Level Design
-  organizationId: mikhail-favorov
+  projectName: minimalproject
+  organizationId: allisonbaitz
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0
