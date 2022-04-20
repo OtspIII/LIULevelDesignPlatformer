@@ -21,21 +21,8 @@
 ,
   "Weapons":[
     {
-      "Color":"Red",
-      "Text": "Rocket",
-      "Damage": 10,
-      "Ammo": 3,
-      "RateOfFire":1,
-      "Accuracy":2,
-      "Speed":30,
-      "ExplodeRadius":3,
-      "ExplodeDamage":50,
-      "SelfDamage":false,
-      "Knockback":10
-    },
-    {
       "Color":"Pink",
-      "Text": "Grenade",
+      "Text": "Bomb",
       "Damage": 20,
       "Ammo": 10,
       "RateOfFire":0.5,
