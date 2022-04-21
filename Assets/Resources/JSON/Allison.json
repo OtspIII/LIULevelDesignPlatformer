@@ -21,10 +21,10 @@
 ,
   "Weapons":[
     {
-      "Color":"Pink",
-      "Text": "Bomb",
-      "Damage": 20,
-      "Ammo": 10,
+      "Color":"Green",
+      "Text": "Tadpole",
+      "Damage": 25,
+      "Ammo": 15,
       "RateOfFire":0.5,
       "Accuracy":5,
       "Speed":20,
@@ -38,21 +38,13 @@
       "Type":"Grenade"
     },
     {
-      "Color":"Green",
-      "Text": "Shotgun",
-      "Damage": 5,
+      "Color":"Pink",
+      "Text": "Tongue",
+      "Damage": 20,
       "Ammo": 10,
       "RateOfFire":0.4,
       "Accuracy":15,
       "Shots":5
-    },
-    {
-      "Color":"White",
-      "Text": "Uzi",
-      "Damage": 5,
-      "Ammo": 90,
-      "RateOfFire":0.1,
-      "Accuracy":10
     }
   ]
 }
