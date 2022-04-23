@@ -1,4 +1,13 @@
 {
 "ScoreGoal":10,
-"Items":[]
+"Items":[],
+  "Weapons": [
+    {
+      "Color":"Yellow",
+      "Text": "Pistol",
+      "Damage": 10,
+      "RateOfFire":0.5,
+      "Accuracy":1
+    }
+  ]
 }
