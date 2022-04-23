@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -11,22 +12,36 @@ public class WeaponController : NetworkBehaviour
     public NetworkObject NO;
     public JSONWeapon Data;
     public MeshRenderer MR;
+    public bool IsSetup = false;
+    public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
 
     public void Setup(WeaponSpawnController s,JSONWeapon data)
     {
         Data = data;
         Spawner = s;
-        Desc.text = GetName();
         NO.Spawn();
-        if (data.Color != IColors.None)
-            MR.material = God.Library.GetColor(data.Color);
+        SetColor();
     }
-
+    
     void Update()
     {
-        
+        if (!IsSetup && Name.Value != "")
+        {
+            
+            Data = God.LM.GetWeapon(Name.Value.ToString());
+            SetColor();
+        }
     }
-
+    
+    public void SetColor()
+    {   
+        IsSetup = true;
+        Desc.text = GetName();
+        if (Data.Color != IColors.None)
+        {
+            MR.material = God.Library.GetColor(Data.Color);
+        }
+    }
     public void GetTaken(FirstPersonController pc)
     {
         pc.SetWeapon(Data);
