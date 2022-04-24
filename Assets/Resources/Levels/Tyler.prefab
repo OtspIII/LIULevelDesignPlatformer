@@ -5131,6 +5131,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Red
       objectReference: {fileID: 0}
+    - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: ItemToSpawn
+      value: Health
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: RespawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6959586376887958567, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

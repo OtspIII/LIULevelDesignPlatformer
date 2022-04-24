@@ -1,5 +1,5 @@
 {
-  "PointsToWin":3, 
+  "PointsToWin":5, 
   "PlayerHP": 100,
   "MoveSpeed": 10,
   "SprintSpeed": 2,
@@ -40,7 +40,7 @@
     {
       "Color":"Blue",
       "Text": "Rifle",
-      "Damage": 10,
+      "Damage": 15,
       "Ammo": 30,
       "RateOfFire":0.2,
       "Accuracy":2,
@@ -49,14 +49,14 @@
     {
       "Color":"Red",
       "Text": "Rocket",
-      "Damage": 10,
+      "Damage": 30,
       "Ammo": 3,
       "RateOfFire":1,
       "Accuracy":2,
       "Speed":30,
       "ExplodeRadius":3,
       "ExplodeDamage":50,
-      "SelfDamage":false,
+      "SelfDamage":true,
       "Knockback":10
     },
     {

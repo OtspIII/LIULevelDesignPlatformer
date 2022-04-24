@@ -284,10 +284,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Test Settings
       objectReference: {fileID: 0}
-    - target: {fileID: 5331429012024981049, guid: 3944a27ddfe6b584ca6eeb8e8374074f, type: 3}
-      propertyPath: CurrentTest
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8402345974286943872, guid: 3944a27ddfe6b584ca6eeb8e8374074f, type: 3}
       propertyPath: m_RootOrder
       value: 3

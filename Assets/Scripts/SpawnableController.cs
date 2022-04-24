@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Collections;
 using UnityEngine;
 using Unity.Netcode;
 using Unity.Netcode.Components;
@@ -13,20 +14,35 @@ public class SpawnableController : NetworkBehaviour
     public NetworkObject NO;
     public JSONItem Data;
     public MeshRenderer MR;
+    
+    public bool IsSetup = false;
+    public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
 
     public void Setup(ItemSpawnController s,JSONItem data)
     {
         Data = data;
         Spawner = s;
-        Desc.text = GetName();
         NO.Spawn();
-        if (data.Color != IColors.None)
-            MR.material = God.Library.GetColor(data.Color);
+        SetColor();
     }
 
     void Update()
     {
-        
+        if (!IsSetup && Name.Value != "")
+        {
+            Data = God.LM.GetItem(Name.Value.ToString());
+            SetColor();
+        }
+    }
+    
+    public void SetColor()
+    {   
+        IsSetup = true;
+        Desc.text = GetName();
+        if (Data.Color != IColors.None)
+        {
+            MR.material = God.Library.GetColor(Data.Color);
+        }
     }
 
     public void GetTaken(FirstPersonController pc)
