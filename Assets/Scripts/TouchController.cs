@@ -13,9 +13,9 @@ public class TouchController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (!NetworkManager.Singleton.IsServer) return;
+//        if (!NetworkManager.Singleton.IsServer) return;
         FirstPersonController pc = other.gameObject.GetComponent<FirstPersonController>();
-        if (pc == null) return;
+        if (pc == null || !pc.IsOwner) return;
         switch (Type)
         {
             case TouchThings.Lava:

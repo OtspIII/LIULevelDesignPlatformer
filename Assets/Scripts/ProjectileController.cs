@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 using Unity.Netcode;
@@ -18,6 +19,8 @@ public class ProjectileController : NetworkBehaviour
     public Vector3 OldVel;
     public TrailRenderer TR;
     public bool Doomed;
+    public bool IsSetup = false;
+    public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
     
     public void Setup(FirstPersonController pc,JSONWeapon data)
     {
@@ -27,16 +30,34 @@ public class ProjectileController : NetworkBehaviour
         Data = data;
         Shooter = pc;
         NO.Spawn();
+        IsSetup = true;
         RB.velocity = transform.forward * Data.Speed;
         Lifetime = Data.Lifetime > 0 ? Data.Lifetime : 10;
-        if (data.Color != IColors.None)
-        {
-            MR.material = God.Library.GetColor(data.Color);
-            TR.material = God.Library.GetColor(data.Color);
-        }
+        Name.Value = Data.Text;
+        SetColor();
 
 //        if (Shooter.IsOwner && Data.Type != WeaponTypes.Grenade) TR.enabled = false;
 
+    }
+
+    void Update()
+    {
+        if (!IsSetup && Name.Value != "")
+        {
+            
+            Data = God.LM.GetWeapon(Name.Value.ToString());
+            SetColor();
+        }
+    }
+
+    public void SetColor()
+    {
+        IsSetup = true;
+        if (Data.Color != IColors.None)
+        {
+            MR.material = God.Library.GetColor(Data.Color);
+            TR.material = God.Library.GetColor(Data.Color);
+        }
     }
 
     void FixedUpdate()

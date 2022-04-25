@@ -21,6 +21,7 @@ public class LevelManager : MonoBehaviour
     public Dictionary<string, JSONItem> Items = new Dictionary<string, JSONItem>();
     public Dictionary<string, JSONWeapon> Weapons = new Dictionary<string, JSONWeapon>();
     public List<FirstPersonController> AlivePlayers = new List<FirstPersonController>();
+    public List<GameObject> Spawned;
     public bool RoundComplete;
 
 
@@ -130,6 +131,13 @@ public class LevelManager : MonoBehaviour
     {
         if (Ruleset.Mode == GameModes.Elim) return false;
         return true;
+    }
+
+    private void OnDestroy()
+    {
+        if(NetworkManager.Singleton.IsServer)
+            foreach(GameObject obj in Spawned)
+                Destroy(obj);
     }
 
     public void NoticeDeath(FirstPersonController pc,FirstPersonController source=null)

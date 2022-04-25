@@ -1,15 +1,21 @@
 {
-  "PointsToWin":5, 
+  "PointsToWin":2, 
   "PlayerHP": 100,
-  "MoveSpeed": 10,
-  "SprintSpeed": 3,
-  "Gravity": 1.5,
+  "MoveSpeed": 100,
+  "SprintSpeed": 2,
+  "Gravity": 1,
   "Items":[
+    {
+      "Text": "1 Point",
+      "Type": "Points",
+      "Amount": 1,
+      "Color": "Green"
+    },
     {
       "Text": "Health",
       "Type": "Healing",
-      "Amount": 25,
-      "Color": "Red"
+      "Amount": 50,
+      "Color": "Yellow"
     },
     {
       "Text": "Jump",
@@ -25,17 +31,17 @@
   ],
   "Weapons": [
     {
-      "Color":"Gray",
+      "Color":"Yellow",
       "Text": "Pistol",
-      "Damage": 6,
-      "RateOfFire":0.5,
-      "Accuracy":0
+      "Damage": 1,
+      "RateOfFire":1,
+      "Accuracy":1
     },
     {
       "Color":"Blue",
       "Text": "Rifle",
       "Damage": 10,
-      "Ammo": 30,
+      "Ammo": 60,
       "RateOfFire":0.2,
       "Accuracy":2,
       "Speed":80
@@ -43,18 +49,18 @@
     {
       "Color":"Red",
       "Text": "Rocket",
-      "Damage": 10,
-      "Ammo": 3,
+      "Damage": 50,
+      "Ammo": 5,
       "RateOfFire":1,
-      "Accuracy":2,
+      "Accuracy":4,
       "Speed":30,
       "ExplodeRadius":3,
       "ExplodeDamage":50,
       "SelfDamage":false,
-      "Knockback":10
+      "Knockback":4
     },
     {
-      "Color":"Green",
+      "Color":"Pink",
       "Text": "Grenade",
       "Damage": 20,
       "Ammo": 10,
@@ -66,26 +72,29 @@
       "ExplodeDamage":20,
       "SelfDamage":true,
       "Knockback":1,
-      "Bounce":0.75,
+      "Bounce":2.5,
       "Lifetime":3,
       "Type":"Grenade"
     },
     {
-      "Color":"Blue",
+      "Color":"Green",
       "Text": "Shotgun",
-      "Damage": 3,
-      "Ammo": 10,
-      "RateOfFire":1.15,
-      "Accuracy":3,
+      "Damage": 20,
+      "Ammo": 5,
+      "RateOfFire":0.4,
+      "Knockback":1,
+      "Accuracy":15,
+      "Lifetime":5,
       "Shots":6
     },
     {
-      "Color":"Yellow",
-      "Text": "Uzi",
-      "Damage": 6,
-      "Ammo": 40,
-      "RateOfFire":0.2,
+      "Color":"White",
+      "Text": "Sniper",
+      "Damage": 40,
+      "Ammo": 10,
+      "RateOfFire":0.1,
       "Accuracy":2
+	"Lifetime":25,
     }
   ]
 }

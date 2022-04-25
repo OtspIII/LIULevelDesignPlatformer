@@ -426,6 +426,7 @@ Transform:
   - {fileID: 5006383715917523870}
   - {fileID: 4036043525707664891}
   - {fileID: 7687912401537819717}
+  - {fileID: 8847156302734881847}
   - {fileID: 6331193310389831481}
   - {fileID: 4463799278330033610}
   - {fileID: 3855682645995072385}
@@ -452,6 +453,7 @@ MonoBehaviour:
     MoveSpeed: 0
     SprintSpeed: 0
     Gravity: 0
+    Mode: 0
     Items: []
     Weapons: []
   PSpawns: []
@@ -459,6 +461,9 @@ MonoBehaviour:
   WSpawns: []
   LastPS: {fileID: 0}
   Announces: []
+  AlivePlayers: []
+  Spawned: []
+  RoundComplete: 0
 --- !u!1 &5474864611073986954
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +559,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &6594186686019942438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8847156302734881847}
+  m_Layer: 0
+  m_Name: TPDest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8847156302734881847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6594186686019942438}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.8625846, y: 2, z: 13.73}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6544300918910656599}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &725631476657801296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -629,7 +664,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5722890459258790862, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5722890459258790862, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: m_LocalPosition.x
@@ -749,6 +784,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleporter
       objectReference: {fileID: 0}
+    - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: DestObj
+      value: 
+      objectReference: {fileID: 8847156302734881847}
     - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: ItemToSpawn
       value: Teleporter
@@ -951,6 +990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item Spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: DestObj
+      value: 
+      objectReference: {fileID: 8847156302734881847}
     - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: ItemToSpawn
       value: 1 Point
@@ -1417,7 +1460,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5495944765930375063, guid: af6006523c9262f45bdc3047ccab5036, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5495944765930375063, guid: af6006523c9262f45bdc3047ccab5036, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1545,7 +1588,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5495944765930375063, guid: af6006523c9262f45bdc3047ccab5036, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5495944765930375063, guid: af6006523c9262f45bdc3047ccab5036, type: 3}
       propertyPath: m_LocalScale.x

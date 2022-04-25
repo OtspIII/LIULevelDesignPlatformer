@@ -15,6 +15,7 @@ public class LevelSpawner : MonoBehaviour
     
     void Awake()
     {
+        
         foreach (LevelManager s in Resources.LoadAll<LevelManager>("Levels"))
             Levels.Add(s.name,s);
         God.LS = this;
