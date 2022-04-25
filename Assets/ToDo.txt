@@ -4,11 +4,9 @@ Flags
 Capture Flag Zones
 KotH
 Teams
-Teleport to a GameObject
 Charge Shot
 Classes
 Sword
-Elim
 Sound
 Crouching
 Stairs
@@ -17,3 +15,4 @@ Moving Platforms?
 --TO TEST--
 Backup Camera
 Double Pickup Items
+Elim

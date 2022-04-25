@@ -9,6 +9,7 @@ public class RoundManager : NetworkBehaviour
     public NetworkVariable<FixedString64Bytes> Level = new NetworkVariable<FixedString64Bytes>();
     
     public Dictionary<FirstPersonController, int> Scores = new Dictionary<FirstPersonController, int>();
+    public Dictionary<IColors, int> TeamScores = new Dictionary<IColors, int>();
     public NetworkObject NO;
     
     void Awake()
