@@ -2626,7 +2626,7 @@ MonoBehaviour:
   RM: {fileID: 2147030319398324794, guid: eca3a8e6789f7af4099a394bfc58ea92, type: 3}
   ColorSeeds:
   - A: 1
-    B: {fileID: 2100000, guid: ed00832e2dd413a4594c9b2c2c33a19c, type: 2}
+    B: {fileID: 2100000, guid: d93cb9b55be652e4c927d09da14fb4f8, type: 2}
   - A: 2
     B: {fileID: 2100000, guid: 6f5a6b39b5b772a4badc1261b741f521, type: 2}
   - A: 3
@@ -2649,6 +2649,8 @@ MonoBehaviour:
     B: {fileID: 2100000, guid: e750fd54902ecd44e8340a3deb4bae41, type: 2}
   - A: 12
     B: {fileID: 2100000, guid: 705f0f7e946e8d34c87edcd34719fc77, type: 2}
+  - A: 0
+    B: {fileID: 2100000, guid: 68568127e5a921c4080e12c6a5fa6e40, type: 2}
 --- !u!1 &6694636374050762618
 GameObject:
   m_ObjectHideFlags: 0

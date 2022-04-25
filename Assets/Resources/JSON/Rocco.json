@@ -1,21 +1,15 @@
 {
   "PointsToWin":5, 
   "PlayerHP": 100,
-  "MoveSpeed": 5,
-  "SprintSpeed": 2,
-  "Gravity": 2,
+  "MoveSpeed": 10,
+  "SprintSpeed": 3,
+  "Gravity": 1.5,
   "Items":[
-    {
-      "Text": "1 Point",
-      "Type": "Points",
-      "Amount": 1,
-      "Color": "Yellow"
-    },
     {
       "Text": "Health",
       "Type": "Healing",
       "Amount": 25,
-      "Color": "Green"
+      "Color": "Red"
     },
     {
       "Text": "Jump",
@@ -31,11 +25,11 @@
   ],
   "Weapons": [
     {
-      "Color":"Yellow",
+      "Color":"Gray",
       "Text": "Pistol",
-      "Damage": 5,
+      "Damage": 6,
       "RateOfFire":0.5,
-      "Accuracy":1
+      "Accuracy":0
     },
     {
       "Color":"Blue",
@@ -60,7 +54,7 @@
       "Knockback":10
     },
     {
-      "Color":"Pink",
+      "Color":"Green",
       "Text": "Grenade",
       "Damage": 20,
       "Ammo": 10,
@@ -77,21 +71,21 @@
       "Type":"Grenade"
     },
     {
-      "Color":"Green",
+      "Color":"Blue",
       "Text": "Shotgun",
-      "Damage": 5,
+      "Damage": 3,
       "Ammo": 10,
-      "RateOfFire":0.4,
-      "Accuracy":5,
-      "Shots":5
+      "RateOfFire":1.15,
+      "Accuracy":3,
+      "Shots":6
     },
     {
-      "Color":"White",
+      "Color":"Yellow",
       "Text": "Uzi",
-      "Damage": 5,
-      "Ammo": 90,
-      "RateOfFire":0.1,
-      "Accuracy":10
+      "Damage": 6,
+      "Ammo": 40,
+      "RateOfFire":0.2,
+      "Accuracy":2
     }
   ]
 }

@@ -12,9 +12,11 @@ public class ItemSpawnController : MonoBehaviour
     float Countdown = 0;
     public string ItemToSpawn;
     public Vector3 Destination;
+    public Transform DestObj;
 
     void Start()
     {
+        if (DestObj != null) Destination = DestObj.position - God.LM.transform.position;
         God.LM.ISpawns.Add(this);
         Spawn();
     }

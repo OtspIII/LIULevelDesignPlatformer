@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using Unity.Netcode;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
@@ -21,7 +22,9 @@ public class LevelManager : MonoBehaviour
     public Dictionary<string, JSONItem> Items = new Dictionary<string, JSONItem>();
     public Dictionary<string, JSONWeapon> Weapons = new Dictionary<string, JSONWeapon>();
     public List<FirstPersonController> AlivePlayers = new List<FirstPersonController>();
+    public List<GameObject> Spawned;
     public bool RoundComplete;
+    public Dictionary<IColors,List<FirstPersonController>> Teams = new Dictionary<IColors, List<FirstPersonController>>();
 
 
     void Awake()
@@ -73,6 +76,18 @@ public class LevelManager : MonoBehaviour
 
     public void AwardPoint(FirstPersonController who, int amt = 1, string targ="")
     {
+        if (who.Team.Value != IColors.None)
+        {
+            IColors team = who.Team.Value;
+            if (!God.RM.TeamScores.ContainsKey(team)) God.RM.TeamScores.Add(team, amt);
+            else God.RM.TeamScores[team] += amt;
+            if(God.RM.TeamScores[team] >= Ruleset.PointsToWin) SetWinner(team);
+            string teamtxt = who.Name.Value.ToString()  + " <"+team.ToString()+"> ";
+            if (targ != "") teamtxt += " > " + targ;
+            teamtxt += " ("+God.RM.TeamScores[team]+")";
+            StartCoroutine(Announce(teamtxt));
+            return;
+        }
         if (!God.RM.Scores.ContainsKey(who)) God.RM.Scores.Add(who, amt);
         else God.RM.Scores[who] += amt;
         if(God.RM.Scores[who] >= Ruleset.PointsToWin) SetWinner(who);
@@ -93,6 +108,13 @@ public class LevelManager : MonoBehaviour
     {
 //        Debug.Log(who.Name.Value + " Wins!");
         God.LS.StartCoroutine(Winner(who.Name.Value.ToString()));
+        RoundComplete = true;
+    }
+    
+    public void SetWinner(IColors team)
+    {
+//        Debug.Log(who.Name.Value + " Wins!");
+        God.LS.StartCoroutine(Winner(team.ToString()));
         RoundComplete = true;
     }
     
@@ -132,6 +154,13 @@ public class LevelManager : MonoBehaviour
         return true;
     }
 
+    private void OnDestroy()
+    {
+        if(NetworkManager.Singleton.IsServer)
+            foreach(GameObject obj in Spawned)
+                Destroy(obj);
+    }
+
     public void NoticeDeath(FirstPersonController pc,FirstPersonController source=null)
     {
         if(source != null && Ruleset.Mode == GameModes.Deathmatch)AwardPoint(source,1);
@@ -154,5 +183,34 @@ public class LevelManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public IColors PickTeam(FirstPersonController pc)
+    {
+        if (Ruleset.Teams.Count <= 1) return IColors.None;
+        int amt = 999;
+        IColors best = IColors.None;
+        foreach (IColors c in Ruleset.Teams)
+        {
+            if(!Teams.ContainsKey(c)) Teams.Add(c,new List<FirstPersonController>());
+            if (Teams[c].Contains(pc)) return c;
+            int mem = Teams[c].Count;
+            if (mem < amt)
+            {
+                best = c;
+                amt = mem;
+            }
+        }
+
+        if (Teams.ContainsKey(best))
+            Teams[best].Add(pc);
+        return best;
+    }
+
+    public void RemovePlayer(FirstPersonController pc)
+    {
+        AlivePlayers.Remove(pc);
+        foreach (IColors c in Teams.Keys)
+            Teams[c].Remove(pc);
     }
 }
