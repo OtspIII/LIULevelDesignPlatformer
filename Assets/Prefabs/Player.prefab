@@ -496,6 +496,7 @@ MonoBehaviour:
   ShotCooldown: 0
   JustKnocked: 0
   GhostMode: 0
+  ShirtColor: 0
   Name:
     m_InternalValue:
       utf8LengthInBytes: 0
@@ -646,6 +647,8 @@ MonoBehaviour:
     m_InternalValue: 0
   Ammo:
     m_InternalValue: 0
+  Team:
+    m_InternalValue: 0
 --- !u!54 &2284296766530852865
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -661,7 +664,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 3
 --- !u!114 &5203221328714730910
 MonoBehaviour:
   m_ObjectHideFlags: 0
