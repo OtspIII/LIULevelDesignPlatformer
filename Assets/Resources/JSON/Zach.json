@@ -14,7 +14,7 @@
   },
   {
     "Text": "Teleporter",
-    "Type": "Teleporter",
+    "Type": "Teleport",
     "Color": "Red"
   }
   ],
