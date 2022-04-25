@@ -1,7 +1,7 @@
 {
   "PointsToWin":2, 
   "PlayerHP": 100,
-  "MoveSpeed": 100,
+  "MoveSpeed": 20,
   "SprintSpeed": 2,
   "Gravity": 1,
   "Items":[
@@ -16,7 +16,6 @@
       "Type": "Healing",
       "Amount": 50,
       "Color": "Yellow"
-
     },
     {
       "Text": "Jump",
