@@ -23,12 +23,14 @@ public class SpawnableController : NetworkBehaviour
         Data = data;
         Spawner = s;
         NO.Spawn();
+        Name.Value = Data.Text;
         SetColor();
+        God.LM.Spawned.Add(gameObject);
     }
 
     void Update()
     {
-        if (!IsSetup && Name.Value != "")
+        if (!IsSetup && Name.Value != "" && God.LM?.Ruleset != null)
         {
             Data = God.LM.GetItem(Name.Value.ToString());
             SetColor();
@@ -71,6 +73,11 @@ public class SpawnableController : NetworkBehaviour
             case ItemTypes.Points:
             {
                 pc.GetPoint((int)amt);
+                if (Spawner.Destination != Vector3.zero)
+                {
+                    pc.transform.position = God.LM.transform.position + Spawner.Destination;
+                    pc.SetPosClientRPC(God.LM.transform.position + Spawner.Destination);
+                }
                 break;
             }
             case ItemTypes.Jump:
@@ -90,6 +97,7 @@ public class SpawnableController : NetworkBehaviour
             case ItemTypes.Teleport:
             {
                 pc.transform.position = God.LM.transform.position + Spawner.Destination;
+                pc.SetPosClientRPC(God.LM.transform.position + Spawner.Destination);
                 break;
             }
         }
@@ -104,5 +112,11 @@ public class SpawnableController : NetworkBehaviour
 //        Debug.Log("OCE: " + pc + " / " + other.gameObject);
         if(pc != null)
             GetTaken(pc);
+    }
+
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+        God.LM?.Spawned.Remove(gameObject);
     }
 }

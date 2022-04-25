@@ -17,6 +17,7 @@ public static class God
     public static TextMeshProUGUI UpdateText;
     public static Camera Camera;
     public static List<FirstPersonController> Players = new List<FirstPersonController>();
+    public static Dictionary<string,FirstPersonController> PlayerDict = new Dictionary<string, FirstPersonController>();
     public static string NamePick;
     public static LevelManager TestLevel;
     public static RoundManager RM;
@@ -24,6 +25,12 @@ public static class God
     public static NetStatus GetStatus()
     {
         return NetworkManager.Singleton.IsHost ? NetStatus.Host : NetworkManager.Singleton.IsServer ? NetStatus.Server : NetStatus.Client;
+    }
+
+    public static FirstPersonController GetPlayer(string name)
+    {
+        if (!PlayerDict.ContainsKey(name)) return null;
+        return PlayerDict[name];
     }
 }
 

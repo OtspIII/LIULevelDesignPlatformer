@@ -47,6 +47,7 @@ public class FirstPersonController : NetworkBehaviour
             SetName(God.NamePick != "" ? God.NamePick : "Player " + God.Players.Count);
         else
             SetName(Name.Value.ToString());
+        God.PlayerDict.Add(Name.Value.ToString(),this);
     }
     
     public override void OnNetworkSpawn()
@@ -155,7 +156,7 @@ public class FirstPersonController : NetworkBehaviour
     }
 
     [ClientRpc]
-    void SetPosClientRPC(Vector3 pos)
+    public void SetPosClientRPC(Vector3 pos)
     {
         transform.position = pos;
 //        if(IsOwner)
@@ -409,7 +410,29 @@ public class FirstPersonController : NetworkBehaviour
         SetGhostMode(false);
     }
 
-    public void TakeDamage(int amt,FirstPersonController source=null)
+    public void TakeDamage(int amt, FirstPersonController source = null)
+    {
+        string src = source != null ? source.Name.Value.ToString() : "";
+        if(IsServer) TakeDamageS(amt,source);
+        else TakeDamageServerRpc(amt,src);
+    }
+    
+    [ServerRpc]
+    void TakeDamageServerRpc(int amt,string source="",Vector3 kb=new Vector3())
+    {
+        if (amt > 0)
+        {
+            FirstPersonController who = God.GetPlayer(source);
+            TakeDamageS(amt, who);
+        }
+
+        if (kb != Vector3.zero)
+        {
+            TakeKnockbackS(kb);
+        }
+    }
+    
+    public void TakeDamageS(int amt,FirstPersonController source=null)
     {
         HP.Value -= amt;
         if (HP.Value <= 0)
@@ -465,6 +488,13 @@ public class FirstPersonController : NetworkBehaviour
     }
 
     public void TakeKnockback(Vector3 kb)
+    {
+        if(IsServer) TakeDamageServerRpc(0,"",kb);
+        TakeKnockbackS(kb);
+        RB.velocity = kb;
+        JustKnocked = true;
+    }
+    public void TakeKnockbackS(Vector3 kb)
     {
         RB.velocity = kb;
         Fling.Value = new Vector3(kb.x,0,kb.z);
