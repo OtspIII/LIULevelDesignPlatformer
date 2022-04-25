@@ -1,0 +1,18 @@
+--TO ADD--
+Go To Menu
+Flags
+Capture Flag Zones
+KotH
+Teams
+Charge Shot
+Classes
+Sword
+Sound
+Crouching
+Stairs
+Moving Platforms?
+
+--TO TEST--
+Backup Camera
+Double Pickup Items
+Elim

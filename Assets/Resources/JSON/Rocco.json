@@ -1,0 +1,91 @@
+{
+  "PointsToWin":5, 
+  "PlayerHP": 100,
+  "MoveSpeed": 10,
+  "SprintSpeed": 3,
+  "Gravity": 1.5,
+  "Items":[
+    {
+      "Text": "Health",
+      "Type": "Healing",
+      "Amount": 25,
+      "Color": "Red"
+    },
+    {
+      "Text": "Jump",
+      "Type": "Jump",
+      "Amount": 10,
+      "Color": "Blue"
+    },
+    {
+      "Text": "Teleporter",
+      "Type": "Teleport",
+      "Color": "White"
+    }
+  ],
+  "Weapons": [
+    {
+      "Color":"Gray",
+      "Text": "Pistol",
+      "Damage": 6,
+      "RateOfFire":0.5,
+      "Accuracy":0
+    },
+    {
+      "Color":"Blue",
+      "Text": "Rifle",
+      "Damage": 10,
+      "Ammo": 30,
+      "RateOfFire":0.2,
+      "Accuracy":2,
+      "Speed":80
+    },
+    {
+      "Color":"Red",
+      "Text": "Rocket",
+      "Damage": 10,
+      "Ammo": 3,
+      "RateOfFire":1,
+      "Accuracy":2,
+      "Speed":30,
+      "ExplodeRadius":3,
+      "ExplodeDamage":50,
+      "SelfDamage":false,
+      "Knockback":10
+    },
+    {
+      "Color":"Green",
+      "Text": "Grenade",
+      "Damage": 20,
+      "Ammo": 10,
+      "RateOfFire":0.5,
+      "Accuracy":5,
+      "Speed":20,
+      "Gravity":2,
+      "ExplodeRadius":2,
+      "ExplodeDamage":20,
+      "SelfDamage":true,
+      "Knockback":1,
+      "Bounce":0.75,
+      "Lifetime":3,
+      "Type":"Grenade"
+    },
+    {
+      "Color":"Blue",
+      "Text": "Shotgun",
+      "Damage": 3,
+      "Ammo": 10,
+      "RateOfFire":1.15,
+      "Accuracy":3,
+      "Shots":6
+    },
+    {
+      "Color":"Yellow",
+      "Text": "Uzi",
+      "Damage": 6,
+      "Ammo": 40,
+      "RateOfFire":0.2,
+      "Accuracy":2
+    }
+  ]
+}

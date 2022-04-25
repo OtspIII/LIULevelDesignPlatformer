@@ -10,9 +10,13 @@ public class ItemSpawnController : MonoBehaviour
     public SpawnableController Held;
     public float RespawnTime = 15;
     float Countdown = 0;
+    public string ItemToSpawn;
+    public Vector3 Destination;
+    public Transform DestObj;
 
     void Start()
     {
+        if (DestObj != null) Destination = DestObj.position - God.LM.transform.position;
         God.LM.ISpawns.Add(this);
         Spawn();
     }
@@ -34,7 +38,7 @@ public class ItemSpawnController : MonoBehaviour
         if (!NetworkManager.Singleton.IsServer) return;
         Countdown = RespawnTime;
         Held = Instantiate(GetPrefab(), Holder.transform.position, Quaternion.identity);
-        Held.Setup(this);
+        Held.Setup(this,God.LM.GetItem(ItemToSpawn));
     }
     
     public SpawnableController GetPrefab()

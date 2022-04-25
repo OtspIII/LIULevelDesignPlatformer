@@ -1,0 +1,64 @@
+{
+  "PointsToWin":20, 
+  "PlayerHP": 100,
+  "MoveSpeed": 10,
+  "SprintSpeed": 2.1,
+  "Gravity": 0.8,
+  "Items":[
+    {
+      "Text": "2 Points",
+      "Type": "Points",
+      "Amount": 2,
+      "Color": "White"
+    },
+    {
+      "Text": "Health",
+      "Type": "Healing",
+      "Amount": 35,
+      "Color": "Green"
+    },
+    {
+      "Text": "Jump",
+      "Type": "Jump",
+      "Amount": 10,
+      "Color": "Blue"
+    },
+    {
+      "Text": "Teleporter",
+      "Type": "Teleport",
+      "Color": "Yellow"
+    }
+  ],
+  "Weapons": [
+    {
+      "Color":"Purple",
+      "Text": "Pistol",
+      "Damage": 10,
+      "Ammo":25,
+      "RateOfFire":0.5,
+      "Accuracy":1
+    },
+    {
+      "Color":"Red",
+      "Text": "Rocket",
+      "Damage": 15,
+      "Ammo": 5,
+      "RateOfFire":1,
+      "Accuracy":2,
+      "Speed":30,
+      "ExplodeRadius":5,
+      "ExplodeDamage":40,
+      "SelfDamage":true,
+      "Knockback":10
+    },
+    {
+      "Color":"Orange",
+      "Text": "Shotgun",
+      "Damage": 5,
+      "Ammo": 10,
+      "RateOfFire":0.4,
+      "Accuracy":15,
+      "Shots":5
+    }
+  ]
+}

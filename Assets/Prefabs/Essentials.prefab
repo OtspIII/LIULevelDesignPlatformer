@@ -1049,13 +1049,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548082536}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -596.6261, y: -468.26672, z: -7.89929}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
-  m_Father: {fileID: 1983702047}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 5254212438957471755}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!20 &1548082539
 Camera:
   m_ObjectHideFlags: 0
@@ -1719,9 +1719,8 @@ RectTransform:
   - {fileID: 377443777}
   - {fileID: 2051208301}
   - {fileID: 254549868}
-  - {fileID: 1548082537}
   m_Father: {fileID: 5254212438957471755}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2304,6 +2303,7 @@ RectTransform:
   - {fileID: 731040718}
   - {fileID: 1788553572}
   - {fileID: 2507105905403491535}
+  - {fileID: 1548082537}
   - {fileID: 1983702047}
   m_Father: {fileID: 1917628643671156827}
   m_RootOrder: 2
@@ -2620,7 +2620,37 @@ MonoBehaviour:
   Projectile: {fileID: 997150945186904876, guid: 07d698e9298cf0e4abdcfe734528a613, type: 3}
   Blood: {fileID: 8695105304658655812, guid: 24d1293c45ce6a14ca0a4338143e18bb, type: 3}
   Dust: {fileID: 387900051657626760, guid: 8d8ef4236a4a1a247b1c56161ef8f7ab, type: 3}
+  Explosion: {fileID: 177778936510870119, guid: 9da804333c3d8c241bcaa95e78fd0cfd, type: 3}
   TestSpawn: {fileID: 8713032712219484796, guid: f3317fa6b2641bf43a805e0aad940e8d, type: 3}
+  WeaponSpawn: {fileID: 612995193796160363, guid: 013af480853f0c940ba8ef7e82b4b503, type: 3}
+  RM: {fileID: 2147030319398324794, guid: eca3a8e6789f7af4099a394bfc58ea92, type: 3}
+  ColorSeeds:
+  - A: 1
+    B: {fileID: 2100000, guid: d93cb9b55be652e4c927d09da14fb4f8, type: 2}
+  - A: 2
+    B: {fileID: 2100000, guid: 6f5a6b39b5b772a4badc1261b741f521, type: 2}
+  - A: 3
+    B: {fileID: 2100000, guid: 68568127e5a921c4080e12c6a5fa6e40, type: 2}
+  - A: 4
+    B: {fileID: 2100000, guid: 5366edafdc53ba74f8496b65a8d84f2c, type: 2}
+  - A: 5
+    B: {fileID: 2100000, guid: e0b5e8e92de200a49b2873dab29f88c5, type: 2}
+  - A: 6
+    B: {fileID: 2100000, guid: e71d26b338b0b674fb33fcc0733c3e26, type: 2}
+  - A: 7
+    B: {fileID: 2100000, guid: 546c83438f2c98f4b879662087c1a7f0, type: 2}
+  - A: 8
+    B: {fileID: 2100000, guid: df91708de3027bb4996105e55be59917, type: 2}
+  - A: 9
+    B: {fileID: 2100000, guid: c7df3b6ea7712c74b864e0056ac78533, type: 2}
+  - A: 10
+    B: {fileID: 2100000, guid: 9f8dbf0b111e7f84fbfb0d837402151a, type: 2}
+  - A: 11
+    B: {fileID: 2100000, guid: e750fd54902ecd44e8340a3deb4bae41, type: 2}
+  - A: 12
+    B: {fileID: 2100000, guid: 705f0f7e946e8d34c87edcd34719fc77, type: 2}
+  - A: 0
+    B: {fileID: 2100000, guid: 68568127e5a921c4080e12c6a5fa6e40, type: 2}
 --- !u!1 &6694636374050762618
 GameObject:
   m_ObjectHideFlags: 0
