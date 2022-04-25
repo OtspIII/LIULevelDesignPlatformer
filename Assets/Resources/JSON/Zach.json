@@ -1,13 +1,87 @@
 {
-"ScoreGoal":10,
-"Items":[],
+  "Mode": "Deathmatch",
+"PointsToWin": 2,
+  "PlayerHP": 100,
+  "MoveSpeed": 10,
+  "SprintSpeed": 2,
+  "Gravity": 1,
+"Items":[
+  {
+    "Text": "Health",
+    "Type": "Healing",
+    "Amount": 50,
+    "Color": "Green"
+  },
+  {
+    "Text": "Teleporter",
+    "Type": "Teleport",
+    "Color": "Red"
+  }
+  ],
   "Weapons": [
     {
-      "Color":"Yellow",
-      "Text": "Pistol",
-      "Damage": 10,
+      "Color":"Red",
+      "Text": "PopGun",
+      "Damage": 5,
+      "RateOfFire":1,
+      "Accuracy":1,
+      "Knockback":5
+    },
+    {
+      "Color": "Slate",
+      "Text": "Olympia",
+      "Damage": 14.7,
+      "Ammo": 10,
+      "RateofFire":1,
+      "Accuracy":1,
+      "Knockback":7
+    },
+    {
+      "Color":"Pink",
+      "Text": "Plasma Gun",
+      "Damage": 6,
+      "RateOfFire":0.9,
+      "Accuracy":0.1,
+      "Speed":60
+    },
+    {
+      "Color":"Glass",
+      "Text": "Babylon Blaster",
+      "Damage": 40.2,
+      "Ammo": 1,
+      "RateOfFire":1,
+      "Accuracy":2,
+      "Speed":15.5,
+      "ExplodeRadius":5,
+      "ExplodeDamage":75,
+      "SelfDamage":true,
+      "Knockback":20
+    },
+    {
+      "Color":"Pink",
+      "Text": "Grenade",
+      "Damage": 20,
+      "Ammo": 10,
       "RateOfFire":0.5,
-      "Accuracy":1
+      "Accuracy":5,
+      "Speed":20,
+      "Gravity":2,
+      "ExplodeRadius":2,
+      "ExplodeDamage":20,
+      "SelfDamage":true,
+      "Knockback":1,
+      "Bounce":2.5,
+      "Lifetime":3,
+      "Type":"Grenade"
+    },
+    
+    {
+      "Color":"White",
+      "Text": "Brave Pistol",
+      "Damage": 5,
+      "Ammo": 90,
+      "RateOfFire":0.1,
+      "Accuracy":5
     }
-  ]
+]
 }

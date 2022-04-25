@@ -50,7 +50,8 @@ public class FirstPersonController : NetworkBehaviour
             SetName(God.NamePick != "" ? God.NamePick : "Player " + God.Players.Count);
         else
             SetName(Name.Value.ToString());
-        God.PlayerDict.Add(Name.Value.ToString(),this);
+        
+        
     }
     
     public override void OnNetworkSpawn()
@@ -179,6 +180,8 @@ public class FirstPersonController : NetworkBehaviour
     
     void Update()
     {
+        if(!God.PlayerDict.ContainsKey(Name.Value.ToString()))
+            God.PlayerDict.Add(Name.Value.ToString(),this);
         if (Team.Value != ShirtColor)
         {
             MR.material = God.Library.GetColor(Team.Value);
