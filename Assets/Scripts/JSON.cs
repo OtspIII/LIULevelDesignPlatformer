@@ -71,6 +71,7 @@ public class JSONCreator
     public float SprintSpeed;
     public float Gravity;
     public GameModes Mode;
+    public List<IColors> Teams = new List<IColors>();
     public List<JSONItem> Items = new List<JSONItem>();
     public List<JSONWeapon> Weapons = new List<JSONWeapon>();
     

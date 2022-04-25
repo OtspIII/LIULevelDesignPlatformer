@@ -4,6 +4,7 @@
   "MoveSpeed": 10,
   "SprintSpeed": 2,
   "Gravity": 1,
+  "Teams": ["Red","Blue"],
   "Items":[
     {
       "Text": "1 Point",

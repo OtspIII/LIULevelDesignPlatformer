@@ -6,6 +6,7 @@ using Unity.Collections;
 using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
 public class FirstPersonController : NetworkBehaviour
@@ -24,6 +25,7 @@ public class FirstPersonController : NetworkBehaviour
     public float ShotCooldown;
     public bool JustKnocked = false;
     public bool GhostMode;
+    public IColors ShirtColor = IColors.None;
 
     public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
     public NetworkVariable<FixedString64Bytes> Weapon = new NetworkVariable<FixedString64Bytes>();
@@ -35,6 +37,7 @@ public class FirstPersonController : NetworkBehaviour
     public NetworkVariable<float> YRot = new NetworkVariable<float>();
     public NetworkVariable<int> HP = new NetworkVariable<int>();
     public NetworkVariable<int> Ammo = new NetworkVariable<int>();
+    public NetworkVariable<IColors> Team = new NetworkVariable<IColors>();
 
     
     void Start()
@@ -102,7 +105,10 @@ public class FirstPersonController : NetworkBehaviour
 //        }
 
         if (IsServer)
+        {
             RandomSpawnServer();
+            SetTeam(God.LM.PickTeam(this));
+        }
     }
 
     public void SetWeapon(JSONWeapon wpn)
@@ -173,6 +179,11 @@ public class FirstPersonController : NetworkBehaviour
     
     void Update()
     {
+        if (Team.Value != ShirtColor)
+        {
+            MR.material = God.Library.GetColor(Team.Value);
+            ShirtColor = Team.Value;
+        }
         JustKnocked = false;
         if (IsServer && transform.position.y < -100)
             Die();
@@ -485,6 +496,7 @@ public class FirstPersonController : NetworkBehaviour
     {
         base.OnDestroy();
         God.Players.Remove(this);
+        if (God.LM != null) God.LM.RemovePlayer(this);
     }
 
     public void TakeKnockback(Vector3 kb)
@@ -500,6 +512,12 @@ public class FirstPersonController : NetworkBehaviour
         Fling.Value = new Vector3(kb.x,0,kb.z);
 //        Debug.Log("KB: " + kb);
         JustKnocked = true;
+    }
+
+    public void SetTeam(IColors team)
+    {
+        if (!IsServer) return;
+        Team.Value = team;
     }
 }
 
