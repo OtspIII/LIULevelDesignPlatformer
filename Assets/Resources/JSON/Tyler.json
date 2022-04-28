@@ -59,23 +59,7 @@
       "SelfDamage":true,
       "Knockback":10
     },
-    {
-      "Color":"Pink",
-      "Text": "Grenade",
-      "Damage": 20,
-      "Ammo": 10,
-      "RateOfFire":0.5,
-      "Accuracy":5,
-      "Speed":20,
-      "Gravity":2,
-      "ExplodeRadius":2,
-      "ExplodeDamage":20,
-      "SelfDamage":true,
-      "Knockback":1,
-      "Bounce":2.5,
-      "Lifetime":3,
-      "Type":"Grenade"
-    },
+
     {
       "Color":"Green",
       "Text": "Shotgun",
@@ -87,11 +71,20 @@
     },
     {
       "Color":"White",
+      "Text": "Sniper",
+      "Damage": 45,
+      "Ammo": 5,
+      "RateOfFire":1,
+      "Accuracy": 0,
+      "Speed":150
+    },
+    {
+      "Color":"Pink",
       "Text": "Uzi",
-      "Damage": 5,
+      "Damage": 10,
       "Ammo": 90,
       "RateOfFire":0.1,
-      "Accuracy":10
+      "Accuracy":7
     }
   ]
 }
