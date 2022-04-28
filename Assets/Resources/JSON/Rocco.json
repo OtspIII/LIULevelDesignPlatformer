@@ -14,7 +14,7 @@
     {
       "Text": "Jump",
       "Type": "Jump",
-      "Amount": 10,
+      "Amount": 20,
       "Color": "Blue"
     },
     {
@@ -43,31 +43,31 @@
     {
       "Color":"Red",
       "Text": "Rocket",
-      "Damage": 10,
+      "Damage": 25,
       "Ammo": 3,
       "RateOfFire":1,
       "Accuracy":2,
       "Speed":30,
       "ExplodeRadius":3,
-      "ExplodeDamage":50,
+      "ExplodeDamage":25,
       "SelfDamage":false,
       "Knockback":10
     },
     {
       "Color":"Green",
       "Text": "Grenade",
-      "Damage": 20,
+      "Damage": 25,
       "Ammo": 10,
       "RateOfFire":0.5,
       "Accuracy":5,
       "Speed":20,
-      "Gravity":2,
+      "Gravity":4,
       "ExplodeRadius":2,
-      "ExplodeDamage":20,
+      "ExplodeDamage":25,
       "SelfDamage":true,
       "Knockback":1,
-      "Bounce":0.75,
-      "Lifetime":3,
+      "Bounce":0.5,
+      "Lifetime":2,
       "Type":"Grenade"
     },
     {

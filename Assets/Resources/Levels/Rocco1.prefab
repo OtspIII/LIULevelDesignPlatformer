@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 6544300918910656599}
   - component: {fileID: -4070642155064657002}
   m_Layer: 0
-  m_Name: Rocco
+  m_Name: Rocco1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -468,6 +468,8 @@ MonoBehaviour:
     MoveSpeed: 0
     SprintSpeed: 0
     Gravity: 0
+    Mode: 0
+    Teams: 
     Items: []
     Weapons: []
   PSpawns: []
@@ -475,6 +477,9 @@ MonoBehaviour:
   WSpawns: []
   LastPS: {fileID: 0}
   Announces: []
+  AlivePlayers: []
+  Spawned: []
+  RoundComplete: 0
 --- !u!1 &1757964383878253106
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +641,36 @@ Transform:
   - {fileID: 410655636}
   - {fileID: 1778899511}
   m_Father: {fileID: 6544300918910656599}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4581242497019121476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5644660897008457348}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5644660897008457348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581242497019121476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7687912401537819717}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5474864611073986954
@@ -822,6 +857,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6544300918910656599}
     m_Modifications:
+    - target: {fileID: 4239301341163563426, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 5722890459258790862, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -870,27 +909,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleporter
       objectReference: {fileID: 0}
+    - target: {fileID: 6364393103740107961, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364393103740107961, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6364393103740107961, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: Holder
+      value: 
+      objectReference: {fileID: 4581242497019121476}
+    - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: DestObj
+      value: 
+      objectReference: {fileID: 9046012956641540914}
     - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: ItemToSpawn
       value: Teleporter
       objectReference: {fileID: 0}
     - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+      propertyPath: RespawnTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: Destination.x
-      value: 2.69
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: Destination.y
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6837077024909012010, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
       propertyPath: Destination.z
-      value: 16.08
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
 --- !u!4 &7687912401537819717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5722890459258790862, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
+  m_PrefabInstance: {fileID: 2727836765911828363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9046012956641540914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6364393103740107961, guid: 3bd160923adbdd94fa9624bfb54bdf10, type: 3}
   m_PrefabInstance: {fileID: 2727836765911828363}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4419479474177194378
