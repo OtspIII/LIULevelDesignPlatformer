@@ -4,29 +4,13 @@
   "MoveSpeed": 10,
   "SprintSpeed": 2,
   "Gravity": 1,
+"Teams": ["Red","Blue","Pink","Green"],
   "Items":[
-    {
-      "Text": "1 Point",
-      "Type": "Points",
-      "Amount": 1,
-      "Color": "Yellow"
-    },
     {
       "Text": "Health",
       "Type": "Healing",
       "Amount": 50,
       "Color": "Green"
-    },
-    {
-      "Text": "Jump",
-      "Type": "Jump",
-      "Amount": 10,
-      "Color": "Blue"
-    },
-    {
-      "Text": "Teleporter",
-      "Type": "Teleport",
-      "Color": "White"
     }
   ],
   "Weapons": [
@@ -82,7 +66,7 @@
       "Color":"Pink",
       "Text": "Uzi",
       "Damage": 10,
-      "Ammo": 90,
+      "Ammo": 30,
       "RateOfFire":0.1,
       "Accuracy":7
     }
