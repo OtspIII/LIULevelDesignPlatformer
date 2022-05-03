@@ -4,29 +4,13 @@
   "MoveSpeed": 10,
   "SprintSpeed": 2,
   "Gravity": 1,
+"Teams": ["Red","Blue","Pink","Green"],
   "Items":[
-    {
-      "Text": "1 Point",
-      "Type": "Points",
-      "Amount": 1,
-      "Color": "Yellow"
-    },
     {
       "Text": "Health",
       "Type": "Healing",
       "Amount": 50,
       "Color": "Green"
-    },
-    {
-      "Text": "Jump",
-      "Type": "Jump",
-      "Amount": 10,
-      "Color": "Blue"
-    },
-    {
-      "Text": "Teleporter",
-      "Type": "Teleport",
-      "Color": "White"
     }
   ],
   "Weapons": [
@@ -59,23 +43,7 @@
       "SelfDamage":true,
       "Knockback":10
     },
-    {
-      "Color":"Pink",
-      "Text": "Grenade",
-      "Damage": 20,
-      "Ammo": 10,
-      "RateOfFire":0.5,
-      "Accuracy":5,
-      "Speed":20,
-      "Gravity":2,
-      "ExplodeRadius":2,
-      "ExplodeDamage":20,
-      "SelfDamage":true,
-      "Knockback":1,
-      "Bounce":2.5,
-      "Lifetime":3,
-      "Type":"Grenade"
-    },
+
     {
       "Color":"Green",
       "Text": "Shotgun",
@@ -87,11 +55,20 @@
     },
     {
       "Color":"White",
+      "Text": "Sniper",
+      "Damage": 45,
+      "Ammo": 5,
+      "RateOfFire":1,
+      "Accuracy": 0,
+      "Speed":150
+    },
+    {
+      "Color":"Pink",
       "Text": "Uzi",
-      "Damage": 5,
-      "Ammo": 90,
+      "Damage": 10,
+      "Ammo": 30,
       "RateOfFire":0.1,
-      "Accuracy":10
+      "Accuracy":7
     }
   ]
 }

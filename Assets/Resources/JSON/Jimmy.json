@@ -1,7 +1,7 @@
 {
   "PointsToWin":2, 
   "PlayerHP": 100,
-  "MoveSpeed": 20,
+  "MoveSpeed": 5,
   "SprintSpeed": 2,
   "Gravity": 1,
   "Items":[
@@ -85,7 +85,7 @@
       "Knockback":1,
       "Accuracy":15,
       "Lifetime":5,
-      "Shots":6
+      "Shots":10
     },
     {
       "Color":"White",
