@@ -1,5 +1,5 @@
 {
-  "PointsToWin":10, 
+  "PointsToWin":5, 
   "PlayerHP": 50,
   "MoveSpeed": 10,
   "SprintSpeed": 2,

@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 683609776811261221}
   - component: {fileID: 683609776811261220}
   m_Layer: 0
-  m_Name: DarrionLVL2 1
+  m_Name: Darrion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
