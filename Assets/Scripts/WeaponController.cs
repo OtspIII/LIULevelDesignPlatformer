@@ -27,7 +27,7 @@ public class WeaponController : NetworkBehaviour
     
     void Update()
     {
-        if (!IsSetup && Name.Value != "" && God.LM?.Ruleset != null)
+        if (!IsSetup && Name.Value != "" && God.LM?.Ruleset != null && God.LM?.Ruleset.Author != "")
         {
             
             Data = God.LM.GetWeapon(Name.Value.ToString());

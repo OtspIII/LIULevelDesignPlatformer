@@ -3,7 +3,7 @@
   "PlayerHP": 100,
   "MoveSpeed": 10,
   "SprintSpeed": 2,
-  "Gravity": 1,
+  "Gravity": 1.5,
   "Items":[
     {
       "Text": "1 Point",
@@ -18,7 +18,7 @@
       "Color": "Green"
     },
     {
-      "Text": "Jump",
+      "Text": "Vault",
       "Type": "Jump",
       "Amount": 10,
       "Color": "Blue"

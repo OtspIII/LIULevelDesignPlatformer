@@ -12,6 +12,10 @@ Crouching
 Stairs
 Moving Platforms?
 
+Jump from floor transition
+Flight
+Level Desync
+
 --TO TEST--
 Backup Camera
 Double Pickup Items
