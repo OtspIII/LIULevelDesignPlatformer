@@ -57,7 +57,7 @@
       "Speed":30,
       "ExplodeRadius":3,
       "ExplodeDamage":50,
-      "SelfDamage":false,
+      "SelfDamage":true,
       "Knockback":10
     },
     {

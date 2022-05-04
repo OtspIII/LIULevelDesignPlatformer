@@ -65,6 +65,7 @@ public class JSONItem
 [System.Serializable]
 public class JSONCreator
 {
+    public string Author;
     public int PointsToWin;
     public int PlayerHP;
     public float MoveSpeed;
@@ -78,6 +79,7 @@ public class JSONCreator
 
     public JSONCreator(JSONTempCreator source,string author,TextAsset ta)
     {
+        Author = author;
         Mode = source.Mode != null ? (GameModes)Enum.Parse(typeof(GameModes), source.Mode) : GameModes.Deathmatch;
         PointsToWin = source.PointsToWin;
         PlayerHP = source.PlayerHP;

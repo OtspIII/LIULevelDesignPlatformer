@@ -74,7 +74,7 @@
       "SelfDamage":true,
       "Knockback":1,
       "Bounce":0.05,
-      "Lifetime":.85,
+      "Lifetime":0.85,
       "Type":"Grenade"
     },
     {

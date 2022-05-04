@@ -386,12 +386,23 @@ public class FirstPersonController : NetworkBehaviour
     {
         if (!Floors.Contains(other.gameObject))
             Floors.Add(other.gameObject);
-        if (IsServer && Fling.Value != Vector3.zero && !JustKnocked)
+        if (IsOwner && Fling.Value != Vector3.zero && !JustKnocked)
         {
 //            Debug.Log("ENDFLING");
+        if(IsServer)
             Fling.Value = Vector3.zero;
+        else
+            EndFlingServerRPC();
+            
         }
     }
+
+    [ServerRpc]
+    void EndFlingServerRPC()
+    {
+        Fling.Value = Vector3.zero;
+    }
+    
 
     private void OnCollisionExit(Collision other)
     {
@@ -504,7 +515,12 @@ public class FirstPersonController : NetworkBehaviour
 
     public void TakeKnockback(Vector3 kb)
     {
-        if(IsServer) TakeDamageServerRpc(0,"",kb);
+        if (!IsServer)
+        {
+            TakeDamageServerRpc(0,"",kb);
+            RB.velocity = kb;
+            return;
+        }
         TakeKnockbackS(kb);
         RB.velocity = kb;
         JustKnocked = true;

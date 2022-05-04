@@ -17,11 +17,13 @@ public class SpawnableController : NetworkBehaviour
     
     public bool IsSetup = false;
     public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
+    public NetworkVariable<Vector3> Destination = new NetworkVariable<Vector3>();
 
     public void Setup(ItemSpawnController s,JSONItem data)
     {
         Data = data;
         Spawner = s;
+        Destination.Value = Spawner.Destination;
         NO.Spawn();
         Name.Value = Data.Text;
         SetColor();
@@ -30,9 +32,12 @@ public class SpawnableController : NetworkBehaviour
 
     void Update()
     {
-        if (!IsSetup && Name.Value != "" && God.LM?.Ruleset != null)
+        if (!IsSetup && Name.Value != "" && God.LM?.Ruleset != null && God.LM?.Ruleset.Author != "")
         {
+            
             Data = God.LM.GetItem(Name.Value.ToString());
+            //Debug.Log("SETUP! " + Name.Value + " / " + Data.Text + " / " + God.LM?.Ruleset?.Author);
+            Desc.text = Name.Value.ToString();
             SetColor();
         }
     }
@@ -50,7 +55,7 @@ public class SpawnableController : NetworkBehaviour
     public void GetTaken(FirstPersonController pc)
     {
         TakeEffects(pc);
-        Spawner.TakenFrom(pc);
+        Spawner?.TakenFrom(pc);
         Destroy(gameObject);
     }
 
@@ -73,31 +78,32 @@ public class SpawnableController : NetworkBehaviour
             case ItemTypes.Points:
             {
                 pc.GetPoint((int)amt);
-                if (Spawner.Destination != Vector3.zero)
+                if (Destination.Value != Vector3.zero)
                 {
-                    pc.transform.position = God.LM.transform.position + Spawner.Destination;
-                    pc.SetPosClientRPC(God.LM.transform.position + Spawner.Destination);
+                    pc.transform.position = God.LM.transform.position + Destination.Value;
+                    pc.SetPosClientRPC(God.LM.transform.position + Destination.Value);
                 }
                 break;
             }
             case ItemTypes.Jump:
             {
                 Vector3 vel = pc.RB.velocity;
-                if (Spawner.Destination == Vector3.zero)
+                if (Destination.Value == Vector3.zero)
                 {
-                    vel.y = amt;
-                    pc.RB.velocity = vel;
+//                    vel.y = amt;
+//                    pc.RB.velocity = vel;
+                    pc.TakeKnockback(new Vector3(0,amt,0));
                 }
                 else
-                    pc.TakeKnockback(Spawner.Destination);
+                    pc.TakeKnockback(Destination.Value);
                 
                 
                 break;
             }
             case ItemTypes.Teleport:
             {
-                pc.transform.position = God.LM.transform.position + Spawner.Destination;
-                pc.SetPosClientRPC(God.LM.transform.position + Spawner.Destination);
+                pc.transform.position = God.LM.transform.position + Destination.Value;
+                pc.SetPosClientRPC(God.LM.transform.position + Destination.Value);
                 break;
             }
         }
@@ -107,7 +113,7 @@ public class SpawnableController : NetworkBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!NetworkManager.Singleton.IsServer) return;
+        if (!NetworkManager.Singleton.IsServer && Data.Type != ItemTypes.Jump) return;
         FirstPersonController pc = other.gameObject.GetComponent<FirstPersonController>();
 //        Debug.Log("OCE: " + pc + " / " + other.gameObject);
         if(pc != null)

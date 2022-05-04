@@ -44,7 +44,7 @@ public class ExplosionController : NetworkBehaviour
 
     public IEnumerator Explode()
     {
-        if(IsServer) Coll.enabled = true;
+        Coll.enabled = true;
         PS.Emit(Data.ExplodeDamage);
         yield return null;
         Coll.enabled = false;
@@ -54,11 +54,10 @@ public class ExplosionController : NetworkBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!NetworkManager.Singleton.IsServer) return;
+//        if (!NetworkManager.Singleton.IsServer) return;
         FirstPersonController pc = other.GetComponent<FirstPersonController>();
-        if (pc)
+        if (pc && pc.IsOwner)
         {
-           
             if(Data.Knockback >0)
                 pc.TakeKnockback((pc.transform.position - transform.position).normalized * Data.Knockback);
             if (pc == Shooter && !Data.SelfDamage) return;
