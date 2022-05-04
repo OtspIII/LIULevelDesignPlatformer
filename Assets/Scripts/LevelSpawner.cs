@@ -43,9 +43,9 @@ public class LevelSpawner : MonoBehaviour
 //        StartLevel();
 //    }
 
-    public void StartLevel()
+    public void StartLevel(float delay=0)
     {
-        StartCoroutine(LoadScene(GetLevel()));
+        StartCoroutine(LoadScene(GetLevel(),delay));
     }
 
     public LevelManager GetLevel()
@@ -62,8 +62,9 @@ public class LevelSpawner : MonoBehaviour
         return all[Random.Range(0, all.Length)];
     }
 
-    public IEnumerator LoadScene(LevelManager who)
+    public IEnumerator LoadScene(LevelManager who,float delay)
     {
+        if(delay > 0) yield return new WaitForSeconds(delay);
         //Debug.Log("FOR THREAD");
         if(Current != null) Destroy(Current.gameObject);
         Current = Instantiate(who);

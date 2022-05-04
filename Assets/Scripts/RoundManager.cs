@@ -33,11 +33,21 @@ public class RoundManager : NetworkBehaviour
     {
 //        Debug.Log("SLCRPC: " + IsServer + " / " + Level.Value);
         if(!IsServer)
-            God.LS.StartLevel();
+            God.LS.StartLevel(0.5f);
     }
 
     public string GetLevel()
     {
         return Level.Value.ToString();
+    }
+
+    [ClientRpc]
+    public void AlertClientRPC(string txt,bool big=false)
+    {
+        if (IsServer) return;
+        if(!big)
+            God.LM?.StartCoroutine(God.LM?.Announce(txt));
+        else
+            God.LS.StartCoroutine(God.LM?.Winner(txt));
     }
 }

@@ -1,10 +1,10 @@
 {
   "Mode": "Deathmatch",
-  "PointsToWin":15, 
+  "PointsToWin":10, 
   "PlayerHP": 100,
-  "MoveSpeed": 10,
+  "MoveSpeed": 8,
   "SprintSpeed": 2,
-  "Gravity": 1,
+  "Gravity": 1.4,
   "Items":[
     {
       "Text": "Coin",
@@ -15,13 +15,13 @@
     {
       "Text": "Medkit",
       "Type": "Healing",
-      "Amount": 25,
+      "Amount": 40,
       "Color": "Green"
     },
     {
       "Text": "Trampoline",
       "Type": "Jump",
-      "Amount": 10,
+      "Amount": 15,
       "Color": "Blue"
     },
     {
@@ -34,14 +34,14 @@
     {
       "Color":"Black",
       "Text": "BasicPistol",
-      "Damage": 15,
+      "Damage": 25,
       "RateOfFire":0.4,
       "Accuracy":3
     },
     {
       "Color":"Gray",
       "Text": "AssaultRifle",
-      "Damage": 10,
+      "Damage": 22,
       "Ammo": 124,
       "RateOfFire":0.17,
       "Accuracy":2,
@@ -50,37 +50,37 @@
     {
       "Color":"Red",
       "Text": "RocketLauncher",
-      "Damage": 15,
+      "Damage": 30,
       "Ammo": 5,
       "RateOfFire":1.34,
       "Accuracy":1,
       "Speed":30,
       "ExplodeRadius":4,
-      "ExplodeDamage":75,
+      "ExplodeDamage":85,
       "SelfDamage":false,
       "Knockback":10
     },
     {
       "Color":"Pink",
       "Text": "Grenade",
-      "Damage": 15,
+      "Damage": 30,
       "Ammo": 3,
       "RateOfFire":0.5,
       "Accuracy":5,
       "Speed":20,
       "Gravity":2,
       "ExplodeRadius":2,
-      "ExplodeDamage":60,
+      "ExplodeDamage":85,
       "SelfDamage":true,
       "Knockback":1,
-      "Bounce":0.75,
-      "Lifetime":3,
+      "Bounce":0.05,
+      "Lifetime":0.85,
       "Type":"Grenade"
     },
     {
       "Color":"Yellow",
       "Text": "Shotgun",
-      "Damage": 5,
+      "Damage": 10,
       "Ammo": 45,
       "RateOfFire":0.4,
       "Accuracy":15,
@@ -89,7 +89,7 @@
     {
       "Color":"White",
       "Text": "SMG",
-      "Damage": 2,
+      "Damage": 7,
       "Ammo": 356,
       "RateOfFire":0.05,
       "Accuracy":10

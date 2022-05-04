@@ -85,7 +85,8 @@ public class LevelManager : MonoBehaviour
             string teamtxt = who.Name.Value.ToString()  + " <"+team.ToString()+"> ";
             if (targ != "") teamtxt += " > " + targ;
             teamtxt += " ("+God.RM.TeamScores[team]+")";
-            StartCoroutine(Announce(teamtxt));
+            MakeAnnounce(teamtxt);
+//            StartCoroutine(Announce(teamtxt));
             return;
         }
         if (!God.RM.Scores.ContainsKey(who)) God.RM.Scores.Add(who, amt);
@@ -94,9 +95,21 @@ public class LevelManager : MonoBehaviour
         string txt = who.Name.Value.ToString();
         if (targ != "") txt += " > " + targ;
         txt += " ("+God.RM.Scores[who]+")";
-        StartCoroutine(Announce(txt));
+        MakeAnnounce(txt);
     }
 
+    public void MakeAnnounce(string txt, bool big = false)
+    {
+        if (big)
+        {
+            God.LS.StartCoroutine(Winner(txt));
+        }
+        else
+            StartCoroutine(Announce(txt));
+
+        God.RM?.AlertClientRPC(txt, big);
+    }
+    
     public IEnumerator Announce(string txt)
     {
         Announces.Add(txt);
@@ -107,20 +120,22 @@ public class LevelManager : MonoBehaviour
     public void SetWinner(FirstPersonController who)
     {
 //        Debug.Log(who.Name.Value + " Wins!");
-        God.LS.StartCoroutine(Winner(who.Name.Value.ToString()));
+//        God.LS.StartCoroutine(Winner(who.Name.Value.ToString()));
+        MakeAnnounce(who.Name.Value.ToString() + " WINS!", true);
         RoundComplete = true;
     }
     
     public void SetWinner(IColors team)
     {
 //        Debug.Log(who.Name.Value + " Wins!");
-        God.LS.StartCoroutine(Winner(team.ToString()));
+//        God.LS.StartCoroutine(Winner(team.ToString()));
+        MakeAnnounce(team.ToString() + " WINS!", true);
         RoundComplete = true;
     }
     
     public IEnumerator Winner(string who)
     {
-        God.AnnounceText.text = who + " WINS!";
+        God.AnnounceText.text = who;
         if (NetworkManager.Singleton.IsServer)
             God.LS.PickNextLevel();
         yield return new WaitForSeconds(3);
