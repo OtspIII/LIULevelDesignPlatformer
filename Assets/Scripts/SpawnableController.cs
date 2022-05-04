@@ -56,7 +56,8 @@ public class SpawnableController : NetworkBehaviour
     {
         TakeEffects(pc);
         Spawner?.TakenFrom(pc);
-        Destroy(gameObject);
+        if(NetworkManager.Singleton.IsServer)
+            Destroy(gameObject);
     }
 
     public virtual string GetName()
