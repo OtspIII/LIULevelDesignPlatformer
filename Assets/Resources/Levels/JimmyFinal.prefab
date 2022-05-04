@@ -3796,7 +3796,8 @@ MonoBehaviour:
   Creator: Jimmy
   Name: JimmyFinal
   Ruleset:
-    PointsToWin: 0
+    Author: Jimmy
+    PointsToWin: 5
     PlayerHP: 0
     MoveSpeed: 0
     SprintSpeed: 0
