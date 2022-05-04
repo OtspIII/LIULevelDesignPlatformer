@@ -33,7 +33,7 @@
     {
       "Color":"Yellow",
       "Text": "Pistol",
-      "Damage": 1,
+      "Damage": 5,
       "RateOfFire":1,
       "Accuracy":1
     },
